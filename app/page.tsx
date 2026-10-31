@@ -12,12 +12,13 @@ import {
   Award, 
   Clock, 
   MapPin, 
-  Search, 
   Navigation, 
   Sparkles, 
   ArrowRight,
-  Flame,
-  Wrench
+  CloudLightning,
+  ChevronDown,
+  ChevronUp,
+  AlertTriangle
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -25,8 +26,29 @@ export default function HomePage() {
   const [locationInput, setLocationInput] = useState('');
   const [isLocating, setIsLocating] = useState(false);
   const [statusMessage, setStatusMessage] = useState('');
+  const [showDirectory, setShowDirectory] = useState(false);
+  const [directoryFilter, setDirectoryFilter] = useState<'water-damage' | 'pest-control' | 'roof-repair'>('water-damage');
 
-  // Auto detect location simulation
+  // عينة لأهم مراكز المدن للربط الداخلي الفوري
+  const topHubs = [
+    { name: 'Dallas, TX', slug: 'dallas-tx' },
+    { name: 'Houston, TX', slug: 'houston-tx' },
+    { name: 'Austin, TX', slug: 'austin-tx' },
+    { name: 'Orlando, FL', slug: 'orlando-fl' },
+    { name: 'Tampa, FL', slug: 'tampa-fl' },
+    { name: 'Miami, FL', slug: 'miami-fl' },
+    { name: 'Atlanta, GA', slug: 'atlanta-ga' },
+    { name: 'Phoenix, AZ', slug: 'phoenix-az' },
+    { name: 'Charlotte, NC', slug: 'charlotte-nc' },
+    { name: 'Las Vegas, NV', slug: 'las-vegas-nv' },
+    { name: 'Denver, CO', slug: 'denver-co' },
+    { name: 'Nashville, TN', slug: 'nashville-tn' },
+    { name: 'Columbus, OH', slug: 'columbus-oh' },
+    { name: 'Indianapolis, IN', slug: 'indianapolis-in' },
+    { name: 'Kansas City, MO', slug: 'kansas-city-mo' },
+    { name: 'Philadelphia, PA', slug: 'philadelphia-pa' },
+  ];
+
   const handleDetectLocation = () => {
     setIsLocating(true);
     setStatusMessage('Locating your area...');
@@ -35,8 +57,8 @@ export default function HomePage() {
       navigator.geolocation.getCurrentPosition(
         () => {
           setIsLocating(false);
-          setLocationInput('Detected: Current Area (US Dispatch Region)');
-          setStatusMessage('Location identified! Dispatch crews ready.');
+          setLocationInput('Dallas, TX (Active Hub)');
+          setStatusMessage('Location identified! Local dispatch ready.');
         },
         () => {
           setIsLocating(false);
@@ -52,7 +74,6 @@ export default function HomePage() {
 
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Redirect to direct tel or specific location search
     window.location.href = 'tel:18005550199';
   };
 
@@ -65,9 +86,8 @@ export default function HomePage() {
       icon: Droplets,
       badge: 'Avg Response: 18 Mins',
       badgeColor: 'bg-blue-50 text-blue-700 border-blue-200',
-      activeColor: 'border-blue-600 shadow-blue-100',
       features: ['24/7 Water Extraction', 'Insurance Billing Direct', 'Certified Antimicrobial Drying'],
-      phone: '(800) 555-0199',
+      sampleSlug: 'water-damage/dallas-tx',
     },
     {
       id: 'pest-control',
@@ -77,9 +97,8 @@ export default function HomePage() {
       icon: Bug,
       badge: 'Same-Day Dispatch',
       badgeColor: 'bg-amber-50 text-amber-700 border-amber-200',
-      activeColor: 'border-amber-600 shadow-amber-100',
       features: ['Eco-Safe Treatments', 'Complete Colony Removal', 'Preventive Barrier Defense'],
-      phone: '(800) 555-0199',
+      sampleSlug: 'pest-control/orlando-fl',
     },
     {
       id: 'roof-repair',
@@ -89,29 +108,46 @@ export default function HomePage() {
       icon: Hammer,
       badge: 'Critical Crew On-Call',
       badgeColor: 'bg-emerald-50 text-emerald-700 border-emerald-200',
-      activeColor: 'border-emerald-600 shadow-emerald-100',
       features: ['Immediate Waterproof Tarping', 'Storm Insurance Support', 'Commercial & Residential'],
-      phone: '(800) 555-0199',
+      sampleSlug: 'roof-repair/miami-fl',
     },
   ];
 
   return (
     <div className="flex flex-col w-full bg-slate-50 selection:bg-blue-500 selection:text-white">
       
-      {/* Interactive Hero Header */}
-      <section className="relative bg-white border-b border-slate-200/80 pt-12 pb-20 px-4 sm:px-6 overflow-hidden">
-        {/* Subtle Ambient Background Gradients */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-blue-50/60 via-slate-50/20 to-transparent pointer-events-none -z-10" />
+      {/* 1. Gemini AI Live Weather & Emergency Alert Banner */}
+      <section className="bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 text-white py-3 px-4 border-b border-blue-800/50 shadow-inner">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
+          <div className="flex items-center gap-2.5">
+            <span className="p-1 rounded-md bg-amber-500/20 text-amber-400 border border-amber-400/30">
+              <CloudLightning className="w-4 h-4 animate-pulse" />
+            </span>
+            <span>
+              <strong className="text-amber-300 font-bold">Live AI Dispatch Advisory:</strong> High precipitation & sudden freeze warnings active across southern & eastern regions. Water leaks and structural roof stress can double within 6 hours.
+            </span>
+          </div>
 
+          <a 
+            href="tel:18005550199" 
+            className="flex-shrink-0 inline-flex items-center gap-1.5 bg-amber-400 hover:bg-amber-300 text-slate-950 font-black px-3.5 py-1.5 rounded-lg transition transform active:scale-95 shadow-sm"
+          >
+            <AlertTriangle className="w-3.5 h-3.5 text-slate-950" />
+            <span>Prevent Costly Damage: Call (800) 555-0199</span>
+          </a>
+        </div>
+      </section>
+
+      {/* 2. Interactive Hero Header */}
+      <section className="relative bg-white border-b border-slate-200/80 pt-12 pb-16 px-4 sm:px-6 overflow-hidden">
         <div className="max-w-5xl mx-auto text-center space-y-6">
           
-          {/* Live Activity Pulse Indicator */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs font-semibold shadow-xs transition hover:bg-emerald-100">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-800 text-xs font-semibold shadow-xs">
             <span className="relative flex h-2.5 w-2.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
             </span>
-            <span>LinesFix Dispatch Live: 412 Techs Currently Active Across 182 US Cities</span>
+            <span>LinesFix Dispatch Live: 412 Technicians Active Across 182 US Cities</span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight leading-[1.15]">
@@ -125,15 +161,13 @@ export default function HomePage() {
             Select your emergency type, confirm your city or zip code, and get instantly routed to a certified, licensed local contractor.
           </p>
 
-          {/* Interactive Dispatch Search & Matching Engine */}
-          <div className="pt-4 max-w-3xl mx-auto">
+          {/* Search Box */}
+          <div className="pt-2 max-w-3xl mx-auto">
             <form 
               onSubmit={handleSearchSubmit} 
               className="bg-white p-3 sm:p-4 rounded-2xl sm:rounded-3xl shadow-xl shadow-slate-200/60 border border-slate-200 transition hover:border-blue-300"
             >
               <div className="grid grid-cols-1 sm:grid-cols-12 gap-3">
-                
-                {/* Service Selector Dropdown */}
                 <div className="sm:col-span-4 text-left">
                   <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1 ml-1">
                     Emergency Service
@@ -149,7 +183,6 @@ export default function HomePage() {
                   </select>
                 </div>
 
-                {/* Location / Zip / Address Input */}
                 <div className="sm:col-span-5 text-left relative">
                   <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1 ml-1 flex justify-between items-center">
                     <span>City, State or Zip</span>
@@ -174,7 +207,6 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                {/* Submit / Match CTA */}
                 <div className="sm:col-span-3 flex items-end">
                   <button 
                     type="submit" 
@@ -184,37 +216,29 @@ export default function HomePage() {
                     <span>Find Pro</span>
                   </button>
                 </div>
-
               </div>
 
-              {/* Status Indicator */}
               {statusMessage && (
-                <div className="mt-3 text-xs text-blue-700 font-medium bg-blue-50 py-1.5 px-3 rounded-lg flex items-center justify-center gap-1.5 animate-fadeIn">
+                <div className="mt-3 text-xs text-blue-700 font-medium bg-blue-50 py-1.5 px-3 rounded-lg flex items-center justify-center gap-1.5">
                   <Sparkles className="w-3.5 h-3.5 text-blue-600" />
                   {statusMessage}
                 </div>
               )}
             </form>
-
-            <div className="pt-4 flex flex-wrap items-center justify-center gap-5 text-xs text-slate-500 font-medium">
-              <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Fast Phone Dispatch</span>
-              <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Direct Local Contractor</span>
-              <span className="flex items-center gap-1"><CheckCircle2 className="w-4 h-4 text-emerald-500" /> Zero Upfront Deposit</span>
-            </div>
           </div>
 
         </div>
       </section>
 
-      {/* Dynamic Services Cards */}
+      {/* 3. Dynamic Services Cards */}
       <section className="py-16 px-4 sm:px-6 max-w-6xl mx-auto w-full">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
           <div>
-            <span className="text-xs font-bold uppercase tracking-widest text-blue-600">Certified Emergency Networks</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-blue-600">Immediate Response</span>
             <h2 className="text-3xl font-black text-slate-900 tracking-tight mt-1">Available Dispatch Categories</h2>
           </div>
           <p className="text-slate-500 text-sm max-w-md">
-            Click on any service category to instantly connect with an on-duty technician or review coverage specs.
+            Click on any card to connect with an on-duty local technician or view dedicated regional pages.
           </p>
         </div>
 
@@ -227,7 +251,6 @@ export default function HomePage() {
                 className="bg-white rounded-3xl border border-slate-200/90 p-7 shadow-xs hover:shadow-xl hover:border-blue-400 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1"
               >
                 <div>
-                  {/* Top Badge & Icon */}
                   <div className="flex items-center justify-between mb-6">
                     <div className="w-14 h-14 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300 shadow-inner">
                       <IconComponent className="w-7 h-7" />
@@ -247,7 +270,6 @@ export default function HomePage() {
                     {item.desc}
                   </p>
 
-                  {/* Bullet features */}
                   <div className="space-y-2.5 pt-4 border-t border-slate-100 mb-6">
                     {item.features.map((feat, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs font-medium text-slate-700">
@@ -258,19 +280,18 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                {/* Direct Emergency Call Button for this Card */}
                 <div className="pt-4 border-t border-slate-100 flex items-center gap-3">
                   <a 
                     href="tel:18005550199"
-                    className="flex-1 bg-slate-900 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl text-center text-xs transition duration-200 flex items-center justify-center gap-2 shadow-sm group-hover:shadow-md"
+                    className="flex-1 bg-slate-900 hover:bg-emerald-600 text-white font-bold py-3 px-4 rounded-xl text-center text-xs transition duration-200 flex items-center justify-center gap-2 shadow-sm"
                   >
                     <PhoneCall className="w-3.5 h-3.5 text-emerald-400" />
-                    <span>Call Desk: {item.phone}</span>
+                    <span>Call Desk: (800) 555-0199</span>
                   </a>
                   <Link 
-                    href={`/${item.id}`}
-                    className="p-3 bg-slate-100 hover:bg-slate-200 rounded-xl text-slate-600 transition"
-                    title="View Directory"
+                    href={`/${item.sampleSlug}`}
+                    className="p-3 bg-slate-100 hover:bg-blue-100 text-slate-600 hover:text-blue-600 rounded-xl transition"
+                    title="View City Coverage Page"
                   >
                     <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -281,37 +302,84 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Trust & Verification Credentials */}
-      <section className="bg-white border-y border-slate-200/80 py-16 px-4">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
-            <div className="p-3 rounded-xl bg-blue-100/60 text-blue-600">
-              <Clock className="w-6 h-6" />
-            </div>
+      {/* 4. Elegant Interactive Coverage Hubs Drawer (أماكن التغطية الأنيقة) */}
+      <section className="max-w-6xl mx-auto w-full px-4 sm:px-6 pb-16">
+        <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pb-6 border-b border-slate-100">
             <div>
-              <h4 className="font-bold text-slate-900 text-sm">Under 60-Sec Connection</h4>
-              <p className="text-xs text-slate-500 mt-1 leading-relaxed">No robotic IVR mazes. Your call routes directly to local dispatch operators on duty.</p>
+              <div className="inline-flex items-center gap-2 text-blue-600 font-bold text-xs uppercase tracking-wider">
+                <MapPin className="w-4 h-4" /> Nationwide Service Directory
+              </div>
+              <h3 className="text-2xl font-black text-slate-900 mt-1">Our Regional Dispatch Hubs</h3>
+              <p className="text-xs text-slate-500 mt-0.5">Direct access to local programmatic dispatch pages across 182 US Tier-2 and Tier-3 cities.</p>
             </div>
+
+            <button
+              onClick={() => setShowDirectory(!showDirectory)}
+              className="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold px-5 py-2.5 rounded-xl text-xs transition"
+            >
+              <span>{showDirectory ? 'Collapse Hubs' : 'Browse All City Hubs'}</span>
+              {showDirectory ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+            </button>
           </div>
 
-          <div className="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
-            <div className="p-3 rounded-xl bg-emerald-100/60 text-emerald-600">
-              <ShieldCheck className="w-6 h-6" />
-            </div>
-            <div>
-              <h4 className="font-bold text-slate-900 text-sm">State-Licensed Specialists</h4>
-              <p className="text-xs text-slate-500 mt-1 leading-relaxed">Contractors maintain state-level compliance, liability coverage, and required certifications.</p>
-            </div>
+          {/* فلتر الخدمات لاختيار نوع الصفحة */}
+          <div className="flex items-center gap-3 pt-6 pb-4 overflow-x-auto">
+            <button
+              onClick={() => setDirectoryFilter('water-damage')}
+              className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 ${
+                directoryFilter === 'water-damage' 
+                  ? 'bg-blue-600 text-white shadow-sm' 
+                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+              }`}
+            >
+              <Droplets className="w-3.5 h-3.5" /> Water Damage Hubs
+            </button>
+
+            <button
+              onClick={() => setDirectoryFilter('pest-control')}
+              className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 ${
+                directoryFilter === 'pest-control' 
+                  ? 'bg-amber-600 text-white shadow-sm' 
+                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+              }`}
+            >
+              <Bug className="w-3.5 h-3.5" /> Pest Control Hubs
+            </button>
+
+            <button
+              onClick={() => setDirectoryFilter('roof-repair')}
+              className={`px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 ${
+                directoryFilter === 'roof-repair' 
+                  ? 'bg-emerald-600 text-white shadow-sm' 
+                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+              }`}
+            >
+              <Hammer className="w-3.5 h-3.5" /> Roofing Hubs
+            </button>
           </div>
 
-          <div className="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100">
-            <div className="p-3 rounded-xl bg-amber-100/60 text-amber-600">
-              <Award className="w-6 h-6" />
-            </div>
-            <div>
-              <h4 className="font-bold text-slate-900 text-sm">Free Transparent Estimates</h4>
-              <p className="text-xs text-slate-500 mt-1 leading-relaxed">Discuss repair scopes directly over the phone before dispatching physical equipment to your site.</p>
-            </div>
+          {/* شبكة روابط المدن التفاعلية الحية */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2.5 pt-2">
+            {(showDirectory ? topHubs : topHubs.slice(0, 8)).map((city) => (
+              <Link
+                key={city.slug}
+                href={`/${directoryFilter}/${city.slug}`}
+                className="p-2.5 text-center rounded-xl bg-slate-50 hover:bg-blue-50 border border-slate-200/80 hover:border-blue-300 text-slate-700 hover:text-blue-600 text-xs font-semibold transition"
+              >
+                {city.name}
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-4 pt-4 border-t border-slate-100 text-center">
+            <Link 
+              href="/sitemap.xml" 
+              className="text-xs text-slate-400 hover:text-blue-600 transition inline-flex items-center gap-1"
+            >
+              <span>View complete programmatic search index (546 Live City Pages)</span>
+              <ArrowRight className="w-3 h-3" />
+            </Link>
           </div>
         </div>
       </section>
