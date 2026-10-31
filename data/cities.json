@@ -1,0 +1,4552 @@
+[
+  {
+    "city": "Ocala",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "ocala-fl",
+    "zip": "34470",
+    "zips_list": [
+      "34470",
+      "34471",
+      "34472",
+      "34473"
+    ],
+    "area_code": "352",
+    "neighborhoods": [
+      "Silver Springs Shores",
+      "Ocala Palms",
+      "On Top of the World",
+      "Pine Run"
+    ],
+    "climate_risk": "High humidity, frequent tropical storms, hurricane exposure",
+    "pest_risk": "High — termites, fire ants, cockroaches year-round",
+    "roof_risk": "High — UV degradation, storm damage, wind uplift",
+    "avg_cost": 185,
+    "response_mins": 28
+  },
+  {
+    "city": "Dayton",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "dayton-oh",
+    "zip": "45402",
+    "zips_list": [
+      "45402",
+      "45403",
+      "45405",
+      "45406"
+    ],
+    "area_code": "937",
+    "neighborhoods": [
+      "Oregon District",
+      "South Park",
+      "Wright View",
+      "Belmont"
+    ],
+    "climate_risk": "Moderate — ice storms, spring flooding, tornadoes",
+    "pest_risk": "Moderate — mice, carpenter ants, stink bugs in fall",
+    "roof_risk": "Moderate — ice damming, wind shear, hail",
+    "avg_cost": 165,
+    "response_mins": 24
+  },
+  {
+    "city": "Mesquite",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "mesquite-tx",
+    "zip": "75149",
+    "zips_list": [
+      "75149",
+      "75150",
+      "75180",
+      "75181"
+    ],
+    "area_code": "972",
+    "neighborhoods": [
+      "Sunridge",
+      "Motley Oaks",
+      "Elms Creek",
+      "Town East"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding",
+    "pest_risk": "High — scorpions, termites, mosquitoes, fire ants",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 175,
+    "response_mins": 22
+  },
+  {
+    "city": "Tulsa",
+    "state": "Oklahoma",
+    "state_code": "OK",
+    "slug": "tulsa-ok",
+    "zip": "74103",
+    "zips_list": [
+      "74103",
+      "74104",
+      "74105",
+      "74106"
+    ],
+    "area_code": "918",
+    "neighborhoods": [
+      "Cherry Street",
+      "Brady Arts District",
+      "Brookside",
+      "Midtown"
+    ],
+    "climate_risk": "High — tornado alley, ice storms, flash floods",
+    "pest_risk": "High — termites, spiders, cockroaches, bed bugs",
+    "roof_risk": "High — tornado damage, hail, extreme temperature cycles",
+    "avg_cost": 160,
+    "response_mins": 20
+  },
+  {
+    "city": "Macon",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "macon-ga",
+    "zip": "31201",
+    "zips_list": [
+      "31201",
+      "31204",
+      "31206",
+      "31210"
+    ],
+    "area_code": "478",
+    "neighborhoods": [
+      "Ingleside",
+      "Vineville",
+      "Shirley Hills",
+      "College Hill"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, severe storms, humidity",
+    "pest_risk": "High — termites, cockroaches, fire ants, mosquitoes",
+    "roof_risk": "High — humidity rot, storm damage, wind uplift",
+    "avg_cost": 155,
+    "response_mins": 25
+  },
+  {
+    "city": "Akron",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "akron-oh",
+    "zip": "44301",
+    "zips_list": [
+      "44301",
+      "44302",
+      "44303",
+      "44304"
+    ],
+    "area_code": "330",
+    "neighborhoods": [
+      "Highland Square",
+      "Wallhaven",
+      "Merriman Valley",
+      "Kenmore"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites",
+    "roof_risk": "Moderate — snow load, ice damming, freeze-thaw cycles",
+    "avg_cost": 158,
+    "response_mins": 26
+  },
+  {
+    "city": "Waco",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "waco-tx",
+    "zip": "76701",
+    "zips_list": [
+      "76701",
+      "76702",
+      "76704",
+      "76705"
+    ],
+    "area_code": "254",
+    "neighborhoods": [
+      "Castle Heights",
+      "Sanger Heights",
+      "Lake Shore",
+      "Hewitt"
+    ],
+    "climate_risk": "High — tornadoes, flash flooding, severe hail",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail, wind, extreme heat, UV degradation",
+    "avg_cost": 168,
+    "response_mins": 23
+  },
+  {
+    "city": "Lakeland",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "lakeland-fl",
+    "zip": "33801",
+    "zips_list": [
+      "33801",
+      "33803",
+      "33805",
+      "33809"
+    ],
+    "area_code": "863",
+    "neighborhoods": [
+      "Dixieland",
+      "Cleveland Heights",
+      "Medulla",
+      "Lakeland Highlands"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 188,
+    "response_mins": 27
+  },
+  {
+    "city": "Huntsville",
+    "state": "Alabama",
+    "state_code": "AL",
+    "slug": "huntsville-al",
+    "zip": "35801",
+    "zips_list": [
+      "35801",
+      "35802",
+      "35803",
+      "35805"
+    ],
+    "area_code": "256",
+    "neighborhoods": [
+      "Five Points",
+      "Twickenham",
+      "Monte Sano",
+      "MidCity"
+    ],
+    "climate_risk": "Moderate — tornadoes, severe thunderstorms, ice storms",
+    "pest_risk": "High — termites, cockroaches, spiders, fire ants",
+    "roof_risk": "Moderate-High — tornado damage, hail, high humidity",
+    "avg_cost": 162,
+    "response_mins": 21
+  },
+  {
+    "city": "Chattanooga",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "slug": "chattanooga-tn",
+    "zip": "37402",
+    "zips_list": [
+      "37402",
+      "37403",
+      "37404",
+      "37405"
+    ],
+    "area_code": "423",
+    "neighborhoods": [
+      "North Shore",
+      "Southside",
+      "St. Elmo",
+      "Hixson"
+    ],
+    "climate_risk": "Moderate — flooding, severe storms, occasional tornadoes",
+    "pest_risk": "High — termites, cockroaches, mosquitoes, stink bugs",
+    "roof_risk": "Moderate — wind, storm debris, humidity, UV",
+    "avg_cost": 157,
+    "response_mins": 24
+  },
+  {
+    "city": "Augusta",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "augusta-ga",
+    "zip": "30901",
+    "zips_list": [
+      "30901",
+      "30904",
+      "30906",
+      "30909"
+    ],
+    "area_code": "706",
+    "neighborhoods": [
+      "Harrisburg",
+      "Summerville",
+      "Tobacco Road",
+      "Barton Chapel"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 153,
+    "response_mins": 26
+  },
+  {
+    "city": "Fayetteville",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "fayetteville-nc",
+    "zip": "28301",
+    "zips_list": [
+      "28301",
+      "28303",
+      "28304",
+      "28306"
+    ],
+    "area_code": "910",
+    "neighborhoods": [
+      "Haymount",
+      "Massey Hill",
+      "Cross Creek",
+      "Bordeaux"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 163,
+    "response_mins": 22
+  },
+  {
+    "city": "Shreveport",
+    "state": "Louisiana",
+    "state_code": "LA",
+    "slug": "shreveport-la",
+    "zip": "71101",
+    "zips_list": [
+      "71101",
+      "71103",
+      "71104",
+      "71105"
+    ],
+    "area_code": "318",
+    "neighborhoods": [
+      "Highland",
+      "Broadmoor",
+      "Allendale",
+      "South Highlands"
+    ],
+    "climate_risk": "High — flooding, severe storms, extreme humidity",
+    "pest_risk": "High — termites, cockroaches, fire ants, mosquitoes",
+    "roof_risk": "High — wind, hail, moisture damage, UV",
+    "avg_cost": 158,
+    "response_mins": 25
+  },
+  {
+    "city": "Little Rock",
+    "state": "Arkansas",
+    "state_code": "AR",
+    "slug": "little-rock-ar",
+    "zip": "72201",
+    "zips_list": [
+      "72201",
+      "72202",
+      "72204",
+      "72205"
+    ],
+    "area_code": "501",
+    "neighborhoods": [
+      "Hillcrest",
+      "Heights",
+      "MacArthur Park",
+      "Downtown"
+    ],
+    "climate_risk": "High — tornadoes, flooding, ice storms, severe thunderstorms",
+    "pest_risk": "High — termites, cockroaches, spiders, mosquitoes",
+    "roof_risk": "High — tornado damage, hail, ice, temperature extremes",
+    "avg_cost": 156,
+    "response_mins": 23
+  },
+  {
+    "city": "Toledo",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "toledo-oh",
+    "zip": "43604",
+    "zips_list": [
+      "43604",
+      "43606",
+      "43607",
+      "43608"
+    ],
+    "area_code": "419",
+    "neighborhoods": [
+      "Old West End",
+      "Toledo Arts District",
+      "Uptown",
+      "Ottawa Hills"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, high winds",
+    "pest_risk": "Moderate — mice, termites, carpenter ants, bedbugs",
+    "roof_risk": "Moderate — snow load, ice dams, wind, freeze-thaw cycles",
+    "avg_cost": 160,
+    "response_mins": 25
+  },
+  {
+    "city": "Abilene",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "abilene-tx",
+    "zip": "79601",
+    "zips_list": [
+      "79601",
+      "79602",
+      "79603",
+      "79606"
+    ],
+    "area_code": "325",
+    "neighborhoods": [
+      "College Heights",
+      "Wylie",
+      "Northeast",
+      "Elmwood"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 162,
+    "response_mins": 24
+  },
+  {
+    "city": "Amarillo",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "amarillo-tx",
+    "zip": "79101",
+    "zips_list": [
+      "79101",
+      "79102",
+      "79103",
+      "79106"
+    ],
+    "area_code": "806",
+    "neighborhoods": [
+      "Wolflin",
+      "San Jacinto",
+      "Sleepy Hollow",
+      "English Village"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 158,
+    "response_mins": 22
+  },
+  {
+    "city": "Arlington",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "arlington-tx",
+    "zip": "76010",
+    "zips_list": [
+      "76010",
+      "76011",
+      "76013",
+      "76014"
+    ],
+    "area_code": "817",
+    "neighborhoods": [
+      "Southeast",
+      "Pantego",
+      "Dalworthington",
+      "Kennedale"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 172,
+    "response_mins": 19
+  },
+  {
+    "city": "Beaumont",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "beaumont-tx",
+    "zip": "77701",
+    "zips_list": [
+      "77701",
+      "77702",
+      "77703",
+      "77706"
+    ],
+    "area_code": "409",
+    "neighborhoods": [
+      "Pear Orchard",
+      "Tyrrell Park",
+      "Dishman",
+      "South End"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 165,
+    "response_mins": 26
+  },
+  {
+    "city": "Carrollton",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "carrollton-tx",
+    "zip": "75006",
+    "zips_list": [
+      "75006",
+      "75007",
+      "75010",
+      "75011"
+    ],
+    "area_code": "972",
+    "neighborhoods": [
+      "Josey Ranch",
+      "North Carrollton",
+      "Valwood",
+      "East Carrollton"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 170,
+    "response_mins": 20
+  },
+  {
+    "city": "Cedar Park",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "cedar-park-tx",
+    "zip": "78613",
+    "zips_list": [
+      "78613",
+      "78641",
+      "78717",
+      "78726"
+    ],
+    "area_code": "512",
+    "neighborhoods": [
+      "Lakeline",
+      "Ranch at Cypress Creek",
+      "Twin Creeks",
+      "Forest Oaks"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 175,
+    "response_mins": 21
+  },
+  {
+    "city": "College Station",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "college-station-tx",
+    "zip": "77840",
+    "zips_list": [
+      "77840",
+      "77841",
+      "77842",
+      "77845"
+    ],
+    "area_code": "979",
+    "neighborhoods": [
+      "Southwood Valley",
+      "Shenandoah",
+      "Pebble Creek",
+      "Wolf Pen Creek"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 160,
+    "response_mins": 23
+  },
+  {
+    "city": "Corpus Christi",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "corpus-christi-tx",
+    "zip": "78401",
+    "zips_list": [
+      "78401",
+      "78404",
+      "78411",
+      "78412"
+    ],
+    "area_code": "361",
+    "neighborhoods": [
+      "Flour Bluff",
+      "Calallen",
+      "Southside",
+      "Del Mar"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 163,
+    "response_mins": 25
+  },
+  {
+    "city": "Denton",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "denton-tx",
+    "zip": "76201",
+    "zips_list": [
+      "76201",
+      "76202",
+      "76205",
+      "76207"
+    ],
+    "area_code": "940",
+    "neighborhoods": [
+      "Quakertown",
+      "North Lakes",
+      "Southridge",
+      "University"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 168,
+    "response_mins": 20
+  },
+  {
+    "city": "El Paso",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "el-paso-tx",
+    "zip": "79901",
+    "zips_list": [
+      "79901",
+      "79902",
+      "79903",
+      "79904"
+    ],
+    "area_code": "915",
+    "neighborhoods": [
+      "Kern Place",
+      "Sunset Heights",
+      "Coronado",
+      "Montana Vista"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 155,
+    "response_mins": 27
+  },
+  {
+    "city": "Frisco",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "frisco-tx",
+    "zip": "75034",
+    "zips_list": [
+      "75034",
+      "75035",
+      "75036",
+      "75068"
+    ],
+    "area_code": "972",
+    "neighborhoods": [
+      "Plantation Resort",
+      "Heritage Trails",
+      "Stonebrook",
+      "Starwood"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 180,
+    "response_mins": 18
+  },
+  {
+    "city": "Garland",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "garland-tx",
+    "zip": "75040",
+    "zips_list": [
+      "75040",
+      "75041",
+      "75042",
+      "75043"
+    ],
+    "area_code": "972",
+    "neighborhoods": [
+      "Duck Creek",
+      "Rowlett Creek",
+      "Naaman",
+      "Firewheel"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 168,
+    "response_mins": 21
+  },
+  {
+    "city": "Grand Prairie",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "grand-prairie-tx",
+    "zip": "75050",
+    "zips_list": [
+      "75050",
+      "75051",
+      "75052",
+      "75054"
+    ],
+    "area_code": "972",
+    "neighborhoods": [
+      "Dalworth",
+      "Continental",
+      "Prairie Pines",
+      "Mira Lagos"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 166,
+    "response_mins": 22
+  },
+  {
+    "city": "Irving",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "irving-tx",
+    "zip": "75038",
+    "zips_list": [
+      "75038",
+      "75039",
+      "75061",
+      "75062"
+    ],
+    "area_code": "972",
+    "neighborhoods": [
+      "Valley Ranch",
+      "Las Colinas",
+      "Hackberry Creek",
+      "Heritage Crossing"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 170,
+    "response_mins": 20
+  },
+  {
+    "city": "Killeen",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "killeen-tx",
+    "zip": "76541",
+    "zips_list": [
+      "76541",
+      "76542",
+      "76543",
+      "76549"
+    ],
+    "area_code": "254",
+    "neighborhoods": [
+      "Trimmier",
+      "Windmill Farms",
+      "Yowell Ranch",
+      "Rosewood"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 155,
+    "response_mins": 26
+  },
+  {
+    "city": "Laredo",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "laredo-tx",
+    "zip": "78040",
+    "zips_list": [
+      "78040",
+      "78041",
+      "78042",
+      "78045"
+    ],
+    "area_code": "956",
+    "neighborhoods": [
+      "Del Mar",
+      "Plantation",
+      "Heights",
+      "Winfield"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 150,
+    "response_mins": 28
+  },
+  {
+    "city": "League City",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "league-city-tx",
+    "zip": "77573",
+    "zips_list": [
+      "77573",
+      "77574",
+      "77539",
+      "77565"
+    ],
+    "area_code": "281",
+    "neighborhoods": [
+      "South Shore",
+      "Brittany Lakes",
+      "Victory Lakes",
+      "Westwood"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 173,
+    "response_mins": 22
+  },
+  {
+    "city": "Lewisville",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "lewisville-tx",
+    "zip": "75029",
+    "zips_list": [
+      "75029",
+      "75056",
+      "75057",
+      "75067"
+    ],
+    "area_code": "972",
+    "neighborhoods": [
+      "Lakeland",
+      "North Lewisville",
+      "Valley Vista",
+      "Ridgemont"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 169,
+    "response_mins": 20
+  },
+  {
+    "city": "Longview",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "longview-tx",
+    "zip": "75601",
+    "zips_list": [
+      "75601",
+      "75602",
+      "75604",
+      "75605"
+    ],
+    "area_code": "903",
+    "neighborhoods": [
+      "Pine Tree",
+      "Judson",
+      "Spring Hill",
+      "Greggton"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 158,
+    "response_mins": 25
+  },
+  {
+    "city": "Lubbock",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "lubbock-tx",
+    "zip": "79401",
+    "zips_list": [
+      "79401",
+      "79403",
+      "79404",
+      "79407"
+    ],
+    "area_code": "806",
+    "neighborhoods": [
+      "Maxey",
+      "South Lubbock",
+      "Tech Terrace",
+      "Overton"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 155,
+    "response_mins": 24
+  },
+  {
+    "city": "McKinney",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "mckinney-tx",
+    "zip": "75069",
+    "zips_list": [
+      "75069",
+      "75070",
+      "75071",
+      "75072"
+    ],
+    "area_code": "972",
+    "neighborhoods": [
+      "Craig Ranch",
+      "Stonebridge Ranch",
+      "Adriatica",
+      "Eldorado"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 177,
+    "response_mins": 19
+  },
+  {
+    "city": "Midland",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "midland-tx",
+    "zip": "79701",
+    "zips_list": [
+      "79701",
+      "79703",
+      "79705",
+      "79706"
+    ],
+    "area_code": "432",
+    "neighborhoods": [
+      "Midland Gardens",
+      "Country Club",
+      "Oak Ridge",
+      "Scharbauer City"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 160,
+    "response_mins": 26
+  },
+  {
+    "city": "Mission",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "mission-tx",
+    "zip": "78572",
+    "zips_list": [
+      "78572",
+      "78573",
+      "78574",
+      "78504"
+    ],
+    "area_code": "956",
+    "neighborhoods": [
+      "Tres Lagos",
+      "La Homa",
+      "Tom Gill",
+      "Sharyland"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 150,
+    "response_mins": 28
+  },
+  {
+    "city": "Missouri City",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "missouri-city-tx",
+    "zip": "77459",
+    "zips_list": [
+      "77459",
+      "77489",
+      "77071",
+      "77053"
+    ],
+    "area_code": "281",
+    "neighborhoods": [
+      "Sienna Plantation",
+      "Quail Valley",
+      "Fondren",
+      "Scanlan Trace"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 172,
+    "response_mins": 23
+  },
+  {
+    "city": "New Braunfels",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "new-braunfels-tx",
+    "zip": "78130",
+    "zips_list": [
+      "78130",
+      "78132",
+      "78133",
+      "78135"
+    ],
+    "area_code": "830",
+    "neighborhoods": [
+      "Gruene",
+      "Landa Park",
+      "Springbrook",
+      "River Chase"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 170,
+    "response_mins": 24
+  },
+  {
+    "city": "Odessa",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "odessa-tx",
+    "zip": "79761",
+    "zips_list": [
+      "79761",
+      "79762",
+      "79763",
+      "79764"
+    ],
+    "area_code": "432",
+    "neighborhoods": [
+      "Ratliff Ranch",
+      "Music City Mall",
+      "North Odessa",
+      "Cynthia"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 158,
+    "response_mins": 26
+  },
+  {
+    "city": "Pasadena",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "pasadena-tx",
+    "zip": "77501",
+    "zips_list": [
+      "77501",
+      "77502",
+      "77503",
+      "77504"
+    ],
+    "area_code": "713",
+    "neighborhoods": [
+      "Deepwater",
+      "Fairmont Park",
+      "Strawberry",
+      "Shaver"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 163,
+    "response_mins": 24
+  },
+  {
+    "city": "Pearland",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "pearland-tx",
+    "zip": "77581",
+    "zips_list": [
+      "77581",
+      "77584",
+      "77588",
+      "77546"
+    ],
+    "area_code": "281",
+    "neighborhoods": [
+      "Shadow Creek",
+      "Clear Creek",
+      "Silverlake",
+      "Independence Park"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 172,
+    "response_mins": 22
+  },
+  {
+    "city": "Pflugerville",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "pflugerville-tx",
+    "zip": "78660",
+    "zips_list": [
+      "78660",
+      "78691",
+      "78681",
+      "78717"
+    ],
+    "area_code": "512",
+    "neighborhoods": [
+      "Blackhawk",
+      "Highland Park",
+      "Heatherwilde",
+      "Spring Trails"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 174,
+    "response_mins": 20
+  },
+  {
+    "city": "Plano",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "plano-tx",
+    "zip": "75023",
+    "zips_list": [
+      "75023",
+      "75024",
+      "75025",
+      "75074"
+    ],
+    "area_code": "972",
+    "neighborhoods": [
+      "Willow Bend",
+      "Legacy",
+      "Haggard Farm",
+      "Spring Creek"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 176,
+    "response_mins": 18
+  },
+  {
+    "city": "Richardson",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "richardson-tx",
+    "zip": "75080",
+    "zips_list": [
+      "75080",
+      "75081",
+      "75082",
+      "75083"
+    ],
+    "area_code": "972",
+    "neighborhoods": [
+      "Canyon Creek",
+      "Buckingham",
+      "Arapaho",
+      "Prairie Creek"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 173,
+    "response_mins": 19
+  },
+  {
+    "city": "Round Rock",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "round-rock-tx",
+    "zip": "78664",
+    "zips_list": [
+      "78664",
+      "78665",
+      "78681",
+      "78682"
+    ],
+    "area_code": "512",
+    "neighborhoods": [
+      "Walsh Ranch",
+      "Old Town",
+      "Forest Creek",
+      "Behrens Ranch"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 175,
+    "response_mins": 20
+  },
+  {
+    "city": "San Angelo",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "san-angelo-tx",
+    "zip": "76901",
+    "zips_list": [
+      "76901",
+      "76902",
+      "76903",
+      "76904"
+    ],
+    "area_code": "325",
+    "neighborhoods": [
+      "College Hills",
+      "Lake View",
+      "Southland",
+      "Bentwood"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 155,
+    "response_mins": 27
+  },
+  {
+    "city": "San Marcos",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "san-marcos-tx",
+    "zip": "78666",
+    "zips_list": [
+      "78666",
+      "78667",
+      "78676",
+      "78677"
+    ],
+    "area_code": "512",
+    "neighborhoods": [
+      "Trace",
+      "Blanco Vista",
+      "Spring Lake Hills",
+      "Willow Creek"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 165,
+    "response_mins": 24
+  },
+  {
+    "city": "Sugar Land",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "sugar-land-tx",
+    "zip": "77478",
+    "zips_list": [
+      "77478",
+      "77479",
+      "77487",
+      "77496"
+    ],
+    "area_code": "281",
+    "neighborhoods": [
+      "First Colony",
+      "Telfair",
+      "Greatwood",
+      "New Territory"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 178,
+    "response_mins": 20
+  },
+  {
+    "city": "Temple",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "temple-tx",
+    "zip": "76501",
+    "zips_list": [
+      "76501",
+      "76502",
+      "76503",
+      "76504"
+    ],
+    "area_code": "254",
+    "neighborhoods": [
+      "Tanglewood",
+      "Midway Valley",
+      "Troy",
+      "Hillcrest"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 158,
+    "response_mins": 25
+  },
+  {
+    "city": "Tyler",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "tyler-tx",
+    "zip": "75701",
+    "zips_list": [
+      "75701",
+      "75702",
+      "75703",
+      "75704"
+    ],
+    "area_code": "903",
+    "neighborhoods": [
+      "Azalea District",
+      "Rose Heights",
+      "Troup",
+      "Whitehouse"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 160,
+    "response_mins": 24
+  },
+  {
+    "city": "Victoria",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "victoria-tx",
+    "zip": "77901",
+    "zips_list": [
+      "77901",
+      "77902",
+      "77903",
+      "77904"
+    ],
+    "area_code": "361",
+    "neighborhoods": [
+      "Tanglewood",
+      "Sun Valley",
+      "West Side",
+      "Bronte Heights"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 155,
+    "response_mins": 27
+  },
+  {
+    "city": "Wichita Falls",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "wichita-falls-tx",
+    "zip": "76301",
+    "zips_list": [
+      "76301",
+      "76302",
+      "76306",
+      "76308"
+    ],
+    "area_code": "940",
+    "neighborhoods": [
+      "Sheppard AFB",
+      "Lakewood",
+      "Sikes",
+      "Southwest"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 155,
+    "response_mins": 26
+  },
+  {
+    "city": "Wylie",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "wylie-tx",
+    "zip": "75098",
+    "zips_list": [
+      "75098",
+      "75182",
+      "75094",
+      "75189"
+    ],
+    "area_code": "972",
+    "neighborhoods": [
+      "Ballard Estates",
+      "Twin Lakes",
+      "Creekside",
+      "The Woodlands"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding, tornadoes",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 169,
+    "response_mins": 21
+  },
+  {
+    "city": "Boca Raton",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "boca-raton-fl",
+    "zip": "33427",
+    "zips_list": [
+      "33427",
+      "33428",
+      "33431",
+      "33432"
+    ],
+    "area_code": "561",
+    "neighborhoods": [
+      "Camino Gardens",
+      "Boca Del Mar",
+      "Town Center",
+      "Palmetto Park"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 192,
+    "response_mins": 24
+  },
+  {
+    "city": "Bonita Springs",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "bonita-springs-fl",
+    "zip": "34134",
+    "zips_list": [
+      "34134",
+      "34135",
+      "34136",
+      "34138"
+    ],
+    "area_code": "239",
+    "neighborhoods": [
+      "Bonita Bay",
+      "Pelican Landing",
+      "Estero",
+      "Imperial Bonita"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 188,
+    "response_mins": 26
+  },
+  {
+    "city": "Boynton Beach",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "boynton-beach-fl",
+    "zip": "33424",
+    "zips_list": [
+      "33424",
+      "33425",
+      "33426",
+      "33435"
+    ],
+    "area_code": "561",
+    "neighborhoods": [
+      "Quantum Park",
+      "Knollwood",
+      "Meadows",
+      "Isles at Hunters Run"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 185,
+    "response_mins": 25
+  },
+  {
+    "city": "Cape Coral",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "cape-coral-fl",
+    "zip": "33904",
+    "zips_list": [
+      "33904",
+      "33907",
+      "33909",
+      "33914"
+    ],
+    "area_code": "239",
+    "neighborhoods": [
+      "Del Prado",
+      "Veterans Pkwy",
+      "Trafalgar",
+      "Pelican"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 182,
+    "response_mins": 27
+  },
+  {
+    "city": "Clearwater",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "clearwater-fl",
+    "zip": "33755",
+    "zips_list": [
+      "33755",
+      "33756",
+      "33759",
+      "33760"
+    ],
+    "area_code": "727",
+    "neighborhoods": [
+      "Countryside",
+      "Safety Harbor",
+      "Dunedin",
+      "Largo"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 183,
+    "response_mins": 25
+  },
+  {
+    "city": "Coral Springs",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "coral-springs-fl",
+    "zip": "33065",
+    "zips_list": [
+      "33065",
+      "33067",
+      "33071",
+      "33073"
+    ],
+    "area_code": "954",
+    "neighborhoods": [
+      "Eagle Trace",
+      "Pine Ridge",
+      "Wyndham Lakes",
+      "Heron Bay"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 186,
+    "response_mins": 24
+  },
+  {
+    "city": "Daytona Beach",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "daytona-beach-fl",
+    "zip": "32114",
+    "zips_list": [
+      "32114",
+      "32117",
+      "32118",
+      "32119"
+    ],
+    "area_code": "386",
+    "neighborhoods": [
+      "Port Orange",
+      "South Daytona",
+      "Holly Hill",
+      "Ormond Beach"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 180,
+    "response_mins": 27
+  },
+  {
+    "city": "Deerfield Beach",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "deerfield-beach-fl",
+    "zip": "33441",
+    "zips_list": [
+      "33441",
+      "33442",
+      "33443",
+      "33060"
+    ],
+    "area_code": "954",
+    "neighborhoods": [
+      "Crystal Lake",
+      "Cove",
+      "Goolsby",
+      "Beach"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 183,
+    "response_mins": 25
+  },
+  {
+    "city": "Deltona",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "deltona-fl",
+    "zip": "32725",
+    "zips_list": [
+      "32725",
+      "32728",
+      "32738",
+      "32739"
+    ],
+    "area_code": "386",
+    "neighborhoods": [
+      "Saxon",
+      "Deltona Lakes",
+      "Enterprise",
+      "Debary"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 178,
+    "response_mins": 28
+  },
+  {
+    "city": "Fort Lauderdale",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "fort-lauderdale-fl",
+    "zip": "33301",
+    "zips_list": [
+      "33301",
+      "33304",
+      "33311",
+      "33312"
+    ],
+    "area_code": "954",
+    "neighborhoods": [
+      "Flagler Village",
+      "Sailboat Bend",
+      "Rio Vista",
+      "Victoria Park"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 192,
+    "response_mins": 22
+  },
+  {
+    "city": "Fort Myers",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "fort-myers-fl",
+    "zip": "33901",
+    "zips_list": [
+      "33901",
+      "33905",
+      "33907",
+      "33912"
+    ],
+    "area_code": "239",
+    "neighborhoods": [
+      "McGregor",
+      "Three Oaks",
+      "Lehigh Acres",
+      "Gateway"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 186,
+    "response_mins": 26
+  },
+  {
+    "city": "Gainesville",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "gainesville-fl",
+    "zip": "32601",
+    "zips_list": [
+      "32601",
+      "32603",
+      "32605",
+      "32607"
+    ],
+    "area_code": "352",
+    "neighborhoods": [
+      "Duckpond",
+      "Sweetwater",
+      "Haile Plantation",
+      "Millhopper"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 178,
+    "response_mins": 27
+  },
+  {
+    "city": "Hollywood",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "hollywood-fl",
+    "zip": "33019",
+    "zips_list": [
+      "33019",
+      "33020",
+      "33021",
+      "33023"
+    ],
+    "area_code": "954",
+    "neighborhoods": [
+      "Young Circle",
+      "Liberia",
+      "Driftwood",
+      "West Lake"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 187,
+    "response_mins": 24
+  },
+  {
+    "city": "Homestead",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "homestead-fl",
+    "zip": "33030",
+    "zips_list": [
+      "33030",
+      "33031",
+      "33032",
+      "33033"
+    ],
+    "area_code": "305",
+    "neighborhoods": [
+      "Silver Palm",
+      "Princeton",
+      "Leisure City",
+      "Naranja"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 180,
+    "response_mins": 28
+  },
+  {
+    "city": "Jacksonville",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "jacksonville-fl",
+    "zip": "32099",
+    "zips_list": [
+      "32202",
+      "32205",
+      "32207",
+      "32210"
+    ],
+    "area_code": "904",
+    "neighborhoods": [
+      "Riverside",
+      "Avondale",
+      "Springfield",
+      "San Marco"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 181,
+    "response_mins": 25
+  },
+  {
+    "city": "Jupiter",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "jupiter-fl",
+    "zip": "33458",
+    "zips_list": [
+      "33458",
+      "33469",
+      "33477",
+      "33478"
+    ],
+    "area_code": "561",
+    "neighborhoods": [
+      "Abacoa",
+      "Admirals Cove",
+      "Jonathan's Landing",
+      "Egret Landing"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 191,
+    "response_mins": 24
+  },
+  {
+    "city": "Kissimmee",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "kissimmee-fl",
+    "zip": "34741",
+    "zips_list": [
+      "34741",
+      "34743",
+      "34744",
+      "34746"
+    ],
+    "area_code": "407",
+    "neighborhoods": [
+      "Celebration",
+      "Poinciana",
+      "Hunter's Creek",
+      "Buenaventura Lakes"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 183,
+    "response_mins": 26
+  },
+  {
+    "city": "Melbourne",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "melbourne-fl",
+    "zip": "32901",
+    "zips_list": [
+      "32901",
+      "32904",
+      "32935",
+      "32940"
+    ],
+    "area_code": "321",
+    "neighborhoods": [
+      "Eau Gallie",
+      "Indialantic",
+      "Palm Bay",
+      "West Melbourne"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 181,
+    "response_mins": 27
+  },
+  {
+    "city": "Miami Gardens",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "miami-gardens-fl",
+    "zip": "33056",
+    "zips_list": [
+      "33056",
+      "33014",
+      "33015",
+      "33055"
+    ],
+    "area_code": "305",
+    "neighborhoods": [
+      "Scott Lake",
+      "Andover",
+      "Parkland Pines",
+      "Ives Estates"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 188,
+    "response_mins": 24
+  },
+  {
+    "city": "Miramar",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "miramar-fl",
+    "zip": "33023",
+    "zips_list": [
+      "33023",
+      "33025",
+      "33027",
+      "33029"
+    ],
+    "area_code": "954",
+    "neighborhoods": [
+      "Monarch Lakes",
+      "Riviera Isles",
+      "Sunset Lakes",
+      "Vizcaya"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 186,
+    "response_mins": 24
+  },
+  {
+    "city": "Naples",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "naples-fl",
+    "zip": "34101",
+    "zips_list": [
+      "34101",
+      "34102",
+      "34103",
+      "34104"
+    ],
+    "area_code": "239",
+    "neighborhoods": [
+      "Old Naples",
+      "Pelican Bay",
+      "Lely",
+      "Grey Oaks"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 195,
+    "response_mins": 25
+  },
+  {
+    "city": "Orlando",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "orlando-fl",
+    "zip": "32801",
+    "zips_list": [
+      "32801",
+      "32803",
+      "32808",
+      "32811"
+    ],
+    "area_code": "407",
+    "neighborhoods": [
+      "Parramore",
+      "Thornton Park",
+      "College Park",
+      "Lake Nona"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 184,
+    "response_mins": 23
+  },
+  {
+    "city": "Palm Bay",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "palm-bay-fl",
+    "zip": "32905",
+    "zips_list": [
+      "32905",
+      "32907",
+      "32908",
+      "32909"
+    ],
+    "area_code": "321",
+    "neighborhoods": [
+      "NE Palm Bay",
+      "SE Palm Bay",
+      "Port Malabar",
+      "Bayside Lakes"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 178,
+    "response_mins": 28
+  },
+  {
+    "city": "Palm Beach Gardens",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "palm-beach-gardens-fl",
+    "zip": "33410",
+    "zips_list": [
+      "33410",
+      "33412",
+      "33418",
+      "33420"
+    ],
+    "area_code": "561",
+    "neighborhoods": [
+      "BallenIsles",
+      "Mirasol",
+      "PGA National",
+      "Briger"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 192,
+    "response_mins": 23
+  },
+  {
+    "city": "Pembroke Pines",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "pembroke-pines-fl",
+    "zip": "33024",
+    "zips_list": [
+      "33024",
+      "33025",
+      "33026",
+      "33027"
+    ],
+    "area_code": "954",
+    "neighborhoods": [
+      "Chapel Trail",
+      "Silver Lakes",
+      "Pasadena Lakes",
+      "Walnut Creek"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 186,
+    "response_mins": 24
+  },
+  {
+    "city": "Pensacola",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "pensacola-fl",
+    "zip": "32501",
+    "zips_list": [
+      "32501",
+      "32503",
+      "32504",
+      "32505"
+    ],
+    "area_code": "850",
+    "neighborhoods": [
+      "East Hill",
+      "Cordova Park",
+      "Brent",
+      "Brownsville"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 178,
+    "response_mins": 27
+  },
+  {
+    "city": "Plantation",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "plantation-fl",
+    "zip": "33317",
+    "zips_list": [
+      "33317",
+      "33318",
+      "33322",
+      "33324"
+    ],
+    "area_code": "954",
+    "neighborhoods": [
+      "Central Park",
+      "Jacaranda",
+      "Seminole",
+      "Sunrise"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 184,
+    "response_mins": 24
+  },
+  {
+    "city": "Pompano Beach",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "pompano-beach-fl",
+    "zip": "33060",
+    "zips_list": [
+      "33060",
+      "33062",
+      "33063",
+      "33064"
+    ],
+    "area_code": "954",
+    "neighborhoods": [
+      "Cresthaven",
+      "Collier Manor",
+      "Crystal Lakes",
+      "Lighthouse Point"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 183,
+    "response_mins": 25
+  },
+  {
+    "city": "Port St. Lucie",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "port-st-lucie-fl",
+    "zip": "34952",
+    "zips_list": [
+      "34952",
+      "34953",
+      "34986",
+      "34987"
+    ],
+    "area_code": "772",
+    "neighborhoods": [
+      "Tradition",
+      "Torino",
+      "Gatlin",
+      "Tesoro"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 180,
+    "response_mins": 27
+  },
+  {
+    "city": "Sarasota",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "sarasota-fl",
+    "zip": "34230",
+    "zips_list": [
+      "34230",
+      "34231",
+      "34232",
+      "34237"
+    ],
+    "area_code": "941",
+    "neighborhoods": [
+      "Siesta Key",
+      "Downtown",
+      "Laurel Park",
+      "Osprey"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 190,
+    "response_mins": 25
+  },
+  {
+    "city": "Spring Hill",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "spring-hill-fl",
+    "zip": "34606",
+    "zips_list": [
+      "34606",
+      "34607",
+      "34608",
+      "34609"
+    ],
+    "area_code": "352",
+    "neighborhoods": [
+      "Timber Pines",
+      "Mariner",
+      "Silverthorn",
+      "The Oaks"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 178,
+    "response_mins": 28
+  },
+  {
+    "city": "St. Petersburg",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "st-petersburg-fl",
+    "zip": "33701",
+    "zips_list": [
+      "33701",
+      "33704",
+      "33710",
+      "33711"
+    ],
+    "area_code": "727",
+    "neighborhoods": [
+      "Historic Uptown",
+      "Old Northeast",
+      "Kenwood",
+      "Gulfport"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 184,
+    "response_mins": 24
+  },
+  {
+    "city": "Sunrise",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "sunrise-fl",
+    "zip": "33322",
+    "zips_list": [
+      "33322",
+      "33325",
+      "33326",
+      "33351"
+    ],
+    "area_code": "954",
+    "neighborhoods": [
+      "Sunrise Golf Village",
+      "Springtree",
+      "Welleby",
+      "Sawgrass"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 183,
+    "response_mins": 24
+  },
+  {
+    "city": "Tallahassee",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "tallahassee-fl",
+    "zip": "32301",
+    "zips_list": [
+      "32301",
+      "32303",
+      "32304",
+      "32308"
+    ],
+    "area_code": "850",
+    "neighborhoods": [
+      "Midtown",
+      "Frenchtown",
+      "Lafayette Park",
+      "Killearn Estates"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 179,
+    "response_mins": 26
+  },
+  {
+    "city": "Tampa",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "tampa-fl",
+    "zip": "33602",
+    "zips_list": [
+      "33602",
+      "33605",
+      "33610",
+      "33612"
+    ],
+    "area_code": "813",
+    "neighborhoods": [
+      "Ybor City",
+      "Hyde Park",
+      "Seminole Heights",
+      "New Tampa"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 184,
+    "response_mins": 23
+  },
+  {
+    "city": "West Palm Beach",
+    "state": "Florida",
+    "state_code": "FL",
+    "slug": "west-palm-beach-fl",
+    "zip": "33401",
+    "zips_list": [
+      "33401",
+      "33404",
+      "33405",
+      "33406"
+    ],
+    "area_code": "561",
+    "neighborhoods": [
+      "Northboro",
+      "Flamingo Park",
+      "Grandview Heights",
+      "SoSo"
+    ],
+    "climate_risk": "High — hurricanes, tropical storms, flooding, lightning",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — hurricane winds, UV damage, storm debris",
+    "avg_cost": 190,
+    "response_mins": 24
+  },
+  {
+    "city": "Alliance",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "alliance-oh",
+    "zip": "44601",
+    "zips_list": [
+      "44601",
+      "44601",
+      "44620",
+      "44632"
+    ],
+    "area_code": "330",
+    "neighborhoods": [
+      "Mabel Park",
+      "Rockhill",
+      "Glamorgan",
+      "Alton"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 152,
+    "response_mins": 28
+  },
+  {
+    "city": "Barberton",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "barberton-oh",
+    "zip": "44203",
+    "zips_list": [
+      "44203",
+      "44312",
+      "44319",
+      "44224"
+    ],
+    "area_code": "330",
+    "neighborhoods": [
+      "Snyder Park",
+      "Orchard Park",
+      "Summit Mall",
+      "Northgate"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 150,
+    "response_mins": 27
+  },
+  {
+    "city": "Canton",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "canton-oh",
+    "zip": "44701",
+    "zips_list": [
+      "44701",
+      "44702",
+      "44703",
+      "44704"
+    ],
+    "area_code": "330",
+    "neighborhoods": [
+      "Ridgewood",
+      "Edgewood",
+      "Belden Village",
+      "Nimishillen"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 153,
+    "response_mins": 26
+  },
+  {
+    "city": "Cincinnati",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "cincinnati-oh",
+    "zip": "45202",
+    "zips_list": [
+      "45202",
+      "45206",
+      "45211",
+      "45212"
+    ],
+    "area_code": "513",
+    "neighborhoods": [
+      "Over-the-Rhine",
+      "Hyde Park",
+      "Oakley",
+      "Clifton"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 161,
+    "response_mins": 23
+  },
+  {
+    "city": "Cleveland",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "cleveland-oh",
+    "zip": "44101",
+    "zips_list": [
+      "44101",
+      "44102",
+      "44103",
+      "44104"
+    ],
+    "area_code": "216",
+    "neighborhoods": [
+      "Tremont",
+      "Ohio City",
+      "Lakewood",
+      "University Circle"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 160,
+    "response_mins": 24
+  },
+  {
+    "city": "Columbus",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "columbus-oh",
+    "zip": "43215",
+    "zips_list": [
+      "43215",
+      "43201",
+      "43203",
+      "43206"
+    ],
+    "area_code": "614",
+    "neighborhoods": [
+      "Short North",
+      "German Village",
+      "Clintonville",
+      "Bexley"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 163,
+    "response_mins": 22
+  },
+  {
+    "city": "Cuyahoga Falls",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "cuyahoga-falls-oh",
+    "zip": "44221",
+    "zips_list": [
+      "44221",
+      "44222",
+      "44224",
+      "44260"
+    ],
+    "area_code": "330",
+    "neighborhoods": [
+      "Preston",
+      "Waterloo",
+      "Silver Lake",
+      "Northampton"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 153,
+    "response_mins": 26
+  },
+  {
+    "city": "Dublin",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "dublin-oh",
+    "zip": "43016",
+    "zips_list": [
+      "43016",
+      "43017",
+      "43065",
+      "43085"
+    ],
+    "area_code": "614",
+    "neighborhoods": [
+      "Historic Dublin",
+      "Muirfield",
+      "Emerald Pkwy",
+      "Indian Run"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 165,
+    "response_mins": 21
+  },
+  {
+    "city": "Elyria",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "elyria-oh",
+    "zip": "44035",
+    "zips_list": [
+      "44035",
+      "44036",
+      "44055",
+      "44140"
+    ],
+    "area_code": "440",
+    "neighborhoods": [
+      "Southwest",
+      "Northgate",
+      "Midview",
+      "Brownhelm"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 150,
+    "response_mins": 27
+  },
+  {
+    "city": "Euclid",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "euclid-oh",
+    "zip": "44117",
+    "zips_list": [
+      "44117",
+      "44119",
+      "44123",
+      "44132"
+    ],
+    "area_code": "216",
+    "neighborhoods": [
+      "Lakeshore",
+      "South Euclid",
+      "Lyndhurst",
+      "Richmond Heights"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 152,
+    "response_mins": 26
+  },
+  {
+    "city": "Fairborn",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "fairborn-oh",
+    "zip": "45324",
+    "zips_list": [
+      "45324",
+      "45325",
+      "45431",
+      "45433"
+    ],
+    "area_code": "937",
+    "neighborhoods": [
+      "Central",
+      "Xenia Towne Square",
+      "Prairie Township",
+      "Bath"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 150,
+    "response_mins": 26
+  },
+  {
+    "city": "Findlay",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "findlay-oh",
+    "zip": "45839",
+    "zips_list": [
+      "45839",
+      "45840",
+      "45841",
+      "45843"
+    ],
+    "area_code": "419",
+    "neighborhoods": [
+      "Dorney",
+      "Highland Park",
+      "College Manor",
+      "Fox Run"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 152,
+    "response_mins": 26
+  },
+  {
+    "city": "Hamilton",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "hamilton-oh",
+    "zip": "45011",
+    "zips_list": [
+      "45011",
+      "45012",
+      "45013",
+      "45015"
+    ],
+    "area_code": "513",
+    "neighborhoods": [
+      "Lindenwald",
+      "Fairfield",
+      "Middletown",
+      "Ross"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 150,
+    "response_mins": 28
+  },
+  {
+    "city": "Kent",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "kent-oh",
+    "zip": "44240",
+    "zips_list": [
+      "44240",
+      "44241",
+      "44242",
+      "44243"
+    ],
+    "area_code": "330",
+    "neighborhoods": [
+      "Franklin",
+      "University",
+      "Streetsboro",
+      "Brimfield"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 152,
+    "response_mins": 27
+  },
+  {
+    "city": "Lancaster",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "lancaster-oh",
+    "zip": "43130",
+    "zips_list": [
+      "43130",
+      "43138",
+      "43146",
+      "43160"
+    ],
+    "area_code": "740",
+    "neighborhoods": [
+      "Pleasants",
+      "Millersport",
+      "Greenfield",
+      "Logan"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 150,
+    "response_mins": 28
+  },
+  {
+    "city": "Lima",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "lima-oh",
+    "zip": "45801",
+    "zips_list": [
+      "45801",
+      "45802",
+      "45804",
+      "45805"
+    ],
+    "area_code": "419",
+    "neighborhoods": [
+      "Southgate",
+      "Westgate",
+      "Eastgate",
+      "Northgate"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 149,
+    "response_mins": 27
+  },
+  {
+    "city": "Lorain",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "lorain-oh",
+    "zip": "44052",
+    "zips_list": [
+      "44052",
+      "44053",
+      "44054",
+      "44055"
+    ],
+    "area_code": "440",
+    "neighborhoods": [
+      "Towertown",
+      "North Ridgeville",
+      "Sheffield Lake",
+      "Sheffield Village"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 150,
+    "response_mins": 27
+  },
+  {
+    "city": "Mansfield",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "mansfield-oh",
+    "zip": "44901",
+    "zips_list": [
+      "44901",
+      "44902",
+      "44903",
+      "44904"
+    ],
+    "area_code": "419",
+    "neighborhoods": [
+      "Springmill",
+      "Ontario",
+      "Mifflin",
+      "Madison"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 149,
+    "response_mins": 28
+  },
+  {
+    "city": "Mentor",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "mentor-oh",
+    "zip": "44060",
+    "zips_list": [
+      "44060",
+      "44061",
+      "44094",
+      "44095"
+    ],
+    "area_code": "440",
+    "neighborhoods": [
+      "Mentor Headlands",
+      "Willoughby",
+      "Kirtland",
+      "Wickliffe"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 153,
+    "response_mins": 26
+  },
+  {
+    "city": "Middletown",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "middletown-oh",
+    "zip": "45042",
+    "zips_list": [
+      "45042",
+      "45044",
+      "45042",
+      "45005"
+    ],
+    "area_code": "513",
+    "neighborhoods": [
+      "Milford",
+      "Monroe",
+      "Franklin",
+      "West Carrollton"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 150,
+    "response_mins": 27
+  },
+  {
+    "city": "Newark",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "newark-oh",
+    "zip": "43055",
+    "zips_list": [
+      "43055",
+      "43056",
+      "43057",
+      "43058"
+    ],
+    "area_code": "740",
+    "neighborhoods": [
+      "Cherry Valley",
+      "Granville",
+      "Hebron",
+      "Pataskala"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 150,
+    "response_mins": 28
+  },
+  {
+    "city": "Parma",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "parma-oh",
+    "zip": "44129",
+    "zips_list": [
+      "44129",
+      "44130",
+      "44134",
+      "44131"
+    ],
+    "area_code": "440",
+    "neighborhoods": [
+      "Parma Heights",
+      "Seven Hills",
+      "Middleburg Heights",
+      "Broadview Heights"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 153,
+    "response_mins": 25
+  },
+  {
+    "city": "Springfield",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "springfield-oh",
+    "zip": "45501",
+    "zips_list": [
+      "45501",
+      "45502",
+      "45503",
+      "45504"
+    ],
+    "area_code": "937",
+    "neighborhoods": [
+      "Northridge",
+      "Kenton Ridge",
+      "South Vienna",
+      "Enon"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 150,
+    "response_mins": 27
+  },
+  {
+    "city": "Strongsville",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "strongsville-oh",
+    "zip": "44136",
+    "zips_list": [
+      "44136",
+      "44149",
+      "44133",
+      "44137"
+    ],
+    "area_code": "440",
+    "neighborhoods": [
+      "Albion",
+      "Columbia Station",
+      "Royalton",
+      "North Royalton"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 153,
+    "response_mins": 25
+  },
+  {
+    "city": "Warren",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "warren-oh",
+    "zip": "44481",
+    "zips_list": [
+      "44481",
+      "44482",
+      "44483",
+      "44484"
+    ],
+    "area_code": "330",
+    "neighborhoods": [
+      "Howland",
+      "Hubbard",
+      "Cortland",
+      "Girard"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 149,
+    "response_mins": 28
+  },
+  {
+    "city": "Youngstown",
+    "state": "Ohio",
+    "state_code": "OH",
+    "slug": "youngstown-oh",
+    "zip": "44501",
+    "zips_list": [
+      "44501",
+      "44502",
+      "44503",
+      "44504"
+    ],
+    "area_code": "330",
+    "neighborhoods": [
+      "Boardman",
+      "Poland",
+      "Canfield",
+      "Struthers"
+    ],
+    "climate_risk": "Moderate — lake-effect snow, spring flooding, ice storms",
+    "pest_risk": "Moderate — mice, carpenter ants, termites, stink bugs",
+    "roof_risk": "Moderate — ice damming, wind shear, freeze-thaw cycles",
+    "avg_cost": 149,
+    "response_mins": 27
+  },
+  {
+    "city": "Albany",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "albany-ga",
+    "zip": "31701",
+    "zips_list": [
+      "31701",
+      "31705",
+      "31707",
+      "31708"
+    ],
+    "area_code": "229",
+    "neighborhoods": [
+      "Radium Springs",
+      "Sylvester",
+      "Leesburg",
+      "Camilla"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 152,
+    "response_mins": 27
+  },
+  {
+    "city": "Alpharetta",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "alpharetta-ga",
+    "zip": "30004",
+    "zips_list": [
+      "30004",
+      "30005",
+      "30009",
+      "30022"
+    ],
+    "area_code": "770",
+    "neighborhoods": [
+      "Downtown",
+      "Windward",
+      "Webb Bridge",
+      "Mid-City"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 172,
+    "response_mins": 20
+  },
+  {
+    "city": "Athens",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "athens-ga",
+    "zip": "30601",
+    "zips_list": [
+      "30601",
+      "30602",
+      "30605",
+      "30606"
+    ],
+    "area_code": "706",
+    "neighborhoods": [
+      "Five Points",
+      "Normaltown",
+      "Boulevard",
+      "Eastside"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 163,
+    "response_mins": 24
+  },
+  {
+    "city": "Atlanta",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "atlanta-ga",
+    "zip": "30301",
+    "zips_list": [
+      "30305",
+      "30306",
+      "30309",
+      "30310"
+    ],
+    "area_code": "404",
+    "neighborhoods": [
+      "Buckhead",
+      "Virginia-Highland",
+      "Little Five Points",
+      "Midtown"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 173,
+    "response_mins": 22
+  },
+  {
+    "city": "Brunswick",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "brunswick-ga",
+    "zip": "31520",
+    "zips_list": [
+      "31520",
+      "31521",
+      "31522",
+      "31525"
+    ],
+    "area_code": "912",
+    "neighborhoods": [
+      "Glynn Place",
+      "Sterling",
+      "Baisden",
+      "St. Simons"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 155,
+    "response_mins": 27
+  },
+  {
+    "city": "Columbus",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "columbus-ga",
+    "zip": "31901",
+    "zips_list": [
+      "31901",
+      "31904",
+      "31906",
+      "31907"
+    ],
+    "area_code": "706",
+    "neighborhoods": [
+      "Wynnton",
+      "Bibb City",
+      "Harris County",
+      "Phenix City"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 155,
+    "response_mins": 26
+  },
+  {
+    "city": "Dalton",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "dalton-ga",
+    "zip": "30720",
+    "zips_list": [
+      "30720",
+      "30721",
+      "30722",
+      "30733"
+    ],
+    "area_code": "706",
+    "neighborhoods": [
+      "Westwood",
+      "Coahulla Creek",
+      "Cleveland",
+      "Spring Place"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 152,
+    "response_mins": 27
+  },
+  {
+    "city": "Douglasville",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "douglasville-ga",
+    "zip": "30134",
+    "zips_list": [
+      "30134",
+      "30135",
+      "30133",
+      "30187"
+    ],
+    "area_code": "770",
+    "neighborhoods": [
+      "Chapel Hill",
+      "Arbor Place",
+      "Fairplay",
+      "Villa Rica"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 162,
+    "response_mins": 24
+  },
+  {
+    "city": "Gainesville",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "gainesville-ga",
+    "zip": "30501",
+    "zips_list": [
+      "30501",
+      "30503",
+      "30504",
+      "30506"
+    ],
+    "area_code": "770",
+    "neighborhoods": [
+      "New Holland",
+      "Limestone",
+      "Gainesville Corridor",
+      "Lake Lanier"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 158,
+    "response_mins": 24
+  },
+  {
+    "city": "Johns Creek",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "johns-creek-ga",
+    "zip": "30022",
+    "zips_list": [
+      "30022",
+      "30024",
+      "30097",
+      "30005"
+    ],
+    "area_code": "770",
+    "neighborhoods": [
+      "Medlock Bridge",
+      "Abbotts Bridge",
+      "State Bridge",
+      "Jones Bridge"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 170,
+    "response_mins": 21
+  },
+  {
+    "city": "Kennesaw",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "kennesaw-ga",
+    "zip": "30144",
+    "zips_list": [
+      "30144",
+      "30152",
+      "30156",
+      "30188"
+    ],
+    "area_code": "678",
+    "neighborhoods": [
+      "Downtown",
+      "Legacy Park",
+      "Stilesboro",
+      "Mars Hill"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 165,
+    "response_mins": 22
+  },
+  {
+    "city": "LaGrange",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "lagrange-ga",
+    "zip": "30240",
+    "zips_list": [
+      "30240",
+      "30241",
+      "30242",
+      "30247"
+    ],
+    "area_code": "706",
+    "neighborhoods": [
+      "Hillside",
+      "Dunson",
+      "Mountville",
+      "West Point"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 152,
+    "response_mins": 27
+  },
+  {
+    "city": "Lawrenceville",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "lawrenceville-ga",
+    "zip": "30043",
+    "zips_list": [
+      "30043",
+      "30044",
+      "30045",
+      "30046"
+    ],
+    "area_code": "770",
+    "neighborhoods": [
+      "Downtown",
+      "Sugarloaf",
+      "Tribble Mill",
+      "Bethesda"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 164,
+    "response_mins": 23
+  },
+  {
+    "city": "Marietta",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "marietta-ga",
+    "zip": "30060",
+    "zips_list": [
+      "30060",
+      "30062",
+      "30064",
+      "30066"
+    ],
+    "area_code": "770",
+    "neighborhoods": [
+      "Downtown Marietta",
+      "Smyrna",
+      "Vinings",
+      "East Cobb"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 168,
+    "response_mins": 22
+  },
+  {
+    "city": "Peachtree City",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "peachtree-city-ga",
+    "zip": "30269",
+    "zips_list": [
+      "30269",
+      "30213",
+      "30214",
+      "30228"
+    ],
+    "area_code": "770",
+    "neighborhoods": [
+      "Braelinn",
+      "Kedron",
+      "Wilksmoor",
+      "Planterra"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 169,
+    "response_mins": 23
+  },
+  {
+    "city": "Rome",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "rome-ga",
+    "zip": "30161",
+    "zips_list": [
+      "30161",
+      "30162",
+      "30163",
+      "30165"
+    ],
+    "area_code": "706",
+    "neighborhoods": [
+      "Greater Rome",
+      "West Rome",
+      "South Rome",
+      "North Rome"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 152,
+    "response_mins": 27
+  },
+  {
+    "city": "Roswell",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "roswell-ga",
+    "zip": "30075",
+    "zips_list": [
+      "30075",
+      "30076",
+      "30077",
+      "30022"
+    ],
+    "area_code": "770",
+    "neighborhoods": [
+      "Canton Street",
+      "Crabapple",
+      "Holcomb Bridge",
+      "Barfield"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 170,
+    "response_mins": 21
+  },
+  {
+    "city": "Sandy Springs",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "sandy-springs-ga",
+    "zip": "30328",
+    "zips_list": [
+      "30328",
+      "30338",
+      "30339",
+      "30342"
+    ],
+    "area_code": "404",
+    "neighborhoods": [
+      "Heritage Sandy Springs",
+      "Perimeter Center",
+      "Mount Vernon",
+      "Dunwoody"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 172,
+    "response_mins": 21
+  },
+  {
+    "city": "Savannah",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "savannah-ga",
+    "zip": "31401",
+    "zips_list": [
+      "31401",
+      "31404",
+      "31406",
+      "31408"
+    ],
+    "area_code": "912",
+    "neighborhoods": [
+      "Historic District",
+      "Ardsley Park",
+      "Habersham",
+      "Southside"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 165,
+    "response_mins": 25
+  },
+  {
+    "city": "Smyrna",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "smyrna-ga",
+    "zip": "30080",
+    "zips_list": [
+      "30080",
+      "30082",
+      "30339",
+      "30106"
+    ],
+    "area_code": "770",
+    "neighborhoods": [
+      "Village Green",
+      "Belmont Hills",
+      "Oakdale",
+      "Cooper Lake"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 166,
+    "response_mins": 22
+  },
+  {
+    "city": "Stockbridge",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "stockbridge-ga",
+    "zip": "30281",
+    "zips_list": [
+      "30281",
+      "30236",
+      "30252",
+      "30253"
+    ],
+    "area_code": "770",
+    "neighborhoods": [
+      "Eagle's Landing",
+      "Flippen",
+      "Dutchtown",
+      "Hampton"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 160,
+    "response_mins": 25
+  },
+  {
+    "city": "Valdosta",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "valdosta-ga",
+    "zip": "31601",
+    "zips_list": [
+      "31601",
+      "31602",
+      "31605",
+      "31606"
+    ],
+    "area_code": "229",
+    "neighborhoods": [
+      "Drexel Park",
+      "Country Club",
+      "Lake Park",
+      "Hahira"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 152,
+    "response_mins": 27
+  },
+  {
+    "city": "Warner Robins",
+    "state": "Georgia",
+    "state_code": "GA",
+    "slug": "warner-robins-ga",
+    "zip": "31088",
+    "zips_list": [
+      "31088",
+      "31093",
+      "31095",
+      "31098"
+    ],
+    "area_code": "478",
+    "neighborhoods": [
+      "Kathleen",
+      "Centerville",
+      "Perry",
+      "Bonaire"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, fire ants, cockroaches, mosquitoes",
+    "roof_risk": "High — storm damage, humidity rot, wind uplift",
+    "avg_cost": 155,
+    "response_mins": 26
+  },
+  {
+    "city": "Apex",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "apex-nc",
+    "zip": "27502",
+    "zips_list": [
+      "27502",
+      "27523",
+      "27539",
+      "27577"
+    ],
+    "area_code": "919",
+    "neighborhoods": [
+      "New Hill",
+      "Friendship",
+      "Olive Chapel",
+      "Jordan Lake"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 168,
+    "response_mins": 21
+  },
+  {
+    "city": "Asheville",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "asheville-nc",
+    "zip": "28801",
+    "zips_list": [
+      "28801",
+      "28803",
+      "28804",
+      "28805"
+    ],
+    "area_code": "828",
+    "neighborhoods": [
+      "West Asheville",
+      "South Slope",
+      "River Arts",
+      "Kenilworth"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 165,
+    "response_mins": 24
+  },
+  {
+    "city": "Burlington",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "burlington-nc",
+    "zip": "27215",
+    "zips_list": [
+      "27215",
+      "27216",
+      "27217",
+      "27244"
+    ],
+    "area_code": "336",
+    "neighborhoods": [
+      "Graham",
+      "Elon",
+      "Mebane",
+      "Haw River"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 158,
+    "response_mins": 25
+  },
+  {
+    "city": "Cary",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "cary-nc",
+    "zip": "27511",
+    "zips_list": [
+      "27511",
+      "27513",
+      "27518",
+      "27519"
+    ],
+    "area_code": "919",
+    "neighborhoods": [
+      "Preston",
+      "Kildaire Farm",
+      "Regency",
+      "Old Apex Road"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 170,
+    "response_mins": 21
+  },
+  {
+    "city": "Chapel Hill",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "chapel-hill-nc",
+    "zip": "27514",
+    "zips_list": [
+      "27514",
+      "27516",
+      "27517",
+      "27599"
+    ],
+    "area_code": "919",
+    "neighborhoods": [
+      "Carrboro",
+      "Ephesus",
+      "Meadowmont",
+      "Governors Village"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 168,
+    "response_mins": 22
+  },
+  {
+    "city": "Charlotte",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "charlotte-nc",
+    "zip": "28202",
+    "zips_list": [
+      "28202",
+      "28203",
+      "28204",
+      "28205"
+    ],
+    "area_code": "704",
+    "neighborhoods": [
+      "South End",
+      "NoDa",
+      "Dilworth",
+      "Elizabeth"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 170,
+    "response_mins": 21
+  },
+  {
+    "city": "Concord",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "concord-nc",
+    "zip": "28025",
+    "zips_list": [
+      "28025",
+      "28026",
+      "28027",
+      "28078"
+    ],
+    "area_code": "704",
+    "neighborhoods": [
+      "Cabarrus",
+      "Midland",
+      "Harrisburg",
+      "Kannapolis"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 162,
+    "response_mins": 23
+  },
+  {
+    "city": "Durham",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "durham-nc",
+    "zip": "27701",
+    "zips_list": [
+      "27701",
+      "27703",
+      "27705",
+      "27707"
+    ],
+    "area_code": "919",
+    "neighborhoods": [
+      "Old North Durham",
+      "Watts-Hillandale",
+      "Morehead Hill",
+      "Burch Ave"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 167,
+    "response_mins": 22
+  },
+  {
+    "city": "Gastonia",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "gastonia-nc",
+    "zip": "28052",
+    "zips_list": [
+      "28052",
+      "28053",
+      "28054",
+      "28056"
+    ],
+    "area_code": "704",
+    "neighborhoods": [
+      "Lowell",
+      "Bessemer City",
+      "Belmont",
+      "Cramerton"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 160,
+    "response_mins": 24
+  },
+  {
+    "city": "Greensboro",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "greensboro-nc",
+    "zip": "27401",
+    "zips_list": [
+      "27401",
+      "27403",
+      "27405",
+      "27407"
+    ],
+    "area_code": "336",
+    "neighborhoods": [
+      "Fisher Park",
+      "Aycock",
+      "Hamilton Lakes",
+      "Lindley Park"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 163,
+    "response_mins": 23
+  },
+  {
+    "city": "Greenville",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "greenville-nc",
+    "zip": "27858",
+    "zips_list": [
+      "27858",
+      "27834",
+      "27835",
+      "27836"
+    ],
+    "area_code": "252",
+    "neighborhoods": [
+      "Uptown",
+      "Rivershore",
+      "Lynndale",
+      "Clearfield"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 158,
+    "response_mins": 26
+  },
+  {
+    "city": "Hickory",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "hickory-nc",
+    "zip": "28601",
+    "zips_list": [
+      "28601",
+      "28602",
+      "28603",
+      "28602"
+    ],
+    "area_code": "828",
+    "neighborhoods": [
+      "Viewmont",
+      "Southwest",
+      "Conover",
+      "Claremont"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 157,
+    "response_mins": 25
+  },
+  {
+    "city": "High Point",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "high-point-nc",
+    "zip": "27260",
+    "zips_list": [
+      "27260",
+      "27262",
+      "27263",
+      "27265"
+    ],
+    "area_code": "336",
+    "neighborhoods": [
+      "Emerywood",
+      "Millis",
+      "Kernersville",
+      "Oak Hollow"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 160,
+    "response_mins": 24
+  },
+  {
+    "city": "Huntersville",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "huntersville-nc",
+    "zip": "28070",
+    "zips_list": [
+      "28070",
+      "28078",
+      "28036",
+      "28031"
+    ],
+    "area_code": "704",
+    "neighborhoods": [
+      "Birkdale",
+      "Carmel",
+      "Gilead",
+      "Mirror Lake"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 168,
+    "response_mins": 21
+  },
+  {
+    "city": "Jacksonville",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "jacksonville-nc",
+    "zip": "28540",
+    "zips_list": [
+      "28540",
+      "28541",
+      "28542",
+      "28546"
+    ],
+    "area_code": "910",
+    "neighborhoods": [
+      "Northwoods",
+      "Piney Green",
+      "Camp Lejeune",
+      "New River"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 155,
+    "response_mins": 26
+  },
+  {
+    "city": "Kannapolis",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "kannapolis-nc",
+    "zip": "28081",
+    "zips_list": [
+      "28081",
+      "28082",
+      "28083",
+      "28082"
+    ],
+    "area_code": "704",
+    "neighborhoods": [
+      "Downtown Kannapolis",
+      "Lakeside",
+      "Midland",
+      "Meyers"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 158,
+    "response_mins": 24
+  },
+  {
+    "city": "Mooresville",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "mooresville-nc",
+    "zip": "28115",
+    "zips_list": [
+      "28115",
+      "28117",
+      "28031",
+      "28036"
+    ],
+    "area_code": "704",
+    "neighborhoods": [
+      "Langtree",
+      "Lake Shore",
+      "Brawley",
+      "Potts"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 163,
+    "response_mins": 23
+  },
+  {
+    "city": "Raleigh",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "raleigh-nc",
+    "zip": "27601",
+    "zips_list": [
+      "27601",
+      "27603",
+      "27604",
+      "27605"
+    ],
+    "area_code": "919",
+    "neighborhoods": [
+      "Boylan Heights",
+      "Oakwood",
+      "Cameron Village",
+      "Five Points"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 170,
+    "response_mins": 21
+  },
+  {
+    "city": "Rocky Mount",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "rocky-mount-nc",
+    "zip": "27801",
+    "zips_list": [
+      "27801",
+      "27802",
+      "27803",
+      "27804"
+    ],
+    "area_code": "252",
+    "neighborhoods": [
+      "Western Blvd",
+      "Sunset Park",
+      "Englewood",
+      "Toisnot"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 155,
+    "response_mins": 27
+  },
+  {
+    "city": "Wilmington",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "wilmington-nc",
+    "zip": "28401",
+    "zips_list": [
+      "28401",
+      "28403",
+      "28405",
+      "28409"
+    ],
+    "area_code": "910",
+    "neighborhoods": [
+      "Historic District",
+      "Midtown",
+      "Masonboro",
+      "Winter Park"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 163,
+    "response_mins": 25
+  },
+  {
+    "city": "Wilson",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "wilson-nc",
+    "zip": "27893",
+    "zips_list": [
+      "27893",
+      "27894",
+      "27895",
+      "27896"
+    ],
+    "area_code": "252",
+    "neighborhoods": [
+      "Raleigh Road",
+      "Homewood",
+      "Eastern",
+      "Forest Hills"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 155,
+    "response_mins": 27
+  },
+  {
+    "city": "Winston-Salem",
+    "state": "North Carolina",
+    "state_code": "NC",
+    "slug": "winston-salem-nc",
+    "zip": "27101",
+    "zips_list": [
+      "27101",
+      "27103",
+      "27104",
+      "27105"
+    ],
+    "area_code": "336",
+    "neighborhoods": [
+      "West End",
+      "Ardmore",
+      "Old Salem",
+      "Brookstown"
+    ],
+    "climate_risk": "Moderate-High — hurricanes, tornadoes, flooding",
+    "pest_risk": "High — termites, mosquitoes, fire ants, cockroaches",
+    "roof_risk": "High — hurricane winds, hail, humidity, UV",
+    "avg_cost": 162,
+    "response_mins": 23
+  },
+  {
+    "city": "Bartlett",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "slug": "bartlett-tn",
+    "zip": "38002",
+    "zips_list": [
+      "38002",
+      "38016",
+      "38017",
+      "38018"
+    ],
+    "area_code": "901",
+    "neighborhoods": [
+      "Appling",
+      "Davies Plantation",
+      "Ellendale",
+      "Stage Road"
+    ],
+    "climate_risk": "Moderate — tornadoes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, cockroaches, mosquitoes, stink bugs",
+    "roof_risk": "Moderate-High — wind, storm debris, humidity, UV",
+    "avg_cost": 162,
+    "response_mins": 22
+  },
+  {
+    "city": "Brentwood",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "slug": "brentwood-tn",
+    "zip": "37027",
+    "zips_list": [
+      "37027",
+      "37069",
+      "37179",
+      "37221"
+    ],
+    "area_code": "615",
+    "neighborhoods": [
+      "Maryland Farms",
+      "Williamson Place",
+      "Concord Road",
+      "Moores Lane"
+    ],
+    "climate_risk": "Moderate — tornadoes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, cockroaches, mosquitoes, stink bugs",
+    "roof_risk": "Moderate-High — wind, storm debris, humidity, UV",
+    "avg_cost": 175,
+    "response_mins": 20
+  },
+  {
+    "city": "Bristol",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "slug": "bristol-tn",
+    "zip": "37620",
+    "zips_list": [
+      "37620",
+      "37621",
+      "37640",
+      "37643"
+    ],
+    "area_code": "423",
+    "neighborhoods": [
+      "Downtown Bristol",
+      "Holston Valley",
+      "Bluff City",
+      "Piney Flats"
+    ],
+    "climate_risk": "Moderate — tornadoes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, cockroaches, mosquitoes, stink bugs",
+    "roof_risk": "Moderate-High — wind, storm debris, humidity, UV",
+    "avg_cost": 155,
+    "response_mins": 27
+  },
+  {
+    "city": "Clarksville",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "slug": "clarksville-tn",
+    "zip": "37040",
+    "zips_list": [
+      "37040",
+      "37041",
+      "37042",
+      "37043"
+    ],
+    "area_code": "931",
+    "neighborhoods": [
+      "Rossview",
+      "Saint Bethlehem",
+      "Sango",
+      "Cunningham"
+    ],
+    "climate_risk": "Moderate — tornadoes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, cockroaches, mosquitoes, stink bugs",
+    "roof_risk": "Moderate-High — wind, storm debris, humidity, UV",
+    "avg_cost": 158,
+    "response_mins": 25
+  },
+  {
+    "city": "Cleveland",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "slug": "cleveland-tn",
+    "zip": "37311",
+    "zips_list": [
+      "37311",
+      "37312",
+      "37323",
+      "37325"
+    ],
+    "area_code": "423",
+    "neighborhoods": [
+      "Inman",
+      "Georgetown",
+      "Waterville",
+      "Hopewell"
+    ],
+    "climate_risk": "Moderate — tornadoes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, cockroaches, mosquitoes, stink bugs",
+    "roof_risk": "Moderate-High — wind, storm debris, humidity, UV",
+    "avg_cost": 155,
+    "response_mins": 26
+  },
+  {
+    "city": "Columbia",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "slug": "columbia-tn",
+    "zip": "38401",
+    "zips_list": [
+      "38401",
+      "38402",
+      "38451",
+      "38452"
+    ],
+    "area_code": "931",
+    "neighborhoods": [
+      "Lewisburg",
+      "Lawrenceburg",
+      "Hampshire",
+      "Spring Hill"
+    ],
+    "climate_risk": "Moderate — tornadoes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, cockroaches, mosquitoes, stink bugs",
+    "roof_risk": "Moderate-High — wind, storm debris, humidity, UV",
+    "avg_cost": 157,
+    "response_mins": 25
+  },
+  {
+    "city": "Franklin",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "slug": "franklin-tn",
+    "zip": "37064",
+    "zips_list": [
+      "37064",
+      "37065",
+      "37067",
+      "37068"
+    ],
+    "area_code": "615",
+    "neighborhoods": [
+      "Cool Springs",
+      "Downtown",
+      "Fieldstone Farms",
+      "Westhaven"
+    ],
+    "climate_risk": "Moderate — tornadoes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, cockroaches, mosquitoes, stink bugs",
+    "roof_risk": "Moderate-High — wind, storm debris, humidity, UV",
+    "avg_cost": 173,
+    "response_mins": 20
+  },
+  {
+    "city": "Germantown",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "slug": "germantown-tn",
+    "zip": "38138",
+    "zips_list": [
+      "38138",
+      "38139",
+      "38183",
+      "38018"
+    ],
+    "area_code": "901",
+    "neighborhoods": [
+      "Germantown Pkwy",
+      "Forest Hill",
+      "Shelby Farms",
+      "Collierville"
+    ],
+    "climate_risk": "Moderate — tornadoes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, cockroaches, mosquitoes, stink bugs",
+    "roof_risk": "Moderate-High — wind, storm debris, humidity, UV",
+    "avg_cost": 168,
+    "response_mins": 21
+  },
+  {
+    "city": "Hendersonville",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "slug": "hendersonville-tn",
+    "zip": "37075",
+    "zips_list": [
+      "37075",
+      "37076",
+      "37066",
+      "37049"
+    ],
+    "area_code": "615",
+    "neighborhoods": [
+      "Bledsoe Creek",
+      "Country Club",
+      "Drake Creek",
+      "Shackle Island"
+    ],
+    "climate_risk": "Moderate — tornadoes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, cockroaches, mosquitoes, stink bugs",
+    "roof_risk": "Moderate-High — wind, storm debris, humidity, UV",
+    "avg_cost": 162,
+    "response_mins": 22
+  },
+  {
+    "city": "Jackson",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "slug": "jackson-tn",
+    "zip": "38301",
+    "zips_list": [
+      "38301",
+      "38302",
+      "38303",
+      "38305"
+    ],
+    "area_code": "731",
+    "neighborhoods": [
+      "Downtown",
+      "North Jackson",
+      "South Jackson",
+      "West Jackson"
+    ],
+    "climate_risk": "Moderate — tornadoes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, cockroaches, mosquitoes, stink bugs",
+    "roof_risk": "Moderate-High — wind, storm debris, humidity, UV",
+    "avg_cost": 155,
+    "response_mins": 27
+  },
+  {
+    "city": "Johnson City",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "slug": "johnson-city-tn",
+    "zip": "37601",
+    "zips_list": [
+      "37601",
+      "37602",
+      "37604",
+      "37615"
+    ],
+    "area_code": "423",
+    "neighborhoods": [
+      "Boones Creek",
+      "Jonesborough",
+      "Elizabethton",
+      "Unicoi"
+    ],
+    "climate_risk": "Moderate — tornadoes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, cockroaches, mosquitoes, stink bugs",
+    "roof_risk": "Moderate-High — wind, storm debris, humidity, UV",
+    "avg_cost": 157,
+    "response_mins": 25
+  },
+  {
+    "city": "Kingsport",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "slug": "kingsport-tn",
+    "zip": "37660",
+    "zips_list": [
+      "37660",
+      "37662",
+      "37663",
+      "37664"
+    ],
+    "area_code": "423",
+    "neighborhoods": [
+      "Downtown Kingsport",
+      "Bloomingdale",
+      "Colonial Heights",
+      "Fort Henry"
+    ],
+    "climate_risk": "Moderate — tornadoes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, cockroaches, mosquitoes, stink bugs",
+    "roof_risk": "Moderate-High — wind, storm debris, humidity, UV",
+    "avg_cost": 155,
+    "response_mins": 26
+  },
+  {
+    "city": "Knoxville",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "slug": "knoxville-tn",
+    "zip": "37901",
+    "zips_list": [
+      "37901",
+      "37902",
+      "37909",
+      "37912"
+    ],
+    "area_code": "865",
+    "neighborhoods": [
+      "Old City",
+      "Fort Sanders",
+      "Fourth and Gill",
+      "Sequoyah Hills"
+    ],
+    "climate_risk": "Moderate — tornadoes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, cockroaches, mosquitoes, stink bugs",
+    "roof_risk": "Moderate-High — wind, storm debris, humidity, UV",
+    "avg_cost": 162,
+    "response_mins": 23
+  },
+  {
+    "city": "Memphis",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "slug": "memphis-tn",
+    "zip": "38101",
+    "zips_list": [
+      "38103",
+      "38105",
+      "38107",
+      "38111"
+    ],
+    "area_code": "901",
+    "neighborhoods": [
+      "Midtown",
+      "Cooper-Young",
+      "Overton Park",
+      "East Memphis"
+    ],
+    "climate_risk": "Moderate — tornadoes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, cockroaches, mosquitoes, stink bugs",
+    "roof_risk": "Moderate-High — wind, storm debris, humidity, UV",
+    "avg_cost": 163,
+    "response_mins": 22
+  },
+  {
+    "city": "Morristown",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "slug": "morristown-tn",
+    "zip": "37813",
+    "zips_list": [
+      "37813",
+      "37814",
+      "37815",
+      "37816"
+    ],
+    "area_code": "423",
+    "neighborhoods": [
+      "Lakeway",
+      "Bridgeport",
+      "Bean Station",
+      "White Pine"
+    ],
+    "climate_risk": "Moderate — tornadoes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, cockroaches, mosquitoes, stink bugs",
+    "roof_risk": "Moderate-High — wind, storm debris, humidity, UV",
+    "avg_cost": 153,
+    "response_mins": 27
+  },
+  {
+    "city": "Mount Juliet",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "slug": "mount-juliet-tn",
+    "zip": "37122",
+    "zips_list": [
+      "37122",
+      "37138",
+      "37090",
+      "37086"
+    ],
+    "area_code": "615",
+    "neighborhoods": [
+      "Providence",
+      "Nonaville",
+      "Stoner Creek",
+      "Charlie Daniels"
+    ],
+    "climate_risk": "Moderate — tornadoes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, cockroaches, mosquitoes, stink bugs",
+    "roof_risk": "Moderate-High — wind, storm debris, humidity, UV",
+    "avg_cost": 163,
+    "response_mins": 22
+  },
+  {
+    "city": "Murfreesboro",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "slug": "murfreesboro-tn",
+    "zip": "37129",
+    "zips_list": [
+      "37129",
+      "37130",
+      "37127",
+      "37128"
+    ],
+    "area_code": "615",
+    "neighborhoods": [
+      "Medical Center",
+      "University Street",
+      "Downtown",
+      "Blackman"
+    ],
+    "climate_risk": "Moderate — tornadoes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, cockroaches, mosquitoes, stink bugs",
+    "roof_risk": "Moderate-High — wind, storm debris, humidity, UV",
+    "avg_cost": 163,
+    "response_mins": 22
+  },
+  {
+    "city": "Nashville",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "slug": "nashville-tn",
+    "zip": "37201",
+    "zips_list": [
+      "37201",
+      "37203",
+      "37205",
+      "37206"
+    ],
+    "area_code": "615",
+    "neighborhoods": [
+      "The Gulch",
+      "12South",
+      "East Nashville",
+      "Germantown"
+    ],
+    "climate_risk": "Moderate — tornadoes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, cockroaches, mosquitoes, stink bugs",
+    "roof_risk": "Moderate-High — wind, storm debris, humidity, UV",
+    "avg_cost": 168,
+    "response_mins": 21
+  },
+  {
+    "city": "Oak Ridge",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "slug": "oak-ridge-tn",
+    "zip": "37830",
+    "zips_list": [
+      "37830",
+      "37831",
+      "37840",
+      "37849"
+    ],
+    "area_code": "865",
+    "neighborhoods": [
+      "Scarboro",
+      "Jefferson",
+      "Woodland",
+      "Jackson Square"
+    ],
+    "climate_risk": "Moderate — tornadoes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, cockroaches, mosquitoes, stink bugs",
+    "roof_risk": "Moderate-High — wind, storm debris, humidity, UV",
+    "avg_cost": 155,
+    "response_mins": 26
+  },
+  {
+    "city": "Smyrna",
+    "state": "Tennessee",
+    "state_code": "TN",
+    "slug": "smyrna-tn",
+    "zip": "37167",
+    "zips_list": [
+      "37167",
+      "37086",
+      "37087",
+      "37130"
+    ],
+    "area_code": "615",
+    "neighborhoods": [
+      "Sam Ridley Pkwy",
+      "Nissan Drive",
+      "Lee Victory",
+      "Enon Springs"
+    ],
+    "climate_risk": "Moderate — tornadoes, flooding, severe thunderstorms",
+    "pest_risk": "High — termites, cockroaches, mosquitoes, stink bugs",
+    "roof_risk": "Moderate-High — wind, storm debris, humidity, UV",
+    "avg_cost": 159,
+    "response_mins": 23
+  }
+]

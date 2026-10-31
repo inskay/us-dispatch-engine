@@ -1,0 +1,42 @@
+{
+  "Lakeland:FL:water-damage:fall": {
+    "liveAlert": "Late hurricane season combined with heavy autumn rainfall is keeping water damage demand at peak levels across Florida. Roof-to-wall junctions and window seals are the most common entry points this season.",
+    "demandIndex": "CRITICAL",
+    "localTip": "Inspect exterior caulking around windows and doors every October — Florida's UV exposure degrades sealant 3× faster than northern states."
+  },
+  "Ocala:FL:water-damage:fall": {
+    "liveAlert": "Late hurricane season combined with heavy autumn rainfall is keeping water damage demand at peak levels across Florida. Roof-to-wall junctions and window seals are the most common entry points this season.",
+    "demandIndex": "CRITICAL",
+    "localTip": "Inspect exterior caulking around windows and doors every October — Florida's UV exposure degrades sealant 3× faster than northern states."
+  },
+  "Tulsa:OK:pest-control:fall": {
+    "liveAlert": "Oklahoma's cooling fall temperatures are driving brown recluse spiders, mice, and stink bugs indoors. Brown recluse populations in Oklahoma are among the densest in the US.",
+    "demandIndex": "HIGH",
+    "localTip": "Install sticky monitors in every closet and under-sink cabinet in fall — brown recluse spiders follow mouse entry routes and early detection prevents potentially serious encounters."
+  },
+  "Fayetteville:NC:water-damage:fall": {
+    "liveAlert": "Hurricane remnants and fall nor'easters are producing multi-day rainfall events across North Carolina. Storm surge and river flooding continue to affect low-lying communities weeks after named storms.",
+    "demandIndex": "CRITICAL",
+    "localTip": "Purchase a portable water extraction unit — NC's remote mountain and coastal communities often wait 48–72 hours for professional services, and rapid extraction prevents secondary mold damage."
+  },
+  "Chattanooga:TN:water-damage:fall": {
+    "liveAlert": "Tennessee's fall rainfall is maintaining saturated soil conditions that sustain basement and crawl space moisture intrusion through October and November. Post-summer mold remediation demand is elevated.",
+    "demandIndex": "HIGH",
+    "localTip": "Run a crawl space dehumidifier year-round set to 50% relative humidity — Tennessee's clay soils retain summer moisture deep into fall, keeping crawl space humidity above mold-growth threshold."
+  },
+  "Abilene:TX:roof-repair:fall": {
+    "liveAlert": "Post-summer thermal shock is causing premature cracking in roofing materials across Texas as daytime highs drop rapidly overnight. Fall is the most cost-effective time to address deferred roof maintenance.",
+    "demandIndex": "HIGH",
+    "localTip": "Have your flashings inspected every fall — thermal cycling in Texas expands and contracts metal flashing up to ¼ inch per year, eventually breaking the waterproof seal."
+  },
+  "Boca Raton:FL:pest-control:fall": {
+    "liveAlert": "As temperatures begin to moderate, Florida pest populations remain high and begin seeking indoor harborage for the winter months. German cockroach and rodent intrusion calls spike significantly in October.",
+    "demandIndex": "HIGH",
+    "localTip": "Seal all exterior gaps larger than a quarter inch before fall — mice can compress their bodies to fit through openings the size of a dime."
+  },
+  "Huntsville:AL:water-damage:fall": {
+    "liveAlert": "Alabama's fall hurricane remnants are generating rainfall totals that saturate soil and sustain basement seepage well into November. Mold remediation demand remains elevated after summer storm activity.",
+    "demandIndex": "HIGH",
+    "localTip": "Run a dehumidifier in your crawl space set to 50% relative humidity year-round — Alabama's humidity rarely allows natural drying of enclosed spaces without active moisture management."
+  }
+}
