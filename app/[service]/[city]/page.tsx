@@ -4,23 +4,22 @@ import {
   Phone, Clock, Shield, MapPin, AlertTriangle, CheckCircle,
   Star, Zap, TrendingUp, Lightbulb, BadgeCheck, Wrench, Calendar,
 } from "lucide-react";
-import { cities, getCityBySlug } from "@/lib/cities";
-import { NICHES, type Niche } from "@/lib/niches";
+import { cities, getOrResolveCity } from "@/lib/cities";
+import { NICHES, type Niche, type City } from "@/lib/niches";
 import { siteConfig } from "@/config/site";
 import { getAdvisory } from "@/lib/gemini";
 import { FAQAccordion } from "@/components/FAQAccordion";
 
-// ─── ISR — daily regeneration so search engines see fresh advisory data ────────
 export const revalidate = 86400;
 
-const VALID_NICHES = Object.keys(NICHES) as Niche[];
+const VALID_SERVICES = Object.keys(NICHES) as Niche[];
 
-// ─── Static Params ────────────────────────────────────────────────────────────
+// ─── Static Params for pre-rendering known cities ─────────────────────────────
 export function generateStaticParams() {
-  const params: { niche: string; slug: string }[] = [];
-  for (const niche of VALID_NICHES) {
-    for (const city of cities) {
-      params.push({ niche, slug: city.slug });
+  const params: { service: string; city: string }[] = [];
+  for (const service of VALID_SERVICES) {
+    for (const c of cities) {
+      params.push({ service, city: c.slug });
     }
   }
   return params;
@@ -30,31 +29,31 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ niche: string; slug: string }>;
+  params: Promise<{ service: string; city: string }>;
 }): Promise<Metadata> {
-  const { niche, slug } = await params;
-  const city = getCityBySlug(slug);
-  if (!city || !VALID_NICHES.includes(niche as Niche)) return {};
+  const { service, city: citySlug } = await params;
+  if (!VALID_SERVICES.includes(service as Niche)) return {};
 
-  const nicheInfo = NICHES[niche as Niche];
-  const title = `${nicheInfo.label} in ${city.city}, ${city.state_code} — 24/7 Emergency Dispatch`;
-  const description = `Fast, local ${nicheInfo.label.toLowerCase()} in ${city.city}, ${city.state} (${city.zip}). ${nicheInfo.urgencyText}. Call ${siteConfig.phoneDisplay} for immediate response — avg ${city.response_mins} min dispatch.`;
+  const city = getOrResolveCity(citySlug);
+  const info = NICHES[service as Niche];
+  const title = `${info.label} in ${city.city}, ${city.state_code} — 24/7 Emergency Dispatch`;
+  const description = `Fast, local ${info.label.toLowerCase()} in ${city.city}, ${city.state} (${city.zip}). ${info.urgencyText}. Call ${siteConfig.phoneDisplay} for immediate response — avg ${city.response_mins} min dispatch.`;
 
   return {
     title,
     description,
     keywords: [
-      `${nicheInfo.label.toLowerCase()} ${city.city}`,
-      `${nicheInfo.label.toLowerCase()} ${city.state_code}`,
-      `emergency ${niche} ${city.city}`,
-      `${niche} near me ${city.zip}`,
-      ...city.zips_list.map((z) => `${niche} ${z}`),
+      `${info.label.toLowerCase()} ${city.city}`,
+      `${info.label.toLowerCase()} ${city.state_code}`,
+      `emergency ${service} ${city.city}`,
+      `${service} near me ${city.zip}`,
+      ...city.zips_list.map((z) => `${service} ${z}`),
     ],
     openGraph: {
       title,
       description,
       type: "website",
-      url: `${siteConfig.domain}/${niche}/${slug}`,
+      url: `${siteConfig.domain}/${service}/${citySlug}`,
       siteName: siteConfig.siteName,
     },
     twitter: {
@@ -63,17 +62,14 @@ export async function generateMetadata({
       description,
     },
     alternates: {
-      canonical: `${siteConfig.domain}/${niche}/${slug}`,
+      canonical: `${siteConfig.domain}/${service}/${citySlug}`,
     },
     robots: { index: true, follow: true },
   };
 }
 
 // ─── JSON-LD: EmergencyService ─────────────────────────────────────────────────
-function buildEmergencyServiceJsonLd(
-  niche: Niche,
-  city: NonNullable<ReturnType<typeof getCityBySlug>>
-) {
+function buildEmergencyServiceJsonLd(niche: Niche, city: City) {
   const nicheInfo = NICHES[niche];
   return {
     "@context": "https://schema.org",
@@ -115,9 +111,7 @@ function buildEmergencyServiceJsonLd(
 }
 
 // ─── JSON-LD: FAQPage ─────────────────────────────────────────────────────────
-function buildFaqJsonLd(
-  faqs: Array<{ q: string; a: string }>
-) {
+function buildFaqJsonLd(faqs: Array<{ q: string; a: string }>) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -130,37 +124,32 @@ function buildFaqJsonLd(
 }
 
 // ─── FAQ builder ─────────────────────────────────────────────────────────────
-function buildFaqs(
-  niche: Niche,
-  city: NonNullable<ReturnType<typeof getCityBySlug>>
-): Array<{ q: string; a: string }> {
+function buildFaqs(niche: Niche, city: City): Array<{ q: string; a: string }> {
   const nicheInfo = NICHES[niche];
   const costRange = `\$${city.avg_cost}–\$${Math.round(city.avg_cost * 2.8)}`;
   return [
     {
       q: `How fast can an emergency specialist reach ${city.city} (${city.zip})?`,
-      a: `Our local ${city.city} dispatch network maintains an average response time of ${city.response_mins} minutes to the ${city.zip} ZIP code. We have certified ${nicheInfo.label.toLowerCase()} technicians stationed across ${city.neighborhoods.join(", ")} and all surrounding areas. Dispatch confirmation is provided within 60 seconds of your call.`,
+      a: `Our local ${city.city} dispatch network maintains an average response time of ${city.response_mins} minutes to the ${city.zip} area. We have certified ${nicheInfo.label.toLowerCase()} technicians stationed across ${city.neighborhoods.join(", ")} and all surrounding communities. Dispatch confirmation is issued within 60 seconds of your call.`,
     },
     {
       q: `What is the estimated cost range for ${nicheInfo.label.toLowerCase()} dispatch in ${city.state}?`,
-      a: `In ${city.state}, ${nicheInfo.label.toLowerCase()} costs typically range from ${costRange} depending on the severity of the situation, square footage affected, and specific services required. Our ${city.city} specialists provide a free, no-obligation estimate before any work begins. Emergency situations after-hours carry no additional surcharge.`,
+      a: `In ${city.state}, ${nicheInfo.label.toLowerCase()} costs typically range from ${costRange} depending on property severity, affected square footage, and necessary equipment. Our ${city.city} specialists provide a transparent, 100% free estimate before any work begins, with zero after-hours surcharges.`,
     },
     {
       q: `Are the ${niche === "pest-control" ? "treatments" : "repairs"} compliant with local ${city.state} regulations?`,
-      a: `Yes — all our ${city.city} technicians are fully licensed and insured under ${city.state} state requirements. We comply with all applicable ${city.state} Department of ${niche === "pest-control" ? "Agriculture pest control" : niche === "roof-repair" ? "Professional and Occupational Regulation roofing contractor" : "Environmental Quality water damage restoration"} regulations and carry the required state-specific certifications. Workmanship guarantees are provided in writing.`,
+      a: `Yes — all our ${city.city} technicians are fully licensed, bonded, and insured under ${city.state} statutory codes. We carry appropriate state-specific licensing and provide written guarantees on all completed work.`,
     },
     {
       q: `Can I get an immediate quote over the phone before dispatch to ${city.city}?`,
-      a: `Absolutely. Call ${siteConfig.phoneDisplay} and our ${city.city} dispatch coordinator will provide a preliminary cost range based on your description within the first 2 minutes of the call. For complex situations, we send a technician for a no-cost on-site assessment. There is no commitment required to receive a quote and no trip charge for estimates in the ${city.zip} area.`,
+      a: `Yes. Call ${siteConfig.phoneDisplay} and our ${city.city} dispatch coordinator will assess your situation and provide an initial cost estimate within the first 2 minutes. There is no obligation to schedule service and no travel fee for estimates in ${city.city}.`,
     },
   ];
 }
 
-// ─── Sub-components (Light Theme & Trust-First UI) ───────────────────────────
+// ─── Sub-components ───────────────────────────────────────────────────────────
 
-type CityType = NonNullable<ReturnType<typeof getCityBySlug>>;
-
-function LiveStatusBar({ niche, city }: { niche: Niche; city: CityType }) {
+function LiveStatusBar({ niche, city }: { niche: Niche; city: City }) {
   const nicheInfo = NICHES[niche];
   return (
     <div className="w-full bg-blue-950 text-white text-xs sm:text-sm py-2 px-4 shadow-xs">
@@ -174,7 +163,7 @@ function LiveStatusBar({ niche, city }: { niche: Niche; city: CityType }) {
             Live Dispatch Active
           </span>
           <span className="hidden sm:inline text-slate-400">|</span>
-          <span className="hidden sm:inline text-slate-200">
+          <span className="text-slate-200">
             {city.city}, {city.state_code}
           </span>
         </div>
@@ -194,21 +183,16 @@ function LiveStatusBar({ niche, city }: { niche: Niche; city: CityType }) {
   );
 }
 
-function HeroSection({ niche, city }: { niche: Niche; city: CityType }) {
+function HeroSection({ niche, city }: { niche: Niche; city: City }) {
   const nicheInfo = NICHES[niche];
   return (
     <section className="relative bg-gradient-to-b from-white via-slate-50/70 to-slate-100/60 border-b border-slate-200/80 pt-10 pb-16 px-4 overflow-hidden">
-      {/* Subtle geometric grid background accent */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f015_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f015_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
-
       <div className="relative z-10 max-w-4xl mx-auto text-center space-y-6">
-        {/* Trust & Location Badge */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide bg-blue-50 border border-blue-200 text-blue-900 shadow-xs">
           <BadgeCheck className="w-4 h-4 text-blue-700" />
           <span>Licensed &amp; Insured Dispatch — {city.city}, {city.state_code} ({city.zip})</span>
         </div>
 
-        {/* Headline */}
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
           24/7 {nicheInfo.label} in{" "}
           <span className="text-blue-900 underline decoration-blue-300 decoration-wavy decoration-2">
@@ -220,13 +204,12 @@ function HeroSection({ niche, city }: { niche: Niche; city: CityType }) {
           {nicheInfo.description}
         </p>
 
-        {/* Soft Urgency Callout */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-amber-50 border border-amber-200 text-amber-900 shadow-xs">
           <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
           <span>{nicheInfo.urgencyText}</span>
         </div>
 
-        {/* Main CTA: High-impact vibrant emergency green */}
+        {/* Main CTA */}
         <div className="pt-2">
           <a
             href={siteConfig.phoneTel}
@@ -244,7 +227,7 @@ function HeroSection({ niche, city }: { niche: Niche; city: CityType }) {
           </p>
         </div>
 
-        {/* Trust badges */}
+        {/* Trust Badges */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 max-w-3xl mx-auto">
           {[
             { icon: Shield, text: "Licensed & Insured", sub: "State Compliant" },
@@ -267,22 +250,19 @@ function HeroSection({ niche, city }: { niche: Niche; city: CityType }) {
   );
 }
 
-// ─── Real-Time Emergency Advisory Block (Light Trust Theme) ───────────────────
-
-type AdvisoryBlockProps = {
-  niche: Niche;
-  city: CityType;
+function AdvisoryBlock({
+  city,
+  liveAlert,
+  demandIndex,
+  localTip,
+  monthLabel,
+}: {
+  city: City;
   liveAlert: string;
   demandIndex: "CRITICAL" | "HIGH" | "ELEVATED";
   localTip: string;
   monthLabel: string;
-};
-
-function AdvisoryBlock({
-  niche, city, liveAlert, demandIndex, localTip, monthLabel,
-}: AdvisoryBlockProps) {
-  const nicheInfo = NICHES[niche];
-
+}) {
   const demandStyles: Record<string, { badge: string; bar: string; label: string }> = {
     CRITICAL: {
       badge: "bg-red-50 border-red-200 text-red-800",
@@ -306,7 +286,6 @@ function AdvisoryBlock({
   return (
     <section className="max-w-4xl mx-auto px-4 -mt-8 relative z-20">
       <div className="bg-white border border-slate-200/90 rounded-2xl shadow-lg overflow-hidden">
-        {/* Advisory Header Bar */}
         <div className="bg-slate-50 border-b border-slate-200 px-5 py-3.5 flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-2">
             <span className="relative flex h-2.5 w-2.5">
@@ -323,7 +302,6 @@ function AdvisoryBlock({
         </div>
 
         <div className="p-5 sm:p-6 space-y-5">
-          {/* Month Badge + Live Alert */}
           <div className="flex items-start gap-3">
             <div className="shrink-0 px-2.5 py-1 rounded-lg text-xs font-bold uppercase tracking-wide bg-blue-50 border border-blue-200 text-blue-900 flex items-center gap-1.5">
               <Calendar className="w-3.5 h-3.5 text-blue-700" />
@@ -334,7 +312,6 @@ function AdvisoryBlock({
             </p>
           </div>
 
-          {/* Demand Level Meter */}
           <div className="bg-slate-50 border border-slate-200/70 rounded-xl p-3.5">
             <div className="flex items-center justify-between text-xs font-semibold mb-2">
               <span className="flex items-center gap-1.5 text-slate-700">
@@ -350,7 +327,6 @@ function AdvisoryBlock({
             </div>
           </div>
 
-          {/* Homeowner Prevention Tip Card */}
           <div className="bg-emerald-50/70 border border-emerald-200 rounded-xl p-4 flex items-start gap-3">
             <Lightbulb className="w-5 h-5 text-emerald-700 shrink-0 mt-0.5" />
             <div>
@@ -368,9 +344,7 @@ function AdvisoryBlock({
   );
 }
 
-// ─── Local Data & Price Range Table (Light Trust UI) ─────────────────────────
-
-function LocalDataTable({ niche, city }: { niche: Niche; city: CityType }) {
+function LocalDataTable({ niche, city }: { niche: Niche; city: City }) {
   const nicheInfo = NICHES[niche];
   const riskValue = city[nicheInfo.riskKey];
 
@@ -386,7 +360,7 @@ function LocalDataTable({ niche, city }: { niche: Niche; city: CityType }) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Pricing & Dispatch Card — Highlighted with Free Quote badge */}
+        {/* Pricing Card */}
         <div className="bg-white border-2 border-blue-900/20 rounded-2xl p-6 shadow-md shadow-slate-100 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-4">
@@ -504,9 +478,7 @@ function LocalDataTable({ niche, city }: { niche: Niche; city: CityType }) {
   );
 }
 
-// ─── Services Grid (Light Theme) ─────────────────────────────────────────────
-
-function ServicesGrid({ niche, city }: { niche: Niche; city: CityType }) {
+function ServicesGrid({ niche, city }: { niche: Niche; city: City }) {
   const nicheInfo = NICHES[niche];
   return (
     <section className="bg-slate-100/70 border-y border-slate-200 py-14">
@@ -541,155 +513,51 @@ function ServicesGrid({ niche, city }: { niche: Niche; city: CityType }) {
   );
 }
 
-// ─── FAQ Section (Light Theme) ────────────────────────────────────────────────
-
-function FAQSection({
-  niche, city, faqs,
-}: {
-  niche: Niche;
-  city: CityType;
-  faqs: Array<{ q: string; a: string }>;
-}) {
-  const nicheInfo = NICHES[niche];
-  return (
-    <section className="max-w-4xl mx-auto px-4 py-14">
-      <div className="text-center space-y-2 mb-8">
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-          Frequently Asked Questions
-        </h2>
-        <p className="text-slate-600 text-sm">
-          Everything you need to know about {nicheInfo.label.toLowerCase()} in {city.city}, {city.state_code} ({city.zip})
-        </p>
-      </div>
-
-      <FAQAccordion items={faqs} accentColor="text-blue-900" />
-    </section>
-  );
-}
-
-// ─── Mid-Page CTA (Light Theme Trust Callout) ─────────────────────────────────
-
-function MidPageCTA({ niche, city }: { niche: Niche; city: CityType }) {
-  const nicheInfo = NICHES[niche];
-  return (
-    <section className="max-w-4xl mx-auto px-4 py-12">
-      <div className="bg-gradient-to-br from-blue-950 via-slate-900 to-blue-900 text-white rounded-3xl p-8 sm:p-12 text-center space-y-6 shadow-xl">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">
-          Need Immediate {nicheInfo.label} in {city.city}?
-        </h2>
-        <p className="text-slate-200 text-base max-w-2xl mx-auto leading-relaxed">
-          Don&apos;t wait until minor issues become major structural damage. Our licensed local crews are on standby with an average response time of{" "}
-          <strong className="text-white font-bold">{city.response_mins} minutes</strong> across {city.zip} and surrounding areas.
-        </p>
-        <div>
-          <a
-            href={siteConfig.phoneTel}
-            data-tracking="call-btn"
-            data-niche={niche}
-            data-city={city.city}
-            data-zip={city.zip}
-            className="inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-lg sm:text-xl px-8 py-4 rounded-xl shadow-lg shadow-emerald-950/40 transition-all hover:scale-105 active:scale-95"
-          >
-            <Phone className="w-5 h-5 shrink-0" />
-            <span>Call {siteConfig.phoneDisplay}</span>
-          </a>
-          <p className="text-slate-300 text-xs mt-3">
-            24/7 Rapid Dispatch · No Trip Surcharge · Local {city.city} Technicians
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ─── Mobile Sticky Bar (Light Trust Theme) ───────────────────────────────────
-
-function MobileStickyBar({ niche, city }: { niche: Niche; city: CityType }) {
-  const nicheInfo = NICHES[niche];
-  return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/95 backdrop-blur border-t border-slate-200 px-4 py-3 flex items-center justify-between gap-3 shadow-2xl">
-      <div className="min-w-0">
-        <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider truncate">
-          {city.city} · {nicheInfo.label}
-        </p>
-        <p className="text-xs font-bold text-slate-900 flex items-center gap-1">
-          <span className="h-2 w-2 rounded-full bg-emerald-500 inline-block animate-pulse" />
-          {city.response_mins}-Min Dispatch
-        </p>
-      </div>
-      <a
-        href={siteConfig.phoneTel}
-        data-tracking="call-btn"
-        data-niche={niche}
-        data-city={city.city}
-        data-zip={city.zip}
-        className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-sm px-5 py-3 rounded-xl shadow-md shrink-0 transition-colors"
-      >
-        <Phone className="w-4 h-4 shrink-0" />
-        <span>Call Now</span>
-      </a>
-    </div>
-  );
-}
-
-// ─── Page ─────────────────────────────────────────────────────────────────────
-
-export default async function NicheCityPage({
+export default async function ServiceCityPage({
   params,
 }: {
-  params: Promise<{ niche: string; slug: string }>;
+  params: Promise<{ service: string; city: string }>;
 }) {
-  const { niche, slug } = await params;
+  const { service, city: citySlug } = await params;
 
-  if (!VALID_NICHES.includes(niche as Niche)) notFound();
-  const city = getCityBySlug(slug);
-  if (!city) notFound();
+  if (!VALID_SERVICES.includes(service as Niche)) notFound();
 
-  const typedNiche = niche as Niche;
+  // Dynamic Fallback Template guarantees a valid City object for any slug
+  const city = getOrResolveCity(citySlug);
+  const typedService = service as Niche;
 
-  // Current month (0-indexed) and label
   const now = new Date();
   const currentMonth = now.getMonth();
   const monthLabel = now.toLocaleString("en-US", { month: "long", year: "numeric" });
 
-  // Fetch advisory — uses Gemini if key present, else static fallback
   const advisory = await getAdvisory(
     city.city,
     city.state_code,
-    typedNiche,
+    typedService,
     currentMonth
   );
 
-  // Build FAQs
-  const faqs = buildFaqs(typedNiche, city);
-
-  // JSON-LD schemas
-  const emergencyServiceSchema = buildEmergencyServiceJsonLd(typedNiche, city);
+  const faqs = buildFaqs(typedService, city);
+  const emergencyServiceSchema = buildEmergencyServiceJsonLd(typedService, city);
   const faqSchema = buildFaqJsonLd(faqs);
 
   return (
     <>
-      {/* JSON-LD: EmergencyService */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(emergencyServiceSchema) }}
       />
-      {/* JSON-LD: FAQPage */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <div className="min-h-screen bg-slate-50 text-slate-900 pb-24 md:pb-0 font-sans antialiased">
-        {/* Live status bar */}
-        <LiveStatusBar niche={typedNiche} city={city} />
+        <LiveStatusBar niche={typedService} city={city} />
 
-        {/* Hero */}
-        <HeroSection niche={typedNiche} city={city} />
+        <HeroSection niche={typedService} city={city} />
 
-        {/* Real-Time Emergency Advisory */}
         <AdvisoryBlock
-          niche={typedNiche}
           city={city}
           liveAlert={advisory.liveAlert}
           demandIndex={advisory.demandIndex}
@@ -697,17 +565,51 @@ export default async function NicheCityPage({
           monthLabel={monthLabel}
         />
 
-        {/* Services grid */}
-        <ServicesGrid niche={typedNiche} city={city} />
+        <ServicesGrid niche={typedService} city={city} />
 
-        {/* Local data table */}
-        <LocalDataTable niche={typedNiche} city={city} />
+        <LocalDataTable niche={typedService} city={city} />
 
-        {/* FAQ Section */}
-        <FAQSection niche={typedNiche} city={city} faqs={faqs} />
+        <section className="max-w-4xl mx-auto px-4 py-14">
+          <div className="text-center space-y-2 mb-8">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-slate-600 text-sm">
+              Everything you need to know about {NICHES[typedService].label.toLowerCase()} in {city.city}, {city.state_code} ({city.zip})
+            </p>
+          </div>
 
-        {/* Mid-page CTA */}
-        <MidPageCTA niche={typedNiche} city={city} />
+          <FAQAccordion items={faqs} accentColor="text-blue-900" />
+        </section>
+
+        {/* Mid-Page Callout Banner */}
+        <section className="max-w-4xl mx-auto px-4 py-12">
+          <div className="bg-gradient-to-br from-blue-950 via-slate-900 to-blue-900 text-white rounded-3xl p-8 sm:p-12 text-center space-y-6 shadow-xl">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">
+              Need Immediate {NICHES[typedService].label} in {city.city}?
+            </h2>
+            <p className="text-slate-200 text-base max-w-2xl mx-auto leading-relaxed">
+              Don&apos;t wait until minor issues become major structural damage. Our licensed local crews are on standby with an average response time of{" "}
+              <strong className="text-white font-bold">{city.response_mins} minutes</strong> across {city.zip} and surrounding areas.
+            </p>
+            <div>
+              <a
+                href={siteConfig.phoneTel}
+                data-tracking="call-btn"
+                data-niche={service}
+                data-city={city.city}
+                data-zip={city.zip}
+                className="inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-lg sm:text-xl px-8 py-4 rounded-xl shadow-lg shadow-emerald-950/40 transition-all hover:scale-105 active:scale-95"
+              >
+                <Phone className="w-5 h-5 shrink-0" />
+                <span>Call {siteConfig.phoneDisplay}</span>
+              </a>
+              <p className="text-slate-300 text-xs mt-3">
+                24/7 Rapid Dispatch · No Trip Surcharge · Local {city.city} Technicians
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* Footer */}
         <footer className="bg-white border-t border-slate-200 py-10 text-center text-slate-500 text-xs px-4">
@@ -720,7 +622,7 @@ export default async function NicheCityPage({
               <a
                 href={siteConfig.phoneTel}
                 data-tracking="call-btn"
-                data-niche={niche}
+                data-niche={service}
                 data-city={city.city}
                 data-zip={city.zip}
                 className="text-blue-900 font-semibold hover:underline"
@@ -733,10 +635,31 @@ export default async function NicheCityPage({
             </p>
           </div>
         </footer>
-      </div>
 
-      {/* Mobile sticky CTA bar */}
-      <MobileStickyBar niche={typedNiche} city={city} />
+        {/* Mobile Sticky CTA Bar */}
+        <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-white/95 backdrop-blur border-t border-slate-200 px-4 py-3 flex items-center justify-between gap-3 shadow-2xl">
+          <div className="min-w-0">
+            <p className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider truncate">
+              {city.city} · {NICHES[typedService].label}
+            </p>
+            <p className="text-xs font-bold text-slate-900 flex items-center gap-1">
+              <span className="h-2 w-2 rounded-full bg-emerald-500 inline-block animate-pulse" />
+              {city.response_mins}-Min Dispatch
+            </p>
+          </div>
+          <a
+            href={siteConfig.phoneTel}
+            data-tracking="call-btn"
+            data-niche={service}
+            data-city={city.city}
+            data-zip={city.zip}
+            className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-sm px-5 py-3 rounded-xl shadow-md shrink-0 transition-colors"
+          >
+            <Phone className="w-4 h-4 shrink-0" />
+            <span>Call Now</span>
+          </a>
+        </div>
+      </div>
     </>
   );
 }

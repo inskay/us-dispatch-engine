@@ -18,15 +18,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // All niche × city combinations
-  const pages: MetadataRoute.Sitemap = NICHE_KEYS.flatMap((niche) =>
+  // 3 Primary Service Hubs (e.g. /water-damage, /pest-control, /roof-repair)
+  const serviceHubs: MetadataRoute.Sitemap = NICHE_KEYS.map((service) => ({
+    url: `${siteConfig.domain}/${service}`,
+    lastModified: now,
+    changeFrequency: "daily" as const,
+    priority: 0.95,
+  }));
+
+  // All city × service combinations
+  const cityPages: MetadataRoute.Sitemap = NICHE_KEYS.flatMap((service) =>
     cities.map((city) => ({
-      url: `${siteConfig.domain}/${niche}/${city.slug}`,
+      url: `${siteConfig.domain}/${service}/${city.slug}`,
       lastModified: now,
       changeFrequency: "weekly" as const,
-      priority: 0.9,
+      priority: 0.85,
     }))
   );
 
-  return [...home, ...pages];
+  return [...home, ...serviceHubs, ...cityPages];
 }

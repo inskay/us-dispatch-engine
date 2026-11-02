@@ -4548,5 +4548,380 @@
     "roof_risk": "Moderate-High — wind, storm debris, humidity, UV",
     "avg_cost": 159,
     "response_mins": 23
+  },
+  {
+    "city": "Dallas",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "dallas-tx",
+    "zip": "75201",
+    "zips_list": [
+      "75201",
+      "75204",
+      "75206",
+      "75214"
+    ],
+    "area_code": "214",
+    "neighborhoods": [
+      "Uptown",
+      "Deep Ellum",
+      "Oak Lawn",
+      "Bishop Arts"
+    ],
+    "climate_risk": "High — severe thunderstorms, hail, flash flooding",
+    "pest_risk": "High — termites, scorpions, fire ants, cockroaches",
+    "roof_risk": "High — hail damage, UV degradation, high winds",
+    "avg_cost": 175,
+    "response_mins": 18
+  },
+  {
+    "city": "Houston",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "houston-tx",
+    "zip": "77002",
+    "zips_list": [
+      "77002",
+      "77005",
+      "77007",
+      "77019"
+    ],
+    "area_code": "713",
+    "neighborhoods": [
+      "The Heights",
+      "Montrose",
+      "Midtown",
+      "Museum District"
+    ],
+    "climate_risk": "High — tropical storms, hurricanes, extreme humidity, flooding",
+    "pest_risk": "High — Formosan termites, cockroaches, mosquitoes, fire ants",
+    "roof_risk": "High — wind uplift, heavy rain leaks, moisture rot",
+    "avg_cost": 179,
+    "response_mins": 20
+  },
+  {
+    "city": "Austin",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "austin-tx",
+    "zip": "78701",
+    "zips_list": [
+      "78701",
+      "78704",
+      "78745",
+      "78751"
+    ],
+    "area_code": "512",
+    "neighborhoods": [
+      "South Congress",
+      "Zilker",
+      "East Austin",
+      "Hyde Park"
+    ],
+    "climate_risk": "Moderate-High — flash flooding, hail, extreme summer heat",
+    "pest_risk": "High — scorpions, fire ants, termites, rodents",
+    "roof_risk": "High — thermal cycling, hail impact, high winds",
+    "avg_cost": 172,
+    "response_mins": 19
+  },
+  {
+    "city": "San Antonio",
+    "state": "Texas",
+    "state_code": "TX",
+    "slug": "san-antonio-tx",
+    "zip": "78205",
+    "zips_list": [
+      "78205",
+      "78209",
+      "78212",
+      "78216"
+    ],
+    "area_code": "210",
+    "neighborhoods": [
+      "Alamo Heights",
+      "Stone Oak",
+      "Southtown",
+      "Medical Center"
+    ],
+    "climate_risk": "Moderate-High — flash floods, severe thunderstorms, extreme heat",
+    "pest_risk": "High — scorpions, subterranean termites, fire ants",
+    "roof_risk": "High — intense UV degradation, hail damage",
+    "avg_cost": 168,
+    "response_mins": 22
+  },
+  {
+    "city": "Los Angeles",
+    "state": "California",
+    "state_code": "CA",
+    "slug": "los-angeles-ca",
+    "zip": "90012",
+    "zips_list": [
+      "90012",
+      "90024",
+      "90026",
+      "90046"
+    ],
+    "area_code": "213",
+    "neighborhoods": [
+      "Downtown",
+      "Silver Lake",
+      "West Hollywood",
+      "Westwood"
+    ],
+    "climate_risk": "Moderate — atmospheric river winter flooding, seismic stress",
+    "pest_risk": "High — drywood termites, Argentine ants, German cockroaches",
+    "roof_risk": "High — prolonged UV exposure, dry rot, seismic tile displacement",
+    "avg_cost": 195,
+    "response_mins": 20
+  },
+  {
+    "city": "San Diego",
+    "state": "California",
+    "state_code": "CA",
+    "slug": "san-diego-ca",
+    "zip": "92101",
+    "zips_list": [
+      "92101",
+      "92103",
+      "92104",
+      "92109"
+    ],
+    "area_code": "619",
+    "neighborhoods": [
+      "Gaslamp",
+      "North Park",
+      "Pacific Beach",
+      "Hillcrest"
+    ],
+    "climate_risk": "Moderate — coastal atmospheric storms, flash flooding",
+    "pest_risk": "High — subterranean & drywood termites, rodents, spiders",
+    "roof_risk": "Moderate-High — marine layer moisture, UV degradation",
+    "avg_cost": 188,
+    "response_mins": 22
+  },
+  {
+    "city": "San Jose",
+    "state": "California",
+    "state_code": "CA",
+    "slug": "san-jose-ca",
+    "zip": "95113",
+    "zips_list": [
+      "95113",
+      "95125",
+      "95126",
+      "95128"
+    ],
+    "area_code": "408",
+    "neighborhoods": [
+      "Willow Glen",
+      "Rose Garden",
+      "Almaden",
+      "Downtown"
+    ],
+    "climate_risk": "Moderate — winter atmospheric river downpours, river overflow",
+    "pest_risk": "Moderate-High — carpenter ants, termites, mice",
+    "roof_risk": "Moderate — winter rain penetration, wind-driven debris",
+    "avg_cost": 192,
+    "response_mins": 21
+  },
+  {
+    "city": "Sacramento",
+    "state": "California",
+    "state_code": "CA",
+    "slug": "sacramento-ca",
+    "zip": "95814",
+    "zips_list": [
+      "95814",
+      "95816",
+      "95818",
+      "95819"
+    ],
+    "area_code": "916",
+    "neighborhoods": [
+      "Midtown",
+      "East Sacramento",
+      "Land Park",
+      "Natomas"
+    ],
+    "climate_risk": "High — Sacramento River flood basin, atmospheric storms",
+    "pest_risk": "High — termites, roof rats, cockroaches, ants",
+    "roof_risk": "High — heavy winter precipitation, intense summer heat cycles",
+    "avg_cost": 178,
+    "response_mins": 23
+  },
+  {
+    "city": "Fresno",
+    "state": "California",
+    "state_code": "CA",
+    "slug": "fresno-ca",
+    "zip": "93721",
+    "zips_list": [
+      "93721",
+      "93704",
+      "93710",
+      "93720"
+    ],
+    "area_code": "559",
+    "neighborhoods": [
+      "Tower District",
+      "Woodward Park",
+      "Fig Garden",
+      "Sunnyside"
+    ],
+    "climate_risk": "Moderate — winter tule fog moisture, severe summer heatwaves",
+    "pest_risk": "High — subterranean termites, black widows, rodents",
+    "roof_risk": "High — severe heat blistering, tile cracking, thermal shock",
+    "avg_cost": 168,
+    "response_mins": 24
+  },
+  {
+    "city": "Anaheim",
+    "state": "California",
+    "state_code": "CA",
+    "slug": "anaheim-ca",
+    "zip": "92801",
+    "zips_list": [
+      "92801",
+      "92802",
+      "92804",
+      "92805"
+    ],
+    "area_code": "714",
+    "neighborhoods": [
+      "Anaheim Hills",
+      "West Anaheim",
+      "Platinum Triangle",
+      "The Colony"
+    ],
+    "climate_risk": "Moderate — Santa Ana windstorms, seasonal heavy rains",
+    "pest_risk": "High — drywood termites, Argentine ants, cockroaches",
+    "roof_risk": "High — Santa Ana wind uplift, tile shifting",
+    "avg_cost": 185,
+    "response_mins": 21
+  },
+  {
+    "city": "Phoenix",
+    "state": "Arizona",
+    "state_code": "AZ",
+    "slug": "phoenix-az",
+    "zip": "85001",
+    "zips_list": [
+      "85001",
+      "85004",
+      "85008",
+      "85016"
+    ],
+    "area_code": "602",
+    "neighborhoods": [
+      "Arcadia",
+      "Biltmore",
+      "Downtown",
+      "Desert Ridge"
+    ],
+    "climate_risk": "High — monsoon flash flooding, microburst winds, haboobs",
+    "pest_risk": "High — bark scorpions, subterranean termites, black widows",
+    "roof_risk": "High — extreme 115°F+ UV breakdown, foam roof cracking, monsoons",
+    "avg_cost": 172,
+    "response_mins": 19
+  },
+  {
+    "city": "Tucson",
+    "state": "Arizona",
+    "state_code": "AZ",
+    "slug": "tucson-az",
+    "zip": "85701",
+    "zips_list": [
+      "85701",
+      "85705",
+      "85711",
+      "85719"
+    ],
+    "area_code": "520",
+    "neighborhoods": [
+      "Catalina Foothills",
+      "Sam Hughes",
+      "Downtown",
+      "Oro Valley"
+    ],
+    "climate_risk": "High — summer monsoon cloudbursts, arroyo flash floods",
+    "pest_risk": "High — scorpions, kisser bugs, termites, pack rats",
+    "roof_risk": "High — intense desert sun, thermal cycling, tile weathering",
+    "avg_cost": 164,
+    "response_mins": 22
+  },
+  {
+    "city": "Mesa",
+    "state": "Arizona",
+    "state_code": "AZ",
+    "slug": "mesa-az",
+    "zip": "85201",
+    "zips_list": [
+      "85201",
+      "85203",
+      "85205",
+      "85207"
+    ],
+    "area_code": "480",
+    "neighborhoods": [
+      "Eastmark",
+      "Dobson Ranch",
+      "Las Sendas",
+      "Red Mountain"
+    ],
+    "climate_risk": "High — monsoon storm downpours, microburst winds",
+    "pest_risk": "High — scorpions, termites, crickets, spiders",
+    "roof_risk": "High — monsoon wind shear, UV degradation, roof seal failure",
+    "avg_cost": 168,
+    "response_mins": 20
+  },
+  {
+    "city": "Scottsdale",
+    "state": "Arizona",
+    "state_code": "AZ",
+    "slug": "scottsdale-az",
+    "zip": "85251",
+    "zips_list": [
+      "85251",
+      "85255",
+      "85258",
+      "85260"
+    ],
+    "area_code": "480",
+    "neighborhoods": [
+      "Old Town",
+      "DC Ranch",
+      "McCormick Ranch",
+      "Gainey Ranch"
+    ],
+    "climate_risk": "Moderate-High — flash flooding, monsoon storms, intense heat",
+    "pest_risk": "High — bark scorpions, termites, roof rats",
+    "roof_risk": "High — premium tile displacement, foam roof degradation",
+    "avg_cost": 182,
+    "response_mins": 18
+  },
+  {
+    "city": "Chandler",
+    "state": "Arizona",
+    "state_code": "AZ",
+    "slug": "chandler-az",
+    "zip": "85224",
+    "zips_list": [
+      "85224",
+      "85225",
+      "85226",
+      "85248"
+    ],
+    "area_code": "480",
+    "neighborhoods": [
+      "Ocotillo",
+      "Sun Lakes",
+      "Downtown Chandler",
+      "Fulton Ranch"
+    ],
+    "climate_risk": "Moderate-High — monsoon deluge, straight-line winds",
+    "pest_risk": "High — scorpions, termites, ants, crickets",
+    "roof_risk": "High — heat fatigue, microburst shingle loss",
+    "avg_cost": 170,
+    "response_mins": 21
   }
 ]
