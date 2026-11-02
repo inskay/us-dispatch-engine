@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { 
   ShieldCheck, 
@@ -9,7 +9,6 @@ import {
   Bug, 
   Hammer, 
   CheckCircle2, 
-  Award, 
   Clock, 
   MapPin, 
   Navigation, 
@@ -18,7 +17,8 @@ import {
   CloudLightning,
   ChevronDown,
   ChevronUp,
-  AlertTriangle
+  AlertTriangle,
+  Wind
 } from 'lucide-react';
 
 export default function HomePage() {
@@ -29,7 +29,23 @@ export default function HomePage() {
   const [showDirectory, setShowDirectory] = useState(false);
   const [directoryFilter, setDirectoryFilter] = useState<'water-damage' | 'pest-control' | 'roof-repair'>('water-damage');
 
-  // عينة لأهم مراكز المدن للربط الداخلي الفوري
+  // Live Dispatch Social Proof Toasts
+  const dispatchEvents = [
+    { city: 'Tampa, FL', service: 'Emergency Water Extraction crew dispatched' },
+    { city: 'Dallas, TX', service: 'Storm roof tarping unit routed on-site' },
+    { city: 'Atlanta, GA', service: 'Emergency pest technician assigned' },
+    { city: 'Orlando, FL', service: 'Basement flood mitigation active' },
+    { city: 'Houston, TX', service: 'Burst pipe repair dispatched' },
+  ];
+  const [currentEventIdx, setCurrentEventIdx] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentEventIdx((prev) => (prev + 1) % dispatchEvents.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [dispatchEvents.length]);
+
   const topHubs = [
     { name: 'Dallas, TX', slug: 'dallas-tx' },
     { name: 'Houston, TX', slug: 'houston-tx' },
@@ -51,18 +67,18 @@ export default function HomePage() {
 
   const handleDetectLocation = () => {
     setIsLocating(true);
-    setStatusMessage('Locating your area...');
+    setStatusMessage('Locating regional dispatch grid...');
     
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         () => {
           setIsLocating(false);
-          setLocationInput('Dallas, TX (Active Hub)');
-          setStatusMessage('Location identified! Local dispatch ready.');
+          setLocationInput('Detected: Active US Metro Area');
+          setStatusMessage('Location matched! Local priority line connected.');
         },
         () => {
           setIsLocating(false);
-          setLocationInput('Dallas, TX (Default Regional Hub)');
+          setLocationInput('Dallas, TX (Regional Hub)');
           setStatusMessage('Regional dispatch auto-selected.');
         }
       );
@@ -114,26 +130,50 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="flex flex-col w-full bg-slate-50 selection:bg-blue-500 selection:text-white">
+    <div className="flex flex-col w-full bg-slate-50 selection:bg-blue-500 selection:text-white relative">
       
-      {/* 1. Gemini AI Live Weather & Emergency Alert Banner */}
-      <section className="bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 text-white py-3 px-4 border-b border-blue-800/50 shadow-inner">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
-          <div className="flex items-center gap-2.5">
-            <span className="p-1 rounded-md bg-amber-500/20 text-amber-400 border border-amber-400/30">
-              <CloudLightning className="w-4 h-4 animate-pulse" />
+      {/* 1. Live AI Advisory with Ambient Vector Weather Motion Backdrop */}
+      <section className="relative overflow-hidden bg-slate-900 border-b border-blue-900/40 text-slate-100 py-3.5 px-4 shadow-sm">
+        {/* Animated Vector Stream: Rain Streams & Wind Flow */}
+        <div className="absolute inset-0 pointer-events-none opacity-25">
+          {/* Horizontal Wind Lines */}
+          <div className="absolute top-2 w-[200%] h-[1px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-wind-slow" />
+          <div className="absolute top-6 w-[200%] h-[1px] bg-gradient-to-r from-transparent via-blue-300 to-transparent animate-wind-fast" />
+          <div className="absolute bottom-2 w-[200%] h-[1px] bg-gradient-to-r from-transparent via-teal-400 to-transparent animate-wind-slow" />
+
+          {/* Vertical Rain & Droplet SVG Shapes */}
+          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" className="text-cyan-300">
+              <line x1="15%" y1="0" x2="14%" y2="22" className="animate-rain-drop" />
+              <line x1="38%" y1="0" x2="37%" y2="28" className="animate-rain-drop" style={{ animationDelay: '0.4s' }} />
+              <line x1="62%" y1="0" x2="61%" y2="24" className="animate-rain-drop" style={{ animationDelay: '0.9s' }} />
+              <line x1="84%" y1="0" x2="83%" y2="20" className="animate-rain-drop" style={{ animationDelay: '1.2s' }} />
+            </g>
+          </svg>
+        </div>
+
+        <div className="max-w-6xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
+          <div className="flex items-center gap-3">
+            <span className="relative flex h-3 w-3 flex-shrink-0">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-cyan-500"></span>
             </span>
-            <span>
-              <strong className="text-amber-300 font-bold">Live AI Dispatch Advisory:</strong> High precipitation & sudden freeze warnings active across southern & eastern regions. Water leaks and structural roof stress can double within 6 hours.
-            </span>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="px-2.5 py-1 rounded-md bg-cyan-500/20 text-cyan-300 border border-cyan-400/30 font-black text-[10px] tracking-wider uppercase flex items-center gap-1.5 backdrop-blur-xs">
+                <Wind className="w-3.5 h-3.5 animate-spin" /> Weather AI Alert
+              </span>
+              <span className="text-slate-300">
+                <strong className="text-white font-bold">Severe Moisture & Freeze Warning:</strong> Active wind & storm front detected. Unchecked water leaks double remediation costs within 6 hours.
+              </span>
+            </div>
           </div>
 
           <a 
             href="tel:18005550199" 
-            className="flex-shrink-0 inline-flex items-center gap-1.5 bg-amber-400 hover:bg-amber-300 text-slate-950 font-black px-3.5 py-1.5 rounded-lg transition transform active:scale-95 shadow-sm"
+            className="flex-shrink-0 inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-4 py-2 rounded-xl transition transform hover:scale-[1.03] active:scale-95 shadow-lg shadow-emerald-500/20"
           >
-            <AlertTriangle className="w-3.5 h-3.5 text-slate-950" />
-            <span>Prevent Costly Damage: Call (800) 555-0199</span>
+            <PhoneCall className="w-3.5 h-3.5 animate-bounce text-slate-950" />
+            <span>Prevent Structural Loss: (800) 555-0199</span>
           </a>
         </div>
       </section>
@@ -289,9 +329,9 @@ export default function HomePage() {
                     <span>Call Desk: (800) 555-0199</span>
                   </a>
                   <Link 
-                    href={`/${item.sampleSlug}`}
+                    href={`/${item.id}`}
                     className="p-3 bg-slate-100 hover:bg-blue-100 text-slate-600 hover:text-blue-600 rounded-xl transition"
-                    title="View City Coverage Page"
+                    title="View Directory"
                   >
                     <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -302,7 +342,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. Elegant Interactive Coverage Hubs Drawer (أماكن التغطية الأنيقة) */}
+      {/* 4. Elegant Interactive Coverage Hubs Drawer */}
       <section className="max-w-6xl mx-auto w-full px-4 sm:px-6 pb-16">
         <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pb-6 border-b border-slate-100">
@@ -323,7 +363,6 @@ export default function HomePage() {
             </button>
           </div>
 
-          {/* فلتر الخدمات لاختيار نوع الصفحة */}
           <div className="flex items-center gap-3 pt-6 pb-4 overflow-x-auto">
             <button
               onClick={() => setDirectoryFilter('water-damage')}
@@ -359,7 +398,6 @@ export default function HomePage() {
             </button>
           </div>
 
-          {/* شبكة روابط المدن التفاعلية الحية */}
           <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2.5 pt-2">
             {(showDirectory ? topHubs : topHubs.slice(0, 8)).map((city) => (
               <Link
@@ -383,6 +421,23 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* 5. Fixed Live Dispatch Activity Toast (Social Proof for High Conversion) */}
+      <div className="fixed bottom-5 right-5 z-40 hidden sm:flex items-center gap-3 bg-white/95 backdrop-blur-md border border-slate-200/90 py-2.5 px-4 rounded-2xl shadow-xl shadow-slate-900/10 transition-all duration-500 animate-fadeIn">
+        <span className="relative flex h-2.5 w-2.5 flex-shrink-0">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+        </span>
+        <div className="text-left text-xs">
+          <div className="font-extrabold text-slate-900 flex items-center gap-1">
+            <span>{dispatchEvents[currentEventIdx].city}</span>
+            <span className="text-[10px] text-slate-400 font-normal">• Just now</span>
+          </div>
+          <div className="text-[11px] text-slate-600 font-medium">
+            {dispatchEvents[currentEventIdx].service}
+          </div>
+        </div>
+      </div>
 
     </div>
   );
