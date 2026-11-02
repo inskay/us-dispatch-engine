@@ -24,3 +24,31 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Animated Vector Weather Effects */
+@keyframes windSlow {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes windFast {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes rainDrop {
+  0% { transform: translateY(-20%); opacity: 0; }
+  50% { opacity: 0.8; }
+  100% { transform: translateY(120%); opacity: 0; }
+}
+
+.animate-wind-slow {
+  animation: windSlow 8s linear infinite;
+}
+
+.animate-wind-fast {
+  animation: windFast 4s linear infinite;
+}
+
+.animate-rain-drop {
+  animation: rainDrop 2s linear infinite;
+}
