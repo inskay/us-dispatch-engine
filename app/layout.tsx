@@ -76,7 +76,7 @@ export default function RootLayout({
           {children}
         </main>
 
-        {/* Global Professional Footer - Full Light Trust Theme */}
+        {/* Global Professional Footer - Full Light Trust Palette */}
         <footer className="bg-slate-100/90 border-t border-slate-200 text-slate-600 pt-14 pb-12 text-sm">
           <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-10">
             <div className="space-y-4">
@@ -98,11 +98,12 @@ export default function RootLayout({
             </div>
 
             <div>
-              <h4 className="text-slate-900 font-bold mb-4 text-xs tracking-wider uppercase">Trust &amp; Compliance</h4>
+              <h4 className="text-slate-900 font-bold mb-4 text-xs tracking-wider uppercase">Trust &amp; Legal</h4>
               <ul className="space-y-2.5 text-xs">
-                <li><span className="text-slate-600">Licensed &amp; Insured Contractors</span></li>
-                <li><span className="text-slate-600">Same-Day Local Dispatch</span></li>
-                <li><span className="text-slate-600">Zero Obligation Estimates</span></li>
+                <li><Link href="/terms" className="hover:text-blue-700 transition text-slate-600 font-medium">Terms of Service &amp; Disclaimer</Link></li>
+                <li><Link href="/privacy" className="hover:text-blue-700 transition text-slate-600 font-medium">Privacy Policy (CCPA)</Link></li>
+                <li><span className="text-slate-500">Licensed &amp; Insured Contractors</span></li>
+                <li><span className="text-slate-500">Zero Obligation Phone Quotes</span></li>
               </ul>
             </div>
 
@@ -119,8 +120,15 @@ export default function RootLayout({
             </div>
           </div>
 
-          <div className="max-w-6xl mx-auto px-4 mt-10 pt-6 border-t border-slate-200/90 text-center text-xs text-slate-500">
-            © {new Date().getFullYear()} {siteConfig.domain} · All rights reserved · 24/7 Emergency Dispatch Network
+          <div className="max-w-6xl mx-auto px-4 mt-10 pt-6 border-t border-slate-200/90 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+            <div>
+              © 2026 LinesFix.com · All rights reserved · 24/7 National Emergency Dispatch Network
+            </div>
+            <div className="flex items-center gap-4 text-slate-500">
+              <Link href="/terms" className="hover:text-blue-700 transition">Terms of Service</Link>
+              <span>·</span>
+              <Link href="/privacy" className="hover:text-blue-700 transition">Privacy Policy</Link>
+            </div>
           </div>
         </footer>
       </body>

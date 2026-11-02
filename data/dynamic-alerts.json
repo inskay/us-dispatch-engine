@@ -48,5 +48,105 @@
     "liveAlert": "Post-summer thermal shock is causing premature cracking in roofing materials across Texas as daytime highs drop rapidly overnight. Fall is the most cost-effective time to address deferred roof maintenance.",
     "demandIndex": "HIGH",
     "localTip": "Have your flashings inspected every fall — thermal cycling in Texas expands and contracts metal flashing up to ¼ inch per year, eventually breaking the waterproof seal."
+  },
+  "Kingsport:TN:water-damage:fall": {
+    "liveAlert": "Tennessee's fall rainfall is maintaining saturated soil conditions that sustain basement and crawl space moisture intrusion through October and November. Post-summer mold remediation demand is elevated.",
+    "demandIndex": "HIGH",
+    "localTip": "Run a crawl space dehumidifier year-round set to 50% relative humidity — Tennessee's clay soils retain summer moisture deep into fall, keeping crawl space humidity above mold-growth threshold."
+  },
+  "Little Rock:AR:water-damage:fall": {
+    "liveAlert": "Arkansas fall rainfall is maintaining elevated water tables and sustaining basement and crawl space moisture intrusion through November. Mold remediation demand remains elevated from summer flood events.",
+    "demandIndex": "HIGH",
+    "localTip": "Install a crawl space encapsulation system before winter — Arkansas's fall moisture levels sustain ideal mold conditions under floors that persist through the entire heating season."
+  },
+  "Mooresville:NC:pest-control:fall": {
+    "liveAlert": "Cooling temperatures are driving stink bugs, rodents, and cockroaches to seek indoor shelter across North Carolina. Brown marmorated stink bugs are congregating in wall voids in large numbers.",
+    "demandIndex": "HIGH",
+    "localTip": "Apply door sweep seals to all exterior doors before October — NC's stink bug invasion typically begins when overnight temperatures first drop below 55°F."
+  },
+  "Arlington:TX:water-damage:fall": {
+    "liveAlert": "Fall storm systems are tracking across Texas, producing prolonged rain events that saturate clay soils and generate foundation seepage. Demand for moisture mitigation remains elevated.",
+    "demandIndex": "HIGH",
+    "localTip": "Grade soil away from your foundation at a 1-inch-per-foot slope — Texas's expansive clay soils shift when wet and push water directly toward foundation walls."
+  },
+  "Temple:TX:roof-repair:fall": {
+    "liveAlert": "Post-summer thermal shock is causing premature cracking in roofing materials across Texas as daytime highs drop rapidly overnight. Fall is the most cost-effective time to address deferred roof maintenance.",
+    "demandIndex": "HIGH",
+    "localTip": "Have your flashings inspected every fall — thermal cycling in Texas expands and contracts metal flashing up to ¼ inch per year, eventually breaking the waterproof seal."
+  },
+  "Irving:TX:water-damage:fall": {
+    "liveAlert": "Fall storm systems are tracking across Texas, producing prolonged rain events that saturate clay soils and generate foundation seepage. Demand for moisture mitigation remains elevated.",
+    "demandIndex": "HIGH",
+    "localTip": "Grade soil away from your foundation at a 1-inch-per-foot slope — Texas's expansive clay soils shift when wet and push water directly toward foundation walls."
+  },
+  "Deltona:FL:roof-repair:fall": {
+    "liveAlert": "Post-storm roof assessments are spiking across Florida as late-season hurricanes and tropical storms continue through November. UV-aged shingles are failing at disproportionately high rates this season.",
+    "demandIndex": "CRITICAL",
+    "localTip": "Inspect attic insulation for moisture intrusion after every major storm — water migrates through micro-tears in roofing felt that aren't visible from outside."
+  },
+  "Cincinnati:OH:pest-control:fall": {
+    "liveAlert": "Ohio's cooling temperatures are triggering the annual stink bug, box elder bug, and Asian lady beetle invasion. These insects congregate by the thousands on south-facing walls and enter homes through micro-gaps in window frames.",
+    "demandIndex": "CRITICAL",
+    "localTip": "Apply exclusion caulk to all window frames and utility penetrations in September — stink bugs find entry points as small as 1/16 inch and congregate once one scout enters."
+  },
+  "Murfreesboro:TN:pest-control:fall": {
+    "liveAlert": "Tennessee's fall pest season is bringing stink bugs, spiders, and rodents into residential structures. Orb weaver spiders are particularly prevalent this fall as their population peaks before the first frost.",
+    "demandIndex": "HIGH",
+    "localTip": "Apply exterior perimeter spray before October 1 — treating before pests begin their fall migration into homes is significantly more effective than reactive treatment after entry."
+  },
+  "Richardson:TX:water-damage:fall": {
+    "liveAlert": "Fall storm systems are tracking across Texas, producing prolonged rain events that saturate clay soils and generate foundation seepage. Demand for moisture mitigation remains elevated.",
+    "demandIndex": "HIGH",
+    "localTip": "Grade soil away from your foundation at a 1-inch-per-foot slope — Texas's expansive clay soils shift when wet and push water directly toward foundation walls."
+  },
+  "Wilson:NC:roof-repair:fall": {
+    "liveAlert": "Post-hurricane season roof assessment demand is at its highest level across North Carolina. Insurance adjusters are prioritizing claims with professional inspection reports.",
+    "demandIndex": "CRITICAL",
+    "localTip": "File insurance claims immediately after any storm event — NC insurance law gives adjusters 15 business days to respond and early filing ensures adjuster availability before backlogs develop."
+  },
+  "Middletown:OH:pest-control:fall": {
+    "liveAlert": "Ohio's cooling temperatures are triggering the annual stink bug, box elder bug, and Asian lady beetle invasion. These insects congregate by the thousands on south-facing walls and enter homes through micro-gaps in window frames.",
+    "demandIndex": "CRITICAL",
+    "localTip": "Apply exclusion caulk to all window frames and utility penetrations in September — stink bugs find entry points as small as 1/16 inch and congregate once one scout enters."
+  },
+  "Tallahassee:FL:roof-repair:fall": {
+    "liveAlert": "Post-storm roof assessments are spiking across Florida as late-season hurricanes and tropical storms continue through November. UV-aged shingles are failing at disproportionately high rates this season.",
+    "demandIndex": "CRITICAL",
+    "localTip": "Inspect attic insulation for moisture intrusion after every major storm — water migrates through micro-tears in roofing felt that aren't visible from outside."
+  },
+  "Youngstown:OH:pest-control:fall": {
+    "liveAlert": "Ohio's cooling temperatures are triggering the annual stink bug, box elder bug, and Asian lady beetle invasion. These insects congregate by the thousands on south-facing walls and enter homes through micro-gaps in window frames.",
+    "demandIndex": "CRITICAL",
+    "localTip": "Apply exclusion caulk to all window frames and utility penetrations in September — stink bugs find entry points as small as 1/16 inch and congregate once one scout enters."
+  },
+  "Cleveland:OH:roof-repair:fall": {
+    "liveAlert": "Ohio fall wind events are lifting damaged shingles left vulnerable by summer hail. Pre-winter roof sealing is the most cost-effective way to prevent the interior damage that accelerates dramatically once snow arrives.",
+    "demandIndex": "HIGH",
+    "localTip": "Re-seal all roof penetrations (vents, pipes, skylights) every October — Ohio's winter temperature extremes will open any gap left unsealed before the first hard freeze."
+  },
+  "Hollywood:FL:water-damage:fall": {
+    "liveAlert": "Late hurricane season combined with heavy autumn rainfall is keeping water damage demand at peak levels across Florida. Roof-to-wall junctions and window seals are the most common entry points this season.",
+    "demandIndex": "CRITICAL",
+    "localTip": "Inspect exterior caulking around windows and doors every October — Florida's UV exposure degrades sealant 3× faster than northern states."
+  },
+  "Melbourne:FL:water-damage:fall": {
+    "liveAlert": "Late hurricane season combined with heavy autumn rainfall is keeping water damage demand at peak levels across Florida. Roof-to-wall junctions and window seals are the most common entry points this season.",
+    "demandIndex": "CRITICAL",
+    "localTip": "Inspect exterior caulking around windows and doors every October — Florida's UV exposure degrades sealant 3× faster than northern states."
+  },
+  "Warner Robins:GA:pest-control:fall": {
+    "liveAlert": "Georgia fall pest pressures remain high as cooling temperatures push cockroaches, spiders, and rodents indoors. Mosquito populations are elevated following a wet summer season.",
+    "demandIndex": "HIGH",
+    "localTip": "Treat your yard perimeter with pyrethroid insecticide every October — fall is when Georgia pest populations consolidate at foundation lines before seeking indoor winter harborage."
+  },
+  "Scottsdale:AZ:roof-repair:fall": {
+    "liveAlert": "Seasonal weather in Scottsdale, AZ is driving elevated demand for roof inspection and repair services this fall. Storm-damaged roofing requires prompt attention to prevent water intrusion from compounding repair costs.",
+    "demandIndex": "HIGH",
+    "localTip": "In November, have your Scottsdale home's roof flashing and sealant inspected — AZ's seasonal weather transitions are the most common trigger for flashing failure and subsequent leaks."
+  },
+  "Bristol:TN:water-damage:fall": {
+    "liveAlert": "Tennessee's fall rainfall is maintaining saturated soil conditions that sustain basement and crawl space moisture intrusion through October and November. Post-summer mold remediation demand is elevated.",
+    "demandIndex": "HIGH",
+    "localTip": "Run a crawl space dehumidifier year-round set to 50% relative humidity — Tennessee's clay soils retain summer moisture deep into fall, keeping crawl space humidity above mold-growth threshold."
   }
 }
