@@ -6,6 +6,7 @@ import {
   Search, Phone, Droplets, Bug, Home, ExternalLink,
   MapPin, Clock, Star, ArrowRight, Activity, FileText,
   ChevronDown, Navigation, Headphones, Sparkles, ShieldAlert,
+  RotateCcw,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import citiesData from "@/data/cities.json";
@@ -66,10 +67,13 @@ const SERVICES = [
   },
 ];
 
+const INITIAL_DISPLAY_COUNT = 16;
+
 export default function DirectoryDashboard() {
   const [selectedService, setSelectedService] = useState<string>("water-damage");
   const [selectedState, setSelectedState] = useState<string>("ALL");
   const [search, setSearch] = useState<string>("");
+  const [isExpanded, setIsExpanded] = useState<boolean>(false);
   const [gpsLoading, setGpsLoading] = useState<boolean>(false);
 
   const currentService = useMemo(() => {
@@ -98,6 +102,8 @@ export default function DirectoryDashboard() {
       .sort((a, b) => a.name.localeCompare(b.name));
   }, []);
 
+  const isFiltering = selectedState !== "ALL" || search.trim() !== "";
+
   const filteredCities = useMemo(() => {
     return CITIES.filter((c) => {
       const matchesState =
@@ -113,6 +119,13 @@ export default function DirectoryDashboard() {
       return matchesState && matchesSearch;
     });
   }, [selectedState, search]);
+
+  const displayedCities = useMemo(() => {
+    if (isFiltering || isExpanded) {
+      return filteredCities;
+    }
+    return filteredCities.slice(0, INITIAL_DISPLAY_COUNT);
+  }, [filteredCities, isFiltering, isExpanded]);
 
   const seasonalAlert = useMemo(() => {
     switch (selectedService) {
@@ -145,9 +158,8 @@ export default function DirectoryDashboard() {
     }
     setGpsLoading(true);
     navigator.geolocation.getCurrentPosition(
-      (pos) => {
+      () => {
         setGpsLoading(false);
-        // Default to high-priority metro nearest to coordinates or prefill detected region
         setSearch("Dallas, TX");
       },
       () => {
@@ -158,11 +170,23 @@ export default function DirectoryDashboard() {
     );
   };
 
+  const handleResetFilters = () => {
+    setSelectedState("ALL");
+    setSearch("");
+    setIsExpanded(false);
+  };
+
+  const selectedStateName = useMemo(() => {
+    if (selectedState === "ALL") return "";
+    const found = availableStates.find((s) => s.code === selectedState);
+    return found ? found.name : selectedState;
+  }, [selectedState, availableStates]);
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans antialiased flex flex-col justify-between">
       <div className="space-y-12 pb-16">
-        {/* Hero Section */}
-        <section className="pt-12 sm:pt-16 pb-8 px-4 text-center max-w-4xl mx-auto space-y-4">
+        {/* 1. Hero Section */}
+        <section className="pt-12 sm:pt-16 pb-4 px-4 text-center max-w-4xl mx-auto space-y-4">
           <span className="inline-block px-3.5 py-1 text-xs font-bold uppercase tracking-wider bg-blue-50 border border-blue-200 text-blue-900 rounded-full">
             24/7 Nationwide Emergency Dispatch Network
           </span>
@@ -218,7 +242,10 @@ export default function DirectoryDashboard() {
                     <input
                       type="text"
                       value={search}
-                      onChange={(e) => setSearch(e.target.value)}
+                      onChange={(e) => {
+                        setSearch(e.target.value);
+                        setIsExpanded(false);
+                      }}
                       placeholder="e.g. Dallas, TX or 75001"
                       className="w-full bg-slate-50 border border-slate-200 rounded-xl pl-10 pr-4 py-2.5 text-sm font-medium text-slate-800 placeholder-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600"
                     />
@@ -242,7 +269,92 @@ export default function DirectoryDashboard() {
           </div>
         </section>
 
-        {/* 3 Main Services Direct Hub Cards */}
+        {/* 2. Repositioned: Gemini AI Climate & Risk Intelligence Card (Directly Below Hero Search Bar, Before Primary Hubs) */}
+        <section className="max-w-7xl mx-auto px-4">
+          <div className="relative overflow-hidden bg-gradient-to-r from-sky-50 via-slate-50 to-blue-50/70 border border-slate-200/90 rounded-3xl p-6 sm:p-8 shadow-xs">
+            {/* Vector Weather Animation Canvas */}
+            <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+              {/* 1. Thermal Flare Glow */}
+              <div className="absolute -top-12 right-12 w-64 h-64 bg-amber-200/30 rounded-full blur-3xl animate-weather-glow" />
+              <div className="absolute -bottom-12 left-1/4 w-80 h-80 bg-sky-200/35 rounded-full blur-3xl animate-weather-glow" />
+
+              {/* 2. Flowing Wind Breeze SVG Trails */}
+              <svg className="absolute inset-0 w-full h-full opacity-60" preserveAspectRatio="none" viewBox="0 0 1200 200">
+                <path
+                  d="M-100,50 C200,10 400,90 700,45 C950,10 1150,70 1300,30"
+                  fill="none"
+                  stroke="#93c5fd"
+                  strokeWidth="1.5"
+                  strokeDasharray="10 8"
+                  className="animate-weather-wind-1"
+                />
+                <path
+                  d="M-50,130 C250,90 500,170 800,120 C1050,80 1200,150 1350,110"
+                  fill="none"
+                  stroke="#60a5fa"
+                  strokeWidth="1.2"
+                  strokeDasharray="14 10"
+                  className="animate-weather-wind-2"
+                />
+              </svg>
+
+              {/* 3. Rain & Water Droplets */}
+              <svg className="absolute inset-0 w-full h-full opacity-50" viewBox="0 0 800 200" preserveAspectRatio="none">
+                <line x1="120" y1="0" x2="110" y2="40" stroke="#38bdf8" strokeWidth="2" strokeLinecap="round" className="animate-weather-rain-1" />
+                <line x1="280" y1="0" x2="270" y2="45" stroke="#0ea5e9" strokeWidth="1.5" strokeLinecap="round" className="animate-weather-rain-2" />
+                <line x1="450" y1="0" x2="440" y2="35" stroke="#38bdf8" strokeWidth="1.8" strokeLinecap="round" className="animate-weather-rain-3" />
+                <line x1="620" y1="0" x2="610" y2="42" stroke="#0284c7" strokeWidth="1.5" strokeLinecap="round" className="animate-weather-rain-1" />
+                <line x1="750" y1="0" x2="740" y2="38" stroke="#38bdf8" strokeWidth="2" strokeLinecap="round" className="animate-weather-rain-2" />
+              </svg>
+
+              {/* 4. Pipe Leak / Droplet Ripple Vectors */}
+              <div className="absolute bottom-4 right-1/3 w-14 h-14 border border-blue-400/40 rounded-full animate-weather-ripple" />
+              <div className="absolute top-6 left-1/5 w-10 h-10 border border-sky-400/40 rounded-full animate-weather-ripple" />
+            </div>
+
+            <div className="relative flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
+              <div className="space-y-3 text-center md:text-left flex-1">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100/80 border border-blue-200 text-blue-900 text-xs font-bold uppercase tracking-wider">
+                  <Sparkles className="w-3.5 h-3.5 text-blue-600" />
+                  <span>Live Gemini AI Climate &amp; Risk Intelligence</span>
+                </div>
+                <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+                  {seasonalAlert.title}
+                </h2>
+                <p className="text-sm sm:text-base text-slate-700 leading-relaxed max-w-2xl">
+                  {seasonalAlert.advisory}
+                </p>
+                <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-xs font-semibold text-slate-600 pt-1">
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                    Real-time NOAA &amp; State Emergency Data Sync
+                  </span>
+                  <span className="flex items-center gap-1.5">
+                    <ShieldAlert className="w-3.5 h-3.5 text-amber-600" />
+                    Demand Level: <strong className="text-amber-700 uppercase">{seasonalAlert.demandLevel}</strong>
+                  </span>
+                </div>
+              </div>
+
+              <div className="shrink-0 flex flex-col sm:flex-row md:flex-col items-center gap-2.5">
+                <a
+                  href={siteConfig.phoneTel}
+                  data-tracking="call-btn"
+                  data-niche={selectedService}
+                  className="inline-flex items-center gap-3 bg-[#009b55] hover:bg-[#00874a] text-white font-extrabold text-base px-7 py-3.5 rounded-2xl shadow-lg shadow-emerald-700/20 ring-4 ring-emerald-100 transition-all hover:scale-103 active:scale-95"
+                >
+                  <Phone className="w-5 h-5 animate-bounce" />
+                  <span>Call On-Call Tech: {siteConfig.phoneDisplay}</span>
+                </a>
+                <span className="text-[11px] font-semibold text-slate-500">
+                  Free Phone Estimates · Zero Obligation
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 3. Primary Service Hubs */}
         <section className="max-w-7xl mx-auto px-4 space-y-4">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-extrabold text-slate-900">
@@ -286,7 +398,7 @@ export default function DirectoryDashboard() {
           </div>
         </section>
 
-        {/* Streamlined State Directory Section */}
+        {/* 4. Interactive Instant Filter Coverage Directory */}
         <section id="directory" className="max-w-7xl mx-auto px-4">
           <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-xs space-y-6">
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
@@ -298,59 +410,112 @@ export default function DirectoryDashboard() {
                   Browse {currentService.shortLabel} Dispatch Locations
                 </h2>
                 <p className="text-xs sm:text-sm text-slate-600 mt-1">
-                  Choose a state filter or switch services to locate certified on-call contractors in your city.
+                  Choose a state filter, search by city name or ZIP, or switch services to locate certified on-call contractors.
                 </p>
               </div>
 
-              <div className="text-xs font-semibold text-slate-500">
-                <span className="text-slate-900 font-bold">{filteredCities.length}</span> active cities shown
+              {/* Dynamic Result Counter */}
+              <div className="text-xs font-semibold text-slate-500 bg-slate-50 border border-slate-200/80 px-3.5 py-2 rounded-xl shrink-0">
+                {isFiltering ? (
+                  <>
+                    Showing <strong className="text-blue-900 font-extrabold">{filteredCities.length}</strong> hubs{" "}
+                    {selectedState !== "ALL" && (
+                      <span>in <strong className="text-slate-900">{selectedStateName}</strong></span>
+                    )}
+                    {search.trim() !== "" && (
+                      <span> matching &ldquo;<span className="text-slate-900 font-bold">{search.trim()}</span>&rdquo;</span>
+                    )}
+                  </>
+                ) : (
+                  <>
+                    Showing {!isExpanded && filteredCities.length > INITIAL_DISPLAY_COUNT ? `top ${displayedCities.length} of ` : "all "}
+                    <strong className="text-slate-900 font-extrabold">{filteredCities.length}</strong> hubs across the US
+                  </>
+                )}
               </div>
             </div>
 
-            {/* Streamlined State Selector Dropdown & Service Tabs */}
-            <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 pt-2 border-t border-slate-100">
-              {/* Service Switch Tabs */}
-              <div className="flex flex-wrap gap-2">
-                {SERVICES.map((s) => {
-                  const isActive = selectedService === s.id;
-                  return (
-                    <button
-                      key={s.id}
-                      onClick={() => setSelectedService(s.id)}
-                      className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
-                        isActive
-                          ? "bg-blue-900 text-white border-blue-900 shadow-sm"
-                          : "bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100"
-                      }`}
+            {/* Controls Bar: Compact single row on desktop, stacked on mobile */}
+            <div className="bg-slate-50 border border-slate-200/80 rounded-2xl p-3 sm:p-4">
+              <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-3">
+                {/* 1. Service Switcher: Pill buttons */}
+                <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+                  {SERVICES.map((s) => {
+                    const isActive = selectedService === s.id;
+                    return (
+                      <button
+                        key={s.id}
+                        type="button"
+                        onClick={() => setSelectedService(s.id)}
+                        className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all border ${
+                          isActive
+                            ? "bg-blue-900 text-white border-blue-900 shadow-sm"
+                            : "bg-white text-slate-700 border-slate-200 hover:bg-slate-100"
+                        }`}
+                      >
+                        <span>{s.emoji}</span>
+                        <span>{s.shortLabel}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {/* Right Group: State Dropdown Filter, Live Search, Reset Button */}
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 flex-1 lg:max-w-2xl lg:justify-end">
+                  {/* 2. State Dropdown Filter */}
+                  <div className="relative min-w-[200px] sm:w-56">
+                    <select
+                      value={selectedState}
+                      onChange={(e) => {
+                        setSelectedState(e.target.value);
+                        setIsExpanded(false);
+                      }}
+                      className="w-full appearance-none bg-white border border-slate-200 rounded-xl pl-3.5 pr-9 py-2 text-xs sm:text-sm font-bold text-slate-800 shadow-xs focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600 cursor-pointer"
                     >
-                      <span>{s.emoji}</span>
-                      <span>{s.shortLabel}</span>
-                    </button>
-                  );
-                })}
-              </div>
+                      <option value="ALL">All States ({CITIES.length} Hubs)</option>
+                      {availableStates.map((st) => (
+                        <option key={st.code} value={st.code}>
+                          {st.name} ({st.code}) — {st.count} Hubs
+                        </option>
+                      ))}
+                    </select>
+                    <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
+                  </div>
 
-              {/* Single Minimal State Selector Dropdown */}
-              <div className="relative min-w-[260px]">
-                <select
-                  value={selectedState}
-                  onChange={(e) => setSelectedState(e.target.value)}
-                  className="w-full appearance-none bg-slate-50 hover:bg-white border border-slate-200 rounded-xl px-4 py-2.5 text-xs sm:text-sm font-bold text-slate-800 shadow-xs focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600 cursor-pointer pr-10"
-                >
-                  <option value="ALL">All States (Nationwide Coverage)</option>
-                  {availableStates.map((st) => (
-                    <option key={st.code} value={st.code}>
-                      {st.name} ({st.code}) — {st.count} Cities
-                    </option>
-                  ))}
-                </select>
-                <ChevronDown className="absolute right-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
+                  {/* 3. Live Search Input */}
+                  <div className="relative flex-1 min-w-[180px]">
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
+                    <input
+                      type="text"
+                      value={search}
+                      onChange={(e) => {
+                        setSearch(e.target.value);
+                        setIsExpanded(false);
+                      }}
+                      placeholder="Filter city or ZIP..."
+                      className="w-full bg-white border border-slate-200 rounded-xl pl-9 pr-3 py-2 text-xs sm:text-sm font-medium text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600"
+                    />
+                  </div>
+
+                  {/* 4. Reset Filter Button */}
+                  {(isFiltering || isExpanded) && (
+                    <button
+                      type="button"
+                      onClick={handleResetFilters}
+                      className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold text-slate-600 bg-white border border-slate-200 hover:bg-slate-100 hover:text-slate-900 transition whitespace-nowrap shadow-xs"
+                      title="Clear filters back to default"
+                    >
+                      <RotateCcw className="w-3.5 h-3.5 text-slate-500" />
+                      <span>Reset</span>
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
 
-            {/* Compact City Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 pt-2">
-              {filteredCities.map((city) => {
+            {/* Results Area: Clean 4-column responsive grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 pt-1">
+              {displayedCities.map((city) => {
                 const href = `/${selectedService}/${city.slug}`;
                 return (
                   <Link
@@ -396,11 +561,26 @@ export default function DirectoryDashboard() {
               })}
             </div>
 
+            {/* Load More / Browse Full Directory Toggle when not filtering */}
+            {!isFiltering && filteredCities.length > INITIAL_DISPLAY_COUNT && (
+              <div className="text-center pt-2">
+                <button
+                  type="button"
+                  onClick={() => setIsExpanded(!isExpanded)}
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-xs sm:text-sm font-bold text-blue-900 shadow-xs transition"
+                >
+                  <span>{isExpanded ? "Show Top Hubs Only" : `Browse Full Directory (${filteredCities.length} Total Hubs)`}</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${isExpanded ? "rotate-180" : ""}`} />
+                </button>
+              </div>
+            )}
+
             {filteredCities.length === 0 && (
               <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 text-center space-y-2">
                 <p className="font-bold text-slate-800 text-sm">No cities match your search or filter.</p>
                 <button
-                  onClick={() => { setSelectedState("ALL"); setSearch(""); }}
+                  type="button"
+                  onClick={handleResetFilters}
                   className="px-4 py-2 bg-blue-900 text-white rounded-xl text-xs font-bold shadow-xs hover:bg-blue-800"
                 >
                   Reset Filters
@@ -410,7 +590,7 @@ export default function DirectoryDashboard() {
           </div>
         </section>
 
-        {/* 3-Step Emergency Response Protocol */}
+        {/* 5. 3-Step Emergency Response Protocol */}
         <section className="max-w-7xl mx-auto px-4 space-y-6">
           <div className="text-center space-y-2">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
@@ -459,89 +639,6 @@ export default function DirectoryDashboard() {
           </div>
         </section>
       </div>
-
-      {/* Above Footer: Gemini AI Advisory with Dynamic Weather Vector Animations */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-sky-50 via-slate-50 to-blue-50/60 border-y border-slate-200/80 py-12 px-4 sm:px-6">
-        {/* Vector Weather Animation Canvas */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-          {/* 1. Thermal Flare Glow */}
-          <div className="absolute -top-12 right-12 w-64 h-64 bg-amber-200/30 rounded-full blur-3xl animate-weather-glow" />
-          <div className="absolute -bottom-12 left-1/4 w-80 h-80 bg-sky-200/35 rounded-full blur-3xl animate-weather-glow" />
-
-          {/* 2. Flowing Wind Breeze SVG Trails */}
-          <svg className="absolute inset-0 w-full h-full opacity-60" preserveAspectRatio="none" viewBox="0 0 1200 200">
-            <path
-              d="M-100,50 C200,10 400,90 700,45 C950,10 1150,70 1300,30"
-              fill="none"
-              stroke="#93c5fd"
-              strokeWidth="1.5"
-              strokeDasharray="10 8"
-              className="animate-weather-wind-1"
-            />
-            <path
-              d="M-50,130 C250,90 500,170 800,120 C1050,80 1200,150 1350,110"
-              fill="none"
-              stroke="#60a5fa"
-              strokeWidth="1.2"
-              strokeDasharray="14 10"
-              className="animate-weather-wind-2"
-            />
-          </svg>
-
-          {/* 3. Rain & Water Droplets */}
-          <svg className="absolute inset-0 w-full h-full opacity-50" viewBox="0 0 800 200" preserveAspectRatio="none">
-            <line x1="120" y1="0" x2="110" y2="40" stroke="#38bdf8" strokeWidth="2" strokeLinecap="round" className="animate-weather-rain-1" />
-            <line x1="280" y1="0" x2="270" y2="45" stroke="#0ea5e9" strokeWidth="1.5" strokeLinecap="round" className="animate-weather-rain-2" />
-            <line x1="450" y1="0" x2="440" y2="35" stroke="#38bdf8" strokeWidth="1.8" strokeLinecap="round" className="animate-weather-rain-3" />
-            <line x1="620" y1="0" x2="610" y2="42" stroke="#0284c7" strokeWidth="1.5" strokeLinecap="round" className="animate-weather-rain-1" />
-            <line x1="750" y1="0" x2="740" y2="38" stroke="#38bdf8" strokeWidth="2" strokeLinecap="round" className="animate-weather-rain-2" />
-          </svg>
-
-          {/* 4. Pipe Leak / Droplet Ripple Vectors */}
-          <div className="absolute bottom-4 right-1/3 w-14 h-14 border border-blue-400/40 rounded-full animate-weather-ripple" />
-          <div className="absolute top-6 left-1/5 w-10 h-10 border border-sky-400/40 rounded-full animate-weather-ripple" />
-        </div>
-
-        <div className="relative max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="space-y-3.5 text-center md:text-left flex-1">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100/80 border border-blue-200 text-blue-900 text-xs font-bold uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-              <span>Live Gemini AI Climate &amp; Risk Intelligence</span>
-            </div>
-            <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
-              {seasonalAlert.title}
-            </h2>
-            <p className="text-sm sm:text-base text-slate-700 leading-relaxed max-w-2xl">
-              {seasonalAlert.advisory}
-            </p>
-            <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-xs font-semibold text-slate-600 pt-1">
-              <span className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                Real-time NOAA &amp; State Emergency Data Sync
-              </span>
-              <span className="flex items-center gap-1.5">
-                <ShieldAlert className="w-3.5 h-3.5 text-amber-600" />
-                Demand Level: <strong className="text-amber-700 uppercase">{seasonalAlert.demandLevel}</strong>
-              </span>
-            </div>
-          </div>
-
-          <div className="shrink-0 flex flex-col sm:flex-row md:flex-col items-center gap-3">
-            <a
-              href={siteConfig.phoneTel}
-              data-tracking="call-btn"
-              data-niche={selectedService}
-              className="inline-flex items-center gap-3 bg-[#009b55] hover:bg-[#00874a] text-white font-extrabold text-base px-7 py-3.5 rounded-2xl shadow-lg shadow-emerald-700/20 ring-4 ring-emerald-100 transition-all hover:scale-103 active:scale-95"
-            >
-              <Phone className="w-5 h-5 animate-bounce" />
-              <span>Call On-Call Tech: {siteConfig.phoneDisplay}</span>
-            </a>
-            <span className="text-[11px] font-semibold text-slate-500">
-              Free Phone Estimates · Zero Obligation
-            </span>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
