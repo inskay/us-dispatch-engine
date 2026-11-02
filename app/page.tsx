@@ -282,6 +282,15 @@ export default function DirectoryDashboard() {
                     href={siteConfig.phoneTel}
                     data-tracking="call-btn"
                     data-niche={selectedService}
+                    onClick={() => {
+                      if (typeof window !== 'undefined' && (window as any).gtag) {
+                        (window as any).gtag('event', 'phone_call_click', {
+                          event_category: 'Conversion',
+                          event_label: 'Toll-Free Emergency Dispatch',
+                          value: 1,
+                        });
+                      }
+                    }}
                     className="w-full flex items-center justify-center gap-2 bg-[#009b55] hover:bg-[#00874a] text-white font-extrabold text-base px-6 py-3.5 rounded-2xl shadow-md transition transform active:scale-95"
                   >
                     <Headphones className="w-5 h-5 shrink-0" />
@@ -366,6 +375,15 @@ export default function DirectoryDashboard() {
                   href={siteConfig.phoneTel}
                   data-tracking="call-btn"
                   data-niche={selectedService}
+                  onClick={() => {
+                    if (typeof window !== 'undefined' && (window as any).gtag) {
+                      (window as any).gtag('event', 'phone_call_click', {
+                        event_category: 'Conversion',
+                        event_label: 'Toll-Free Emergency Dispatch',
+                        value: 1,
+                      });
+                    }
+                  }}
                   className="inline-flex items-center gap-3 bg-[#009b55] hover:bg-[#00874a] text-white font-extrabold text-base px-7 py-3.5 rounded-2xl shadow-lg shadow-emerald-700/20 ring-4 ring-emerald-100 transition-all hover:scale-103 active:scale-95"
                 >
                   <Phone className="w-5 h-5 animate-bounce" />

@@ -148,5 +148,110 @@
     "liveAlert": "Tennessee's fall rainfall is maintaining saturated soil conditions that sustain basement and crawl space moisture intrusion through October and November. Post-summer mold remediation demand is elevated.",
     "demandIndex": "HIGH",
     "localTip": "Run a crawl space dehumidifier year-round set to 50% relative humidity — Tennessee's clay soils retain summer moisture deep into fall, keeping crawl space humidity above mold-growth threshold."
+  },
+  "High Point:NC:pest-control:fall": {
+    "liveAlert": "Cooling temperatures are driving stink bugs, rodents, and cockroaches to seek indoor shelter across North Carolina. Brown marmorated stink bugs are congregating in wall voids in large numbers.",
+    "demandIndex": "HIGH",
+    "localTip": "Apply door sweep seals to all exterior doors before October — NC's stink bug invasion typically begins when overnight temperatures first drop below 55°F."
+  },
+  "Akron:OH:water-damage:fall": {
+    "liveAlert": "Ohio's fall rain season is sustaining elevated water table levels, prolonging basement moisture intrusion events into November. Foundation crack seepage is a common and preventable source of fall water damage.",
+    "demandIndex": "HIGH",
+    "localTip": "Apply hydraulic cement to any visible foundation cracks every fall — Ohio's clay-heavy soils exert tremendous hydrostatic pressure against basement walls during the rainy season."
+  },
+  "Oak Ridge:TN:water-damage:fall": {
+    "liveAlert": "Tennessee's fall rainfall is maintaining saturated soil conditions that sustain basement and crawl space moisture intrusion through October and November. Post-summer mold remediation demand is elevated.",
+    "demandIndex": "HIGH",
+    "localTip": "Run a crawl space dehumidifier year-round set to 50% relative humidity — Tennessee's clay soils retain summer moisture deep into fall, keeping crawl space humidity above mold-growth threshold."
+  },
+  "Lawrenceville:GA:roof-repair:fall": {
+    "liveAlert": "Post-storm roof assessments following Georgia's active fall storm season are revealing widespread undiscovered damage from summer events. Insurance claims must be filed within 12 months of the damage date.",
+    "demandIndex": "HIGH",
+    "localTip": "Have your roof inspected every October before winter — Georgia's fall freeze-thaw cycles worsen any pre-existing cracks or lifted shingles that went unaddressed after summer storms."
+  },
+  "Cleveland:OH:water-damage:fall": {
+    "liveAlert": "Ohio's fall rain season is sustaining elevated water table levels, prolonging basement moisture intrusion events into November. Foundation crack seepage is a common and preventable source of fall water damage.",
+    "demandIndex": "HIGH",
+    "localTip": "Apply hydraulic cement to any visible foundation cracks every fall — Ohio's clay-heavy soils exert tremendous hydrostatic pressure against basement walls during the rainy season."
+  },
+  "Winston-Salem:NC:pest-control:fall": {
+    "liveAlert": "Cooling temperatures are driving stink bugs, rodents, and cockroaches to seek indoor shelter across North Carolina. Brown marmorated stink bugs are congregating in wall voids in large numbers.",
+    "demandIndex": "HIGH",
+    "localTip": "Apply door sweep seals to all exterior doors before October — NC's stink bug invasion typically begins when overnight temperatures first drop below 55°F."
+  },
+  "College Station:TX:water-damage:fall": {
+    "liveAlert": "Fall storm systems are tracking across Texas, producing prolonged rain events that saturate clay soils and generate foundation seepage. Demand for moisture mitigation remains elevated.",
+    "demandIndex": "HIGH",
+    "localTip": "Grade soil away from your foundation at a 1-inch-per-foot slope — Texas's expansive clay soils shift when wet and push water directly toward foundation walls."
+  },
+  "Lorain:OH:water-damage:fall": {
+    "liveAlert": "Ohio's fall rain season is sustaining elevated water table levels, prolonging basement moisture intrusion events into November. Foundation crack seepage is a common and preventable source of fall water damage.",
+    "demandIndex": "HIGH",
+    "localTip": "Apply hydraulic cement to any visible foundation cracks every fall — Ohio's clay-heavy soils exert tremendous hydrostatic pressure against basement walls during the rainy season."
+  },
+  "Johnson City:TN:pest-control:fall": {
+    "liveAlert": "Tennessee's fall pest season is bringing stink bugs, spiders, and rodents into residential structures. Orb weaver spiders are particularly prevalent this fall as their population peaks before the first frost.",
+    "demandIndex": "HIGH",
+    "localTip": "Apply exterior perimeter spray before October 1 — treating before pests begin their fall migration into homes is significantly more effective than reactive treatment after entry."
+  },
+  "Warren:OH:water-damage:fall": {
+    "liveAlert": "Ohio's fall rain season is sustaining elevated water table levels, prolonging basement moisture intrusion events into November. Foundation crack seepage is a common and preventable source of fall water damage.",
+    "demandIndex": "HIGH",
+    "localTip": "Apply hydraulic cement to any visible foundation cracks every fall — Ohio's clay-heavy soils exert tremendous hydrostatic pressure against basement walls during the rainy season."
+  },
+  "Houston:TX:pest-control:fall": {
+    "liveAlert": "Cooling temperatures are triggering stink bug, spider, and rodent infiltration in Texas homes as insects seek winter shelter. German cockroach populations that built up over summer are now moving indoors.",
+    "demandIndex": "HIGH",
+    "localTip": "Apply exterior perimeter treatment every September — fall is when Texas pest pressures are highest at the home's foundation line."
+  },
+  "Melbourne:FL:roof-repair:fall": {
+    "liveAlert": "Post-storm roof assessments are spiking across Florida as late-season hurricanes and tropical storms continue through November. UV-aged shingles are failing at disproportionately high rates this season.",
+    "demandIndex": "CRITICAL",
+    "localTip": "Inspect attic insulation for moisture intrusion after every major storm — water migrates through micro-tears in roofing felt that aren't visible from outside."
+  },
+  "Odessa:TX:water-damage:fall": {
+    "liveAlert": "Fall storm systems are tracking across Texas, producing prolonged rain events that saturate clay soils and generate foundation seepage. Demand for moisture mitigation remains elevated.",
+    "demandIndex": "HIGH",
+    "localTip": "Grade soil away from your foundation at a 1-inch-per-foot slope — Texas's expansive clay soils shift when wet and push water directly toward foundation walls."
+  },
+  "Newark:OH:pest-control:fall": {
+    "liveAlert": "Ohio's cooling temperatures are triggering the annual stink bug, box elder bug, and Asian lady beetle invasion. These insects congregate by the thousands on south-facing walls and enter homes through micro-gaps in window frames.",
+    "demandIndex": "CRITICAL",
+    "localTip": "Apply exclusion caulk to all window frames and utility penetrations in September — stink bugs find entry points as small as 1/16 inch and congregate once one scout enters."
+  },
+  "Tulsa:OK:roof-repair:fall": {
+    "liveAlert": "Oklahoma's fall wind events are revealing storm damage that went undetected during summer. Pre-winter roof inspection and repair is critical before ice storms create additional vulnerability.",
+    "demandIndex": "HIGH",
+    "localTip": "Inspect attic ventilation every fall — Oklahoma's extreme temperature range (from 110°F summers to -20°F winters) requires adequate ventilation to prevent moisture buildup and accelerated shingle aging."
+  },
+  "Athens:GA:pest-control:fall": {
+    "liveAlert": "Georgia fall pest pressures remain high as cooling temperatures push cockroaches, spiders, and rodents indoors. Mosquito populations are elevated following a wet summer season.",
+    "demandIndex": "HIGH",
+    "localTip": "Treat your yard perimeter with pyrethroid insecticide every October — fall is when Georgia pest populations consolidate at foundation lines before seeking indoor winter harborage."
+  },
+  "Daytona Beach:FL:water-damage:fall": {
+    "liveAlert": "Late hurricane season combined with heavy autumn rainfall is keeping water damage demand at peak levels across Florida. Roof-to-wall junctions and window seals are the most common entry points this season.",
+    "demandIndex": "CRITICAL",
+    "localTip": "Inspect exterior caulking around windows and doors every October — Florida's UV exposure degrades sealant 3× faster than northern states."
+  },
+  "Findlay:OH:roof-repair:fall": {
+    "liveAlert": "Ohio fall wind events are lifting damaged shingles left vulnerable by summer hail. Pre-winter roof sealing is the most cost-effective way to prevent the interior damage that accelerates dramatically once snow arrives.",
+    "demandIndex": "HIGH",
+    "localTip": "Re-seal all roof penetrations (vents, pipes, skylights) every October — Ohio's winter temperature extremes will open any gap left unsealed before the first hard freeze."
+  },
+  "Phoenix:AZ:roof-repair:fall": {
+    "liveAlert": "Seasonal weather in Phoenix, AZ is driving elevated demand for roof inspection and repair services this fall. Storm-damaged roofing requires prompt attention to prevent water intrusion from compounding repair costs.",
+    "demandIndex": "HIGH",
+    "localTip": "In November, have your Phoenix home's roof flashing and sealant inspected — AZ's seasonal weather transitions are the most common trigger for flashing failure and subsequent leaks."
+  },
+  "Pensacola:FL:water-damage:fall": {
+    "liveAlert": "Late hurricane season combined with heavy autumn rainfall is keeping water damage demand at peak levels across Florida. Roof-to-wall junctions and window seals are the most common entry points this season.",
+    "demandIndex": "CRITICAL",
+    "localTip": "Inspect exterior caulking around windows and doors every October — Florida's UV exposure degrades sealant 3× faster than northern states."
+  },
+  "Franklin:TN:water-damage:fall": {
+    "liveAlert": "Tennessee's fall rainfall is maintaining saturated soil conditions that sustain basement and crawl space moisture intrusion through October and November. Post-summer mold remediation demand is elevated.",
+    "demandIndex": "HIGH",
+    "localTip": "Run a crawl space dehumidifier year-round set to 50% relative humidity — Tennessee's clay soils retain summer moisture deep into fall, keeping crawl space humidity above mold-growth threshold."
   }
 }
