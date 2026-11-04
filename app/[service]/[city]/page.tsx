@@ -7,6 +7,7 @@ import {
 import { cities, getOrResolveCity } from "@/lib/cities";
 import { NICHES, type Niche, type City } from "@/lib/niches";
 import { siteConfig } from "@/config/site";
+import { getDispatchPhone } from "@/config/dispatch";
 import { getAdvisory } from "@/lib/gemini";
 import { FAQAccordion } from "@/components/FAQAccordion";
 
@@ -36,8 +37,9 @@ export async function generateMetadata({
 
   const city = getOrResolveCity(citySlug);
   const info = NICHES[service as Niche];
+  const dispatchPhone = getDispatchPhone(service);
   const title = `${info.label} in ${city.city}, ${city.state_code} — 24/7 Emergency Dispatch`;
-  const description = `Fast, local ${info.label.toLowerCase()} in ${city.city}, ${city.state} (${city.zip}). ${info.urgencyText}. Call ${siteConfig.phoneDisplay} for immediate response — avg ${city.response_mins} min dispatch.`;
+  const description = `Fast, local ${info.label.toLowerCase()} in ${city.city}, ${city.state} (${city.zip}). ${info.urgencyText}. Call ${dispatchPhone.display} for immediate response — avg ${city.response_mins} min dispatch.`;
 
   return {
     title,
@@ -71,12 +73,13 @@ export async function generateMetadata({
 // ─── JSON-LD: EmergencyService ─────────────────────────────────────────────────
 function buildEmergencyServiceJsonLd(niche: Niche, city: City) {
   const nicheInfo = NICHES[niche];
+  const dispatchPhone = getDispatchPhone(niche);
   return {
     "@context": "https://schema.org",
     "@type": "EmergencyService",
     name: `${nicheInfo.label} — ${city.city}, ${city.state_code}`,
     description: nicheInfo.description,
-    telephone: siteConfig.phoneTel.replace("tel:", ""),
+    telephone: dispatchPhone.raw.replace("tel:", ""),
     url: `${siteConfig.domain}/${niche}/${city.slug}`,
     openingHours: "Mo-Su 00:00-23:59",
     areaServed: {
@@ -126,6 +129,7 @@ function buildFaqJsonLd(faqs: Array<{ q: string; a: string }>) {
 // ─── FAQ builder ─────────────────────────────────────────────────────────────
 function buildFaqs(niche: Niche, city: City): Array<{ q: string; a: string }> {
   const nicheInfo = NICHES[niche];
+  const dispatchPhone = getDispatchPhone(niche);
   const costRange = `\$${city.avg_cost}–\$${Math.round(city.avg_cost * 2.8)}`;
   return [
     {
@@ -142,7 +146,7 @@ function buildFaqs(niche: Niche, city: City): Array<{ q: string; a: string }> {
     },
     {
       q: `Can I get an immediate quote over the phone before dispatch to ${city.city}?`,
-      a: `Yes. Call ${siteConfig.phoneDisplay} and our ${city.city} dispatch coordinator will assess your situation and provide an initial cost estimate within the first 2 minutes. There is no obligation to schedule service and no travel fee for estimates in ${city.city}.`,
+      a: `Yes. Call ${dispatchPhone.display} and our ${city.city} dispatch coordinator will assess your situation and provide an initial cost estimate within the first 2 minutes. There is no obligation to schedule service and no travel fee for estimates in ${city.city}.`,
     },
   ];
 }
@@ -185,6 +189,7 @@ function LiveStatusBar({ niche, city }: { niche: Niche; city: City }) {
 
 function HeroSection({ niche, city }: { niche: Niche; city: City }) {
   const nicheInfo = NICHES[niche];
+  const dispatchPhone = getDispatchPhone(niche);
   return (
     <section className="relative bg-gradient-to-b from-white via-slate-50/70 to-slate-100/60 border-b border-slate-200/80 pt-10 pb-16 px-4 overflow-hidden">
       <div className="relative z-10 max-w-4xl mx-auto text-center space-y-6">
@@ -212,7 +217,7 @@ function HeroSection({ niche, city }: { niche: Niche; city: City }) {
         {/* Main CTA */}
         <div className="pt-2">
           <a
-            href={siteConfig.phoneTel}
+            href={dispatchPhone.raw}
             data-tracking="call-btn"
             data-niche={niche}
             data-city={city.city}
@@ -220,7 +225,7 @@ function HeroSection({ niche, city }: { niche: Niche; city: City }) {
             className="inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-extrabold text-xl sm:text-2xl px-8 py-5 rounded-2xl shadow-xl shadow-emerald-700/20 ring-4 ring-emerald-100 transition-all duration-200 hover:scale-105 active:scale-95"
           >
             <Phone className="w-6 h-6 sm:w-7 sm:h-7 animate-bounce shrink-0" />
-            <span>Call {siteConfig.phoneDisplay}</span>
+            <span>Call {dispatchPhone.display}</span>
           </a>
           <p className="text-slate-500 text-xs sm:text-sm mt-3 font-medium">
             ⚡ Direct Dispatch · 100% Free Consultation · No Obligation
@@ -525,6 +530,7 @@ export default async function ServiceCityPage({
   // Dynamic Fallback Template guarantees a valid City object for any slug
   const city = getOrResolveCity(citySlug);
   const typedService = service as Niche;
+  const dispatchPhone = getDispatchPhone(typedService);
 
   const now = new Date();
   const currentMonth = now.getMonth();
@@ -594,7 +600,7 @@ export default async function ServiceCityPage({
             </p>
             <div>
               <a
-                href={siteConfig.phoneTel}
+                href={dispatchPhone.raw}
                 data-tracking="call-btn"
                 data-niche={service}
                 data-city={city.city}
@@ -602,7 +608,7 @@ export default async function ServiceCityPage({
                 className="inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-lg sm:text-xl px-8 py-4 rounded-xl shadow-lg shadow-emerald-950/40 transition-all hover:scale-105 active:scale-95"
               >
                 <Phone className="w-5 h-5 shrink-0" />
-                <span>Call {siteConfig.phoneDisplay}</span>
+                <span>Call {dispatchPhone.display}</span>
               </a>
               <p className="text-slate-300 text-xs mt-3">
                 24/7 Rapid Dispatch · No Trip Surcharge · Local {city.city} Technicians
@@ -620,14 +626,14 @@ export default async function ServiceCityPage({
             <p>
               Serving {city.city}, {city.state} and surrounding areas ·{" "}
               <a
-                href={siteConfig.phoneTel}
+                href={dispatchPhone.raw}
                 data-tracking="call-btn"
                 data-niche={service}
                 data-city={city.city}
                 data-zip={city.zip}
                 className="text-blue-900 font-semibold hover:underline"
               >
-                {siteConfig.phoneDisplay}
+                {dispatchPhone.display}
               </a>
             </p>
             <p className="text-slate-400">
@@ -648,7 +654,7 @@ export default async function ServiceCityPage({
             </p>
           </div>
           <a
-            href={siteConfig.phoneTel}
+            href={dispatchPhone.raw}
             data-tracking="call-btn"
             data-niche={service}
             data-city={city.city}

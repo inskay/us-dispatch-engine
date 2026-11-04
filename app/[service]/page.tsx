@@ -7,6 +7,7 @@ import {
 import { cities } from "@/lib/cities";
 import { NICHES, type Niche } from "@/lib/niches";
 import { siteConfig } from "@/config/site";
+import { getDispatchPhone } from "@/config/dispatch";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { ServiceCityDirectory } from "@/components/ServiceCityDirectory";
 
@@ -27,8 +28,9 @@ export async function generateMetadata({
   if (!VALID_SERVICES.includes(service as Niche)) return {};
 
   const info = NICHES[service as Niche];
+  const dispatchPhone = getDispatchPhone(service);
   const title = `${info.label} — 24/7 Emergency Dispatch & Local Services`;
-  const description = `Immediate ${info.label.toLowerCase()} across all top US metropolitan hubs. Rapid 20-min dispatch, certified local crews, and free estimates. Call ${siteConfig.phoneDisplay} now.`;
+  const description = `Immediate ${info.label.toLowerCase()} across all top US metropolitan hubs. Rapid 20-min dispatch, certified local crews, and free estimates. Call ${dispatchPhone.display} now.`;
 
   return {
     title,
@@ -57,6 +59,7 @@ export async function generateMetadata({
 
 function buildServiceJsonLd(service: Niche) {
   const info = NICHES[service];
+  const dispatchPhone = getDispatchPhone(service);
   return {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -66,7 +69,7 @@ function buildServiceJsonLd(service: Niche) {
     provider: {
       "@type": "EmergencyService",
       name: siteConfig.siteName,
-      telephone: siteConfig.phoneTel.replace("tel:", ""),
+      telephone: dispatchPhone.raw.replace("tel:", ""),
       url: `${siteConfig.domain}/${service}`,
     },
     areaServed: {
@@ -87,6 +90,7 @@ function buildServiceJsonLd(service: Niche) {
 
 function buildServiceFaqs(service: Niche) {
   const info = NICHES[service];
+  const dispatchPhone = getDispatchPhone(service);
   return [
     {
       q: `How quickly can an emergency ${info.label.toLowerCase()} technician arrive?`,
@@ -94,7 +98,7 @@ function buildServiceFaqs(service: Niche) {
     },
     {
       q: `Can I get an immediate pricing estimate over the phone?`,
-      a: `Yes. Call ${siteConfig.phoneDisplay} and our dispatch coordinators will evaluate your situation and provide an instant price estimate. Technicians also perform an on-site inspection with no trip charge before any work begins.`,
+      a: `Yes. Call ${dispatchPhone.display} and our dispatch coordinators will evaluate your situation and provide an instant price estimate. Technicians also perform an on-site inspection with no trip charge before any work begins.`,
     },
     {
       q: `Do you work directly with homeowner insurance companies?`,
@@ -117,6 +121,7 @@ export default async function ServiceHubPage({
 
   const typedService = service as Niche;
   const info = NICHES[typedService];
+  const dispatchPhone = getDispatchPhone(typedService);
   const jsonLd = buildServiceJsonLd(typedService);
   const faqs = buildServiceFaqs(typedService);
 
@@ -145,11 +150,11 @@ export default async function ServiceHubPage({
               </span>
             </div>
             <a
-              href={siteConfig.phoneTel}
+              href={dispatchPhone.raw}
               className="flex items-center gap-1.5 text-emerald-300 font-bold hover:underline"
             >
               <Phone className="w-3.5 h-3.5" />
-              <span>Priority: {siteConfig.phoneDisplay}</span>
+              <span>Priority: {dispatchPhone.display}</span>
             </a>
           </div>
         </div>
@@ -181,13 +186,13 @@ export default async function ServiceHubPage({
             {/* Main CTA */}
             <div className="pt-2">
               <a
-                href={siteConfig.phoneTel}
+                href={dispatchPhone.raw}
                 data-tracking="call-btn"
                 data-niche={service}
                 className="inline-flex items-center justify-center gap-3 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-extrabold text-xl sm:text-2xl px-8 py-5 rounded-2xl shadow-xl shadow-emerald-700/20 ring-4 ring-emerald-100 transition-all duration-200 hover:scale-105 active:scale-95"
               >
                 <Phone className="w-6 h-6 sm:w-7 sm:h-7 animate-bounce shrink-0" />
-                <span>Call {siteConfig.phoneDisplay}</span>
+                <span>Call {dispatchPhone.display}</span>
               </a>
               <p className="text-slate-500 text-xs sm:text-sm mt-3 font-medium">
                 ⚡ Instant Phone Estimate · Zero Trip Charge · Direct Insurance Assistance
@@ -286,7 +291,7 @@ export default async function ServiceHubPage({
               {
                 step: "01",
                 title: "Call & Immediate Triage",
-                desc: `Dial ${siteConfig.phoneDisplay}. Our dispatch coordinator collects your address, evaluates severity, and routes the nearest mobile unit within 60 seconds.`,
+                desc: `Dial ${dispatchPhone.display}. Our dispatch coordinator collects your address, evaluates severity, and routes the nearest mobile unit within 60 seconds.`,
                 icon: Phone,
               },
               {
@@ -344,13 +349,13 @@ export default async function ServiceHubPage({
             </p>
             <div>
               <a
-                href={siteConfig.phoneTel}
+                href={dispatchPhone.raw}
                 data-tracking="call-btn"
                 data-niche={service}
                 className="inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-lg sm:text-xl px-8 py-4 rounded-xl shadow-lg shadow-emerald-950/40 transition-all hover:scale-105 active:scale-95"
               >
                 <Phone className="w-5 h-5 shrink-0" />
-                <span>Call {siteConfig.phoneDisplay}</span>
+                <span>Call {dispatchPhone.display}</span>
               </a>
               <p className="text-slate-300 text-xs mt-3">
                 No Call Centers · Direct Local Dispatch · 100% Free Phone Estimate
@@ -368,12 +373,12 @@ export default async function ServiceHubPage({
             <p>
               Direct emergency dispatch line:{" "}
               <a
-                href={siteConfig.phoneTel}
+                href={dispatchPhone.raw}
                 data-tracking="call-btn"
                 data-niche={service}
                 className="text-blue-900 font-semibold hover:underline"
               >
-                {siteConfig.phoneDisplay}
+                {dispatchPhone.display}
               </a>
             </p>
             <p className="text-slate-400">
@@ -394,7 +399,7 @@ export default async function ServiceHubPage({
             </p>
           </div>
           <a
-            href={siteConfig.phoneTel}
+            href={dispatchPhone.raw}
             data-tracking="call-btn"
             data-niche={service}
             className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white font-bold text-sm px-5 py-3 rounded-xl shadow-md shrink-0 transition-colors"

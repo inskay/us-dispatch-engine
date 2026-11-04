@@ -9,6 +9,7 @@ import {
   RotateCcw,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { getDispatchPhone } from "@/config/dispatch";
 import citiesData from "@/data/cities.json";
 
 interface CityItem {
@@ -79,6 +80,10 @@ export default function DirectoryDashboard() {
 
   const currentService = useMemo(() => {
     return SERVICES.find((s) => s.id === selectedService) || SERVICES[0];
+  }, [selectedService]);
+
+  const activePhone = useMemo(() => {
+    return getDispatchPhone(selectedService);
   }, [selectedService]);
 
   // Aggregate all unique states with city counts
@@ -279,7 +284,7 @@ export default function DirectoryDashboard() {
                 {/* Column 3: Find Pro CTA */}
                 <div className="lg:col-span-3 lg:self-end">
                   <a
-                    href={siteConfig.phoneTel}
+                    href={activePhone.raw}
                     data-tracking="call-btn"
                     data-niche={selectedService}
                     onClick={() => {
@@ -372,7 +377,7 @@ export default function DirectoryDashboard() {
 
               <div className="shrink-0 flex flex-col sm:flex-row md:flex-col items-center gap-2.5">
                 <a
-                  href={siteConfig.phoneTel}
+                  href={activePhone.raw}
                   data-tracking="call-btn"
                   data-niche={selectedService}
                   onClick={() => {
@@ -387,7 +392,7 @@ export default function DirectoryDashboard() {
                   className="inline-flex items-center gap-3 bg-[#009b55] hover:bg-[#00874a] text-white font-extrabold text-base px-7 py-3.5 rounded-2xl shadow-lg shadow-emerald-700/20 ring-4 ring-emerald-100 transition-all hover:scale-103 active:scale-95"
                 >
                   <Phone className="w-5 h-5 animate-bounce" />
-                  <span>Call On-Call Tech: {siteConfig.phoneDisplay}</span>
+                  <span>Call On-Call Tech: {activePhone.display}</span>
                 </a>
                 <span className="text-[11px] font-semibold text-slate-500">
                   Free Phone Estimates · Zero Obligation
@@ -649,7 +654,7 @@ export default function DirectoryDashboard() {
               {
                 step: "01",
                 title: "Call Direct Dispatch",
-                desc: `Dial ${siteConfig.phoneDisplay}. Tell our coordinator your issue and address. Units are alerted within 60 seconds.`,
+                desc: `Dial ${activePhone.display}. Tell our coordinator your issue and address. Units are alerted within 60 seconds.`,
                 icon: Phone,
               },
               {

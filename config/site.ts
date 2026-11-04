@@ -1,7 +1,7 @@
 export const siteConfig = {
   domain: "https://linesfix.com",
-  phoneDisplay: "(800) 555-0199",
-  phoneTel: "tel:+18005550199",
+  phoneDisplay: "(888) 217-8367",
+  phoneTel: "tel:+18882178367",
   siteName: "LinesFix",
   tagline: "Emergency Services — 24/7 Rapid Response",
 } as const;
