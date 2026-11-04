@@ -41,7 +41,7 @@ export const NICHES: Record<
     ringColor: "ring-blue-200",
     accentColor: "bg-blue-600",
     description:
-      "24/7 emergency water extraction, structural drying, mold prevention, and full restoration for residential and commercial properties.",
+      "24/7 emergency water extraction, structural drying, mold prevention, and full restoration for residential properties and homeowners.",
     riskKey: "climate_risk",
     serviceType: "Water Damage Restoration",
     urgencyText: "Water damage worsens every hour — mold begins in 24–48 hrs",

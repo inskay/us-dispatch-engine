@@ -131,7 +131,7 @@ export default function RootLayout({
 
             <div>
               <h4 className="text-slate-900 font-bold mb-4 text-xs tracking-wider uppercase">Direct Dispatch Desk</h4>
-              <p className="text-xs text-slate-500 mb-3">Toll-free 24/7 emergency hotline for residential and commercial dispatch.</p>
+              <p className="text-xs text-slate-500 mb-3">Toll-free 24/7 emergency hotline for residential dispatch and homeowner assistance.</p>
               <a 
                 href={siteConfig.phoneTel} 
                 data-tracking="call-btn" 

@@ -10,6 +10,8 @@ import { siteConfig } from "@/config/site";
 import { getDispatchPhone } from "@/config/dispatch";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { ServiceCityDirectory } from "@/components/ServiceCityDirectory";
+import { ServiceRiskMonitor } from "@/components/verticals/ServiceRiskMonitor";
+import { ServiceSkylineIllustration } from "@/components/verticals/ServiceSkylineIllustration";
 
 export const revalidate = 86400;
 
@@ -175,7 +177,7 @@ export default async function ServiceHubPage({
             </h1>
 
             <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-              {info.description} Fast dispatch to your door with state-licensed crews, commercial-grade equipment, and transparent pricing.
+              {info.description} Fast dispatch to your door with state-licensed crews, professional-grade equipment, and transparent pricing.
             </p>
 
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-amber-50 border border-amber-200 text-amber-900 shadow-xs">
@@ -217,20 +219,36 @@ export default async function ServiceHubPage({
                 </div>
               ))}
             </div>
+
+            {/* Interactive SVG Skyline / Vector Header Illustration */}
+            <div className="pt-6 max-w-5xl mx-auto">
+              <ServiceSkylineIllustration
+                service={service}
+                phoneDisplay={dispatchPhone.display}
+                phoneTel={dispatchPhone.raw}
+              />
+            </div>
           </div>
         </section>
 
+        {/* Service-Specific Live Local Conditions & Risk Monitor Banner */}
+        <ServiceRiskMonitor
+          service={service}
+          phoneDisplay={dispatchPhone.display}
+          phoneTel={dispatchPhone.raw}
+        />
+
         {/* Interactive City Directory & State Filter */}
-        <section className="max-w-6xl mx-auto px-4 py-12 space-y-6">
+        <section className="max-w-6xl mx-auto px-4 py-8 space-y-6">
           <div className="text-center space-y-2">
             <span className="text-xs font-bold uppercase tracking-wider text-blue-900 bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
-              Local Coverage Areas
+              Coverage Directory
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-              Find {info.label} in Your City
+              Browse {info.label} Dispatch Locations
             </h2>
             <p className="text-sm text-slate-600 max-w-xl mx-auto">
-              Filter by state or search below to view local response times, neighborhood coverage, and localized emergency pricing.
+              Select your city to view local dispatch times, pricing estimates, and available emergency units.
             </p>
           </div>
 
@@ -250,7 +268,7 @@ export default async function ServiceHubPage({
                 Full-Scope {info.label} Capabilities
               </h2>
               <p className="text-sm text-slate-600 max-w-xl mx-auto">
-                Commercial and residential solutions handled by certified regional technicians.
+                Comprehensive residential solutions handled by certified regional technicians.
               </p>
             </div>
 
@@ -382,7 +400,7 @@ export default async function ServiceHubPage({
               </a>
             </p>
             <p className="text-slate-400">
-              Serving residential and commercial properties nationwide with state-licensed contractors.
+              Serving residential properties and homeowners nationwide with state-licensed contractors.
             </p>
           </div>
         </footer>

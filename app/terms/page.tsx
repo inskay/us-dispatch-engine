@@ -54,7 +54,7 @@ export default function TermsPage() {
               <span className="text-blue-900">2.</span> Independent Third-Party Contractors
             </h2>
             <p>
-              All technicians, tradespeople, emergency responders, and contracting businesses participating in our referral network are independent business entities. LinesFix does not employ, supervise, manage, control, or direct any contractor or contractor employees.
+              All technicians, tradespeople, emergency responders, and trade contractors participating in our referral network are independent business entities. LinesFix does not employ, supervise, manage, control, or direct any contractor or contractor employees.
             </p>
             <p>
               LinesFix does not endorse, guarantee, or make any representations regarding any contractor&apos;s licensing status, general liability insurance, workers&apos; compensation coverage, bonding, workmanship quality, pricing, or arrival speed. Any agreement, contract, or warranty entered into is strictly between you and the respective contractor.
