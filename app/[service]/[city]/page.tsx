@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import {
   Phone, Clock, Shield, MapPin, AlertTriangle, CheckCircle,
   Star, Zap, TrendingUp, Lightbulb, BadgeCheck, Wrench, Calendar,
 } from "lucide-react";
-import { cities, getOrResolveCity } from "@/lib/cities";
+import { cities, getOrResolveCity, getRegionalCities } from "@/lib/cities";
 import { NICHES, type Niche, type City } from "@/lib/niches";
 import { siteConfig } from "@/config/site";
 import { getDispatchPhone } from "@/config/dispatch";
 import { getAdvisory } from "@/lib/gemini";
 import { FAQAccordion } from "@/components/FAQAccordion";
+import { buildCityServiceSchema } from "@/lib/schema";
 
 export const revalidate = 86400;
 
@@ -38,8 +40,23 @@ export async function generateMetadata({
   const city = getOrResolveCity(citySlug);
   const info = NICHES[service as Niche];
   const dispatchPhone = getDispatchPhone(service);
-  const title = `${info.label} in ${city.city}, ${city.state_code} — 24/7 Emergency Dispatch`;
-  const description = `Fast, local ${info.label.toLowerCase()} in ${city.city}, ${city.state} (${city.zip}). ${info.urgencyText}. Call ${dispatchPhone.display} for immediate response — avg ${city.response_mins} min dispatch.`;
+
+  const shortService =
+    service === "water-damage"
+      ? "Water Damage"
+      : service === "pest-control"
+      ? "Pest Control"
+      : "Roof Repair";
+
+  let title = `24/7 ${shortService} in ${city.city}, ${city.state_code} | Dispatch`;
+  if (title.length > 58) {
+    title = `${city.city}, ${city.state_code} ${shortService} — 24/7 Dispatch`;
+  }
+  if (title.length > 58) {
+    title = `${city.city} ${shortService} — 24/7 Dispatch`;
+  }
+
+  const description = `24/7 emergency ${shortService.toLowerCase()} in ${city.city}, ${city.state_code}. Rapid ${city.response_mins}-min dispatch & free phone quotes. Call ${dispatchPhone.display} now.`;
 
   return {
     title,
@@ -67,62 +84,6 @@ export async function generateMetadata({
       canonical: `${siteConfig.domain}/${service}/${citySlug}`,
     },
     robots: { index: true, follow: true },
-  };
-}
-
-// ─── JSON-LD: EmergencyService ─────────────────────────────────────────────────
-function buildEmergencyServiceJsonLd(niche: Niche, city: City) {
-  const nicheInfo = NICHES[niche];
-  const dispatchPhone = getDispatchPhone(niche);
-  return {
-    "@context": "https://schema.org",
-    "@type": "EmergencyService",
-    name: `${nicheInfo.label} — ${city.city}, ${city.state_code}`,
-    description: nicheInfo.description,
-    telephone: dispatchPhone.raw.replace("tel:", ""),
-    url: `${siteConfig.domain}/${niche}/${city.slug}`,
-    openingHours: "Mo-Su 00:00-23:59",
-    areaServed: {
-      "@type": "City",
-      name: city.city,
-      containedInPlace: { "@type": "State", name: city.state },
-    },
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: city.city,
-      addressRegion: city.state_code,
-      postalCode: city.zip,
-      addressCountry: "US",
-    },
-    priceRange: `From \$${city.avg_cost}`,
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: `${nicheInfo.label} Services`,
-      itemListElement: nicheInfo.services.map((s, i) => ({
-        "@type": "Offer",
-        position: i + 1,
-        itemOffered: { "@type": "Service", name: s },
-      })),
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "312",
-      bestRating: "5",
-    },
-  };
-}
-
-// ─── JSON-LD: FAQPage ─────────────────────────────────────────────────────────
-function buildFaqJsonLd(faqs: Array<{ q: string; a: string }>) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map(({ q, a }) => ({
-      "@type": "Question",
-      name: q,
-      acceptedAnswer: { "@type": "Answer", text: a },
-    })),
   };
 }
 
@@ -518,6 +479,49 @@ function ServicesGrid({ niche, city }: { niche: Niche; city: City }) {
   );
 }
 
+function RegionalSiloMesh({
+  service,
+  currentCity,
+}: {
+  service: Niche;
+  currentCity: City;
+}) {
+  const regionalCities = getRegionalCities(currentCity, 8);
+  const nicheInfo = NICHES[service];
+
+  return (
+    <section className="bg-slate-50/70 border-t border-slate-200/80 py-10 px-4">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center sm:text-left mb-6">
+          <h2 className="text-base sm:text-lg font-black text-slate-900 tracking-tight">
+            Emergency Dispatch Coverage in {currentCity.state}
+          </h2>
+          <p className="text-xs text-slate-500 mt-1">
+            24/7 rapid response network for {nicheInfo.label.toLowerCase()} across regional {currentCity.state} hubs.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+          {regionalCities.map((c) => (
+            <Link
+              key={c.slug}
+              href={`/${service}/${c.slug}`}
+              className="group flex flex-col justify-between p-3 rounded-xl bg-white border border-slate-200/90 hover:border-blue-400 hover:shadow-xs transition"
+            >
+              <span className="font-bold text-xs sm:text-sm text-slate-800 group-hover:text-blue-700 transition truncate">
+                {c.city}, {c.state_code}
+              </span>
+              <span className="text-[11px] text-slate-500 mt-1">
+                Avg. {c.response_mins}m dispatch
+              </span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default async function ServiceCityPage({
   params,
 }: {
@@ -544,18 +548,13 @@ export default async function ServiceCityPage({
   );
 
   const faqs = buildFaqs(typedService, city);
-  const emergencyServiceSchema = buildEmergencyServiceJsonLd(typedService, city);
-  const faqSchema = buildFaqJsonLd(faqs);
+  const jsonLd = buildCityServiceSchema(typedService, city);
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(emergencyServiceSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
       <div className="min-h-screen bg-slate-50 text-slate-900 pb-24 md:pb-0 font-sans antialiased">
@@ -616,6 +615,9 @@ export default async function ServiceCityPage({
             </div>
           </div>
         </section>
+
+        {/* Dynamic Cross-City Internal Linking Silo Mesh */}
+        <RegionalSiloMesh service={typedService} currentCity={city} />
 
         {/* Footer */}
         <footer className="bg-white border-t border-slate-200 py-10 text-center text-slate-500 text-xs px-4">

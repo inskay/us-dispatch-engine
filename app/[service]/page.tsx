@@ -12,6 +12,7 @@ import { FAQAccordion } from "@/components/FAQAccordion";
 import { ServiceCityDirectory } from "@/components/ServiceCityDirectory";
 import { ServiceRiskMonitor } from "@/components/verticals/ServiceRiskMonitor";
 import { ServiceSkylineIllustration } from "@/components/verticals/ServiceSkylineIllustration";
+import { buildServiceHubSchema } from "@/lib/schema";
 
 export const revalidate = 86400;
 
@@ -59,37 +60,6 @@ export async function generateMetadata({
   };
 }
 
-function buildServiceJsonLd(service: Niche) {
-  const info = NICHES[service];
-  const dispatchPhone = getDispatchPhone(service);
-  return {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    name: info.label,
-    serviceType: info.serviceType,
-    description: info.description,
-    provider: {
-      "@type": "EmergencyService",
-      name: siteConfig.siteName,
-      telephone: dispatchPhone.raw.replace("tel:", ""),
-      url: `${siteConfig.domain}/${service}`,
-    },
-    areaServed: {
-      "@type": "Country",
-      name: "United States",
-    },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: `${info.label} Capabilities`,
-      itemListElement: info.services.map((s, i) => ({
-        "@type": "Offer",
-        position: i + 1,
-        itemOffered: { "@type": "Service", name: s },
-      })),
-    },
-  };
-}
-
 function buildServiceFaqs(service: Niche) {
   const info = NICHES[service];
   const dispatchPhone = getDispatchPhone(service);
@@ -124,7 +94,7 @@ export default async function ServiceHubPage({
   const typedService = service as Niche;
   const info = NICHES[typedService];
   const dispatchPhone = getDispatchPhone(typedService);
-  const jsonLd = buildServiceJsonLd(typedService);
+  const jsonLd = buildServiceHubSchema(typedService);
   const faqs = buildServiceFaqs(typedService);
 
   return (

@@ -131,3 +131,24 @@ export function getOrResolveCity(slug: string): City {
     response_mins: 22,
   };
 }
+
+/**
+ * Returns 6 to 10 other cities within the same state (or regional fallback)
+ * to build an internal PageRank silo mesh across regional clusters.
+ */
+export function getRegionalCities(currentCity: City, limit = 8): City[] {
+  const sameState = cities.filter(
+    (c) => c.state_code === currentCity.state_code && c.slug !== currentCity.slug
+  );
+
+  if (sameState.length >= limit) {
+    const hash = currentCity.slug.split("").reduce((acc, ch) => acc + ch.charCodeAt(0), 0);
+    const startIndex = hash % sameState.length;
+    const rotated = [...sameState.slice(startIndex), ...sameState.slice(0, startIndex)];
+    return rotated.slice(0, limit);
+  }
+
+  const existingSlugs = new Set([currentCity.slug, ...sameState.map((c) => c.slug)]);
+  const supplement = cities.filter((c) => !existingSlugs.has(c.slug));
+  return [...sameState, ...supplement].slice(0, limit);
+}
