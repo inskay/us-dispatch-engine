@@ -3,9 +3,10 @@ import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
 import Link from 'next/link';
-import { PhoneCall, ShieldCheck, Clock } from 'lucide-react';
+import { ShieldCheck, Clock } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 import { CallTracking } from '@/components/CallTracking';
+import { HeaderCallButton, FooterCallLink } from '@/components/DynamicPhoneLink';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -79,17 +80,7 @@ export default function RootLayout({
               <Link href="/roof-repair" className="hover:text-blue-700 transition">Roof Repair</Link>
             </nav>
 
-            <a 
-              href={siteConfig.phoneTel}
-              data-tracking="call-btn"
-              className="flex items-center gap-2.5 bg-[#009b55] hover:bg-[#00874a] text-white font-bold px-5 py-2.5 rounded-xl shadow-md shadow-emerald-700/15 transition transform active:scale-95"
-            >
-              <PhoneCall className="w-4 h-4 animate-bounce" />
-              <div className="text-left">
-                <span className="block text-[10px] uppercase tracking-wider text-emerald-100 font-medium">24/7 Dispatch*</span>
-                <span className="text-sm font-black tracking-wide">{siteConfig.phoneDisplay}</span>
-              </div>
-            </a>
+            <HeaderCallButton />
           </div>
         </header>
 
@@ -132,13 +123,7 @@ export default function RootLayout({
             <div>
               <h4 className="text-slate-900 font-bold mb-4 text-xs tracking-wider uppercase">Direct Dispatch Desk</h4>
               <p className="text-xs text-slate-500 mb-3">Toll-free 24/7 emergency hotline* for residential dispatch and homeowner assistance.</p>
-              <a 
-                href={siteConfig.phoneTel} 
-                data-tracking="call-btn" 
-                className="inline-block text-slate-900 font-mono font-bold text-lg hover:text-blue-700 transition"
-              >
-                {siteConfig.phoneDisplay}
-              </a>
+              <FooterCallLink />
             </div>
           </div>
 
