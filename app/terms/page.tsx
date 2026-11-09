@@ -127,7 +127,7 @@ export default function TermsPage() {
         <div className="bg-slate-100 border border-slate-200 rounded-2xl p-6 text-center space-y-3">
           <h3 className="text-base font-bold text-slate-900">Need Immediate Emergency Home Dispatch?</h3>
           <p className="text-xs text-slate-600 max-w-md mx-auto">
-            Our nationwide partner network provides 24/7 on-call dispatch across all 50 states.
+            Our nationwide partner network provides 24/7 on-call dispatch* across all 50 states.
           </p>
           <div>
             <a

@@ -201,7 +201,7 @@ export default function DirectoryDashboard() {
         {/* 1. Hero Section */}
         <section className="pt-12 sm:pt-16 pb-4 px-4 text-center max-w-4xl mx-auto space-y-4">
           <span className="inline-block px-3.5 py-1 text-xs font-bold uppercase tracking-wider bg-blue-50 border border-blue-200 text-blue-900 rounded-full">
-            24/7 Nationwide Emergency Dispatch Network
+            24/7 Nationwide Emergency Dispatch Network*
           </span>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-tight">
             Fast Response Home Services When Every Minute Counts

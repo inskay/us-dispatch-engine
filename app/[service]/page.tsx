@@ -148,7 +148,7 @@ export default async function ServiceHubPage({
               </span>
               <span className="hidden sm:inline text-slate-400">|</span>
               <span className="text-slate-200">
-                24/7 Rapid Deployment Across All US Cities
+                24/7 Rapid Deployment Across All US Cities*
               </span>
             </div>
             <a
@@ -170,7 +170,7 @@ export default async function ServiceHubPage({
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-              24/7 Professional{" "}
+              24/7 Professional*{" "}
               <span className="text-blue-900 underline decoration-blue-300 decoration-wavy decoration-2">
                 {info.label}
               </span>
@@ -284,7 +284,7 @@ export default async function ServiceHubPage({
                   <div>
                     <h3 className="text-slate-900 font-bold text-sm">{s}</h3>
                     <p className="text-slate-500 text-xs mt-1">
-                      24/7 immediate deployment with full warranty coverage.
+                      24/7 immediate deployment* with full warranty coverage.
                     </p>
                   </div>
                 </div>

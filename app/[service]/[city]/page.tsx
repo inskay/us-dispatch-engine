@@ -199,7 +199,7 @@ function HeroSection({ niche, city }: { niche: Niche; city: City }) {
         </div>
 
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-          24/7 {nicheInfo.label} in{" "}
+          24/7 {nicheInfo.label}* in{" "}
           <span className="text-blue-900 underline decoration-blue-300 decoration-wavy decoration-2">
             {city.city}, {city.state_code}
           </span>
@@ -395,7 +395,7 @@ function LocalDataTable({ niche, city }: { niche: Niche; city: City }) {
                 <tr>
                   <td className="py-2.5 text-slate-600 font-medium">Dispatch Availability</td>
                   <td className="py-2.5 text-right font-semibold text-emerald-700">
-                    24/7 / 365 Days
+                    24/7 / 365 Days*
                   </td>
                 </tr>
                 <tr>
@@ -508,7 +508,7 @@ function ServicesGrid({ niche, city }: { niche: Niche; city: City }) {
               </div>
               <div>
                 <p className="text-slate-900 font-bold text-sm">{service}</p>
-                <p className="text-slate-500 text-xs mt-1">Available 24/7 in {city.city}, {city.state_code}</p>
+                <p className="text-slate-500 text-xs mt-1">Available 24/7* in {city.city}, {city.state_code}</p>
               </div>
             </div>
           ))}
@@ -611,7 +611,7 @@ export default async function ServiceCityPage({
                 <span>Call {dispatchPhone.display}</span>
               </a>
               <p className="text-slate-300 text-xs mt-3">
-                24/7 Rapid Dispatch · No Trip Surcharge · Local {city.city} Technicians
+                24/7 Rapid Dispatch* · No Trip Surcharge · Local {city.city} Technicians
               </p>
             </div>
           </div>

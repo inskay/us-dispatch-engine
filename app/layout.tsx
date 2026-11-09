@@ -51,7 +51,7 @@ export default function RootLayout({
             </span>
             <span className="hidden sm:flex items-center gap-4 text-slate-600">
               <span className="flex items-center gap-1"><ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> Licensed &amp; Insured Pros</span>
-              <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5 text-blue-600" /> 24/7 Immediate Response</span>
+              <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5 text-blue-600" /> 24/7 Immediate Response*</span>
             </span>
           </div>
         </div>
@@ -86,7 +86,7 @@ export default function RootLayout({
             >
               <PhoneCall className="w-4 h-4 animate-bounce" />
               <div className="text-left">
-                <span className="block text-[10px] uppercase tracking-wider text-emerald-100 font-medium">24/7 Dispatch</span>
+                <span className="block text-[10px] uppercase tracking-wider text-emerald-100 font-medium">24/7 Dispatch*</span>
                 <span className="text-sm font-black tracking-wide">{siteConfig.phoneDisplay}</span>
               </div>
             </a>
@@ -131,7 +131,7 @@ export default function RootLayout({
 
             <div>
               <h4 className="text-slate-900 font-bold mb-4 text-xs tracking-wider uppercase">Direct Dispatch Desk</h4>
-              <p className="text-xs text-slate-500 mb-3">Toll-free 24/7 emergency hotline for residential dispatch and homeowner assistance.</p>
+              <p className="text-xs text-slate-500 mb-3">Toll-free 24/7 emergency hotline* for residential dispatch and homeowner assistance.</p>
               <a 
                 href={siteConfig.phoneTel} 
                 data-tracking="call-btn" 
@@ -144,13 +144,22 @@ export default function RootLayout({
 
           <div className="max-w-6xl mx-auto px-4 mt-10 pt-6 border-t border-slate-200/90 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
             <div>
-              © 2026 LinesFix.com · All rights reserved · 24/7 National Emergency Dispatch Network
+              © 2026 LinesFix.com · All rights reserved · 24/7 National Emergency Dispatch Network*
             </div>
             <div className="flex items-center gap-4 text-slate-500">
               <Link href="/terms" className="hover:text-blue-700 transition">Terms of Service</Link>
               <span>·</span>
               <Link href="/privacy" className="hover:text-blue-700 transition">Privacy Policy</Link>
             </div>
+          </div>
+
+          <div className="text-xs text-gray-500 max-w-5xl mx-auto mt-6 text-center leading-relaxed border-t border-gray-800 pt-6">
+            <p className="mb-2">
+              <strong>Disclaimer:</strong> LinesFix.com is an independent referral directory and marketing service connecting residential property owners with third-party service specialists. LinesFix does not perform home repair or mitigation services directly, nor is it a licensed contractor or insurance adjuster. All service contractors are independent, and LinesFix makes no warranty or representation regarding work performed. It is the sole responsibility of the customer to verify licensing, bonding, insurance, and qualifications required by local jurisdiction before commencing work.
+            </p>
+            <p>
+              *24/7 dispatch coordination and hotline assistance are subject to local technician availability, emergency volume, regional coverage, and severe weather conditions.
+            </p>
           </div>
         </footer>
       </body>
