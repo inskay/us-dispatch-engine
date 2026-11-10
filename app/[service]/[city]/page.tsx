@@ -41,32 +41,34 @@ export async function generateMetadata({
   const info = NICHES[service as Niche];
   const dispatchPhone = getDispatchPhone(service);
 
-  const shortService =
-    service === "water-damage"
-      ? "Water Damage"
-      : service === "pest-control"
-      ? "Pest Control"
-      : "Roof Repair";
+  let title = "";
+  let description = "";
 
-  let title = `24/7 ${shortService} in ${city.city}, ${city.state_code} | Dispatch`;
-  if (title.length > 58) {
-    title = `${city.city}, ${city.state_code} ${shortService} — 24/7 Dispatch`;
+  if (service === "roof-repair") {
+    title = `24/7 Emergency Roof Repair in ${city.city}, ${city.state_code} | Rapid Dispatch`;
+    description = `24/7 emergency roof repair, storm damage & roof replacement in ${city.city}, ${city.state_code}. Fast certified dispatch. Call ${dispatchPhone.display} now.`;
+  } else if (service === "water-damage") {
+    title = `24/7 Emergency Water Damage in ${city.city}, ${city.state_code} | Rapid Dispatch`;
+    description = `24/7 emergency water damage, flood extraction & structural drying in ${city.city}, ${city.state_code}. Fast certified dispatch. Call ${dispatchPhone.display} now.`;
+  } else {
+    title = `24/7 Emergency Pest Control in ${city.city}, ${city.state_code} | Rapid Dispatch`;
+    description = `24/7 emergency pest control, exterminator & rodent removal in ${city.city}, ${city.state_code}. Fast certified dispatch. Call ${dispatchPhone.display} now.`;
   }
-  if (title.length > 58) {
-    title = `${city.city} ${shortService} — 24/7 Dispatch`;
-  }
-
-  const description = `24/7 emergency ${shortService.toLowerCase()} in ${city.city}, ${city.state_code}. Rapid ${city.response_mins}-min dispatch & free phone quotes. Call ${dispatchPhone.display} now.`;
 
   return {
     title,
     description,
     keywords: [
-      `${info.label.toLowerCase()} ${city.city}`,
-      `${info.label.toLowerCase()} ${city.state_code}`,
+      `24/7 ${service} ${city.city}`,
+      `${service} ${city.city} ${city.state_code}`,
       `emergency ${service} ${city.city}`,
+      `${service} 24 7 ${city.zip}`,
       `${service} near me ${city.zip}`,
+      ...(service === "roof-repair" ? ["roof repair 7 24", "emergency roof repair", "storm roof tarping"] : []),
+      ...(service === "water-damage" ? ["water damage 24", "emergency flood cleanup", "water extraction 24 7"] : []),
+      ...(service === "pest-control" ? ["exterminator 7 24", "emergency exterminator", "pest control 24 7"] : []),
       ...city.zips_list.map((z) => `${service} ${z}`),
+      ...city.zips_list.map((z) => `emergency ${service} ${z}`),
     ],
     openGraph: {
       title,

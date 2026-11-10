@@ -9,13 +9,13 @@ export const SERVICE_DISPATCH_NUMBERS: Record<string, { display: string; raw: st
     raw: 'tel:8553650257',
   },
 
-  // 2. Emergency Roof Repair (Isolated from Water Damage)
+  // 2. Emergency Roof Repair (Dedicated MarketCall Campaign)
   'roof-repair': {
-    display: '(800) 555-0199',
-    raw: 'tel:+18005550199',
+    display: '(855) 365-0334',
+    raw: 'tel:8553650334',
   },
 
-  // 3. Emergency Pest Control (Isolated from Water Damage)
+  // 3. Emergency Pest Control (Fallback until dedicated line assigned)
   'pest-control': {
     display: '(800) 555-0199',
     raw: 'tel:+18005550199',
