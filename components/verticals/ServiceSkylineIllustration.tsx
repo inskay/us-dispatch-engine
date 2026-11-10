@@ -503,7 +503,7 @@ export function ServiceSkylineIllustration({ service, phoneDisplay, phoneTel }: 
         <div className="w-full lg:w-2/5 space-y-4 bg-slate-800/80 border border-slate-700/80 rounded-2xl p-5 sm:p-6 backdrop-blur">
           <div className="flex items-center justify-between">
             <span className="text-xs font-bold uppercase tracking-wider text-slate-400 font-mono">
-              Hydro Sensor #{current.id + 1}
+              Inspection Zone #{current.id + 1}
             </span>
             <span className={`text-[11px] font-black uppercase px-2.5 py-0.5 rounded-full border ${current.badgeColor}`}>
               {current.badge}

@@ -10,7 +10,6 @@ import { siteConfig } from "@/config/site";
 import { getDispatchPhone } from "@/config/dispatch";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { ServiceCityDirectory } from "@/components/ServiceCityDirectory";
-import { ServiceRiskMonitor } from "@/components/verticals/ServiceRiskMonitor";
 import { ServiceSkylineIllustration } from "@/components/verticals/ServiceSkylineIllustration";
 import { buildServiceHubSchema } from "@/lib/schema";
 
@@ -33,7 +32,7 @@ export async function generateMetadata({
   const info = NICHES[service as Niche];
   const dispatchPhone = getDispatchPhone(service);
   const title = `${info.label} — 24/7 Emergency Dispatch & Local Services`;
-  const description = `Immediate ${info.label.toLowerCase()} across all top US metropolitan hubs. Rapid 20-min dispatch, certified local crews, and free estimates. Call ${dispatchPhone.display} now.`;
+  const description = `Immediate ${info.label.toLowerCase()} across all top US metropolitan hubs. Rapid 20-min dispatch, certified local crews, and phone consultation. Call ${dispatchPhone.display} now.`;
 
   return {
     title,
@@ -69,8 +68,8 @@ function buildServiceFaqs(service: Niche) {
       a: `Our nationwide network maintains an average arrival time of under 25 minutes across all metropolitan dispatch centers. In active weather or emergency events, units are dispatched within 60 seconds of your call.`,
     },
     {
-      q: `Can I get an immediate pricing estimate over the phone?`,
-      a: `Yes. Call ${dispatchPhone.display} and our dispatch coordinators will evaluate your situation and provide an instant price estimate. Technicians also perform an on-site inspection with no trip charge before any work begins.`,
+      q: `Can I get an immediate phone consultation and emergency assessment?`,
+      a: `Yes. Call ${dispatchPhone.display} and our dispatch coordinators will evaluate your situation and explain emergency response protocols. Technicians perform an on-site damage assessment before work begins.`,
     },
     {
       q: `Do you work directly with homeowner insurance companies?`,
@@ -167,7 +166,7 @@ export default async function ServiceHubPage({
                 <span>Call {dispatchPhone.display}</span>
               </a>
               <p className="text-slate-500 text-xs sm:text-sm mt-3 font-medium">
-                ⚡ Instant Phone Estimate · Zero Trip Charge · Direct Insurance Assistance
+                ⚡ 24/7 Phone Consultation · Certified Local Contractors · Direct Insurance Assistance
               </p>
             </div>
 
@@ -177,7 +176,7 @@ export default async function ServiceHubPage({
                 { icon: Shield, text: "Licensed & Insured", sub: "Fully Compliant" },
                 { icon: Clock, text: "20-Min Response", sub: "Average Dispatch" },
                 { icon: Star, text: "4.9 ★ Rating", sub: "Verified Reviews" },
-                { icon: CheckCircle, text: "$0 Phone Quote", sub: "No Commitment" },
+                { icon: CheckCircle, text: "Phone Consultation", sub: "24/7 Available" },
               ].map(({ icon: Icon, text, sub }) => (
                 <div
                   key={text}
@@ -201,13 +200,6 @@ export default async function ServiceHubPage({
           </div>
         </section>
 
-        {/* Service-Specific Live Local Conditions & Risk Monitor Banner */}
-        <ServiceRiskMonitor
-          service={service}
-          phoneDisplay={dispatchPhone.display}
-          phoneTel={dispatchPhone.raw}
-        />
-
         {/* Interactive City Directory & State Filter */}
         <section className="max-w-6xl mx-auto px-4 py-8 space-y-6">
           <div className="text-center space-y-2">
@@ -218,7 +210,7 @@ export default async function ServiceHubPage({
               Browse {info.label} Dispatch Locations
             </h2>
             <p className="text-sm text-slate-600 max-w-xl mx-auto">
-              Select your city to view local dispatch times, pricing estimates, and available emergency units.
+              Select your city to view local dispatch times, service protocols, and available emergency units.
             </p>
           </div>
 
@@ -284,8 +276,8 @@ export default async function ServiceHubPage({
               },
               {
                 step: "02",
-                title: "On-Site Assessment & Free Quote",
-                desc: "A licensed specialist arrives on-site, inspects the property with thermal imaging or diagnostic tools, and provides a clear, transparent written estimate.",
+                title: "Emergency Dispatch Assessment",
+                desc: "A licensed specialist arrives on-site, inspects the property with thermal imaging or diagnostic tools, and reviews required mitigation steps.",
                 icon: Activity,
               },
               {
@@ -346,7 +338,7 @@ export default async function ServiceHubPage({
                 <span>Call {dispatchPhone.display}</span>
               </a>
               <p className="text-slate-300 text-xs mt-3">
-                No Call Centers · Direct Local Dispatch · 100% Free Phone Estimate
+                No Call Centers · Direct Local Dispatch · 24/7 Phone Consultation
               </p>
             </div>
           </div>

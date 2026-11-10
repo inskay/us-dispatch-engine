@@ -93,23 +93,22 @@ export async function generateMetadata({
 function buildFaqs(niche: Niche, city: City): Array<{ q: string; a: string }> {
   const nicheInfo = NICHES[niche];
   const dispatchPhone = getDispatchPhone(niche);
-  const costRange = `\$${city.avg_cost}–\$${Math.round(city.avg_cost * 2.8)}`;
   return [
     {
       q: `How fast can an emergency specialist reach ${city.city} (${city.zip})?`,
       a: `Our local ${city.city} dispatch network maintains an average response time of ${city.response_mins} minutes to the ${city.zip} area. We have certified ${nicheInfo.label.toLowerCase()} technicians stationed across ${city.neighborhoods.join(", ")} and all surrounding communities. Dispatch confirmation is issued within 60 seconds of your call.`,
     },
     {
-      q: `What is the estimated cost range for ${nicheInfo.label.toLowerCase()} dispatch in ${city.state}?`,
-      a: `In ${city.state}, ${nicheInfo.label.toLowerCase()} costs typically range from ${costRange} depending on property severity, affected square footage, and necessary equipment. Our ${city.city} specialists provide a transparent, 100% free estimate before any work begins, with zero after-hours surcharges.`,
+      q: `How does emergency dispatch and on-site assessment work in ${city.city}?`,
+      a: `When you call, our ${city.city} dispatch coordinator collects your address and emergency details to route the nearest mobile unit. On-site, certified technicians evaluate the property, outline required mitigation steps, and review procedures directly with you before work begins.`,
     },
     {
       q: `Are the ${niche === "pest-control" ? "treatments" : "repairs"} compliant with local ${city.state} regulations?`,
       a: `Yes — all our ${city.city} technicians are fully licensed, bonded, and insured under ${city.state} statutory codes. We carry appropriate state-specific licensing and provide written guarantees on all completed work.`,
     },
     {
-      q: `Can I get an immediate quote over the phone before dispatch to ${city.city}?`,
-      a: `Yes. Call ${dispatchPhone.display} and our ${city.city} dispatch coordinator will assess your situation and provide an initial cost estimate within the first 2 minutes. There is no obligation to schedule service and no travel fee for estimates in ${city.city}.`,
+      q: `Can I get an immediate phone consultation before dispatch to ${city.city}?`,
+      a: `Yes. Call ${dispatchPhone.display} to speak directly with an emergency coordinator who will review your situation, explain protocol options, and immediately mobilize a local ${city.city} crew if required.`,
     },
   ];
 }
@@ -191,7 +190,7 @@ function HeroSection({ niche, city }: { niche: Niche; city: City }) {
             <span>Call {dispatchPhone.display}</span>
           </a>
           <p className="text-slate-500 text-xs sm:text-sm mt-3 font-medium">
-            ⚡ Direct Dispatch · 100% Free Consultation · No Obligation
+            ⚡ Direct Dispatch · 24/7 Phone Consultation · Certified Local Contractors
           </p>
         </div>
 
@@ -201,7 +200,7 @@ function HeroSection({ niche, city }: { niche: Niche; city: City }) {
             { icon: Shield, text: "Licensed & Insured", sub: "State Compliant" },
             { icon: Clock, text: `${city.response_mins}-Min Dispatch`, sub: "Rapid Response" },
             { icon: Star, text: "4.9 ★ Rating", sub: "312 Local Reviews" },
-            { icon: CheckCircle, text: "Free Phone Quote", sub: "No Trip Fee" },
+            { icon: CheckCircle, text: "Phone Consultation", sub: "24/7 Available" },
           ].map(({ icon: Icon, text, sub }) => (
             <div
               key={text}
@@ -323,30 +322,30 @@ function LocalDataTable({ niche, city }: { niche: Niche; city: City }) {
           Local {nicheInfo.label} Dispatch Data
         </h2>
         <p className="text-sm text-slate-600 max-w-xl mx-auto">
-          Verified response times, coverage zones, and estimated cost ranges for {city.city}, {city.state_code}.
+          Verified response times, coverage zones, and dispatch parameters for {city.city}, {city.state_code}.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Pricing Card */}
+        {/* Dispatch Specifications Card */}
         <div className="bg-white border-2 border-blue-900/20 rounded-2xl p-6 shadow-md shadow-slate-100 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-sm font-bold uppercase tracking-wider text-blue-950 flex items-center gap-2">
                 <Zap className="w-4 h-4 text-blue-700" />
-                Estimated Pricing &amp; Rates
+                Dispatch &amp; Coverage Specifications
               </h3>
               <span className="px-2.5 py-1 rounded-full text-[11px] font-bold uppercase bg-emerald-100 text-emerald-800 border border-emerald-300">
-                Free Phone Quote
+                Phone Consultation
               </span>
             </div>
 
             <table className="w-full text-sm">
               <tbody className="divide-y divide-slate-100">
                 <tr>
-                  <td className="py-2.5 text-slate-600 font-medium">Estimated Starting Cost</td>
-                  <td className="py-2.5 text-right font-extrabold text-slate-900 text-lg">
-                    \${city.avg_cost}
+                  <td className="py-2.5 text-slate-600 font-medium">Dispatch Availability</td>
+                  <td className="py-2.5 text-right font-semibold text-emerald-700">
+                    24/7 / 365 Days*
                   </td>
                 </tr>
                 <tr>
@@ -356,15 +355,15 @@ function LocalDataTable({ niche, city }: { niche: Niche; city: City }) {
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-2.5 text-slate-600 font-medium">Dispatch Availability</td>
-                  <td className="py-2.5 text-right font-semibold text-emerald-700">
-                    24/7 / 365 Days*
+                  <td className="py-2.5 text-slate-600 font-medium">Assessment Protocol</td>
+                  <td className="py-2.5 text-right font-semibold text-slate-800">
+                    On-Site Inspection
                   </td>
                 </tr>
                 <tr>
-                  <td className="py-2.5 text-slate-600 font-medium">Trip Fee for Assessment</td>
-                  <td className="py-2.5 text-right font-semibold text-emerald-700">
-                    $0 (Free Estimate)
+                  <td className="py-2.5 text-slate-600 font-medium">Primary Service Area</td>
+                  <td className="py-2.5 text-right font-semibold text-slate-800">
+                    {city.city} Metro &amp; Suburbs
                   </td>
                 </tr>
               </tbody>
@@ -612,7 +611,7 @@ export default async function ServiceCityPage({
                 <span>Call {dispatchPhone.display}</span>
               </a>
               <p className="text-slate-300 text-xs mt-3">
-                24/7 Rapid Dispatch* · No Trip Surcharge · Local {city.city} Technicians
+                24/7 Rapid Dispatch* · Certified Local Contractors · Local {city.city} Technicians
               </p>
             </div>
           </div>

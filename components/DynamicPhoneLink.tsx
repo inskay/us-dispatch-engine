@@ -1,6 +1,7 @@
 'use client';
 
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import { PhoneCall } from 'lucide-react';
 import { getDispatchPhone } from '@/config/dispatch';
 
@@ -17,6 +18,7 @@ function useCurrentDispatchPhone() {
   return {
     phone: getDispatchPhone(service),
     service: service || 'water-damage',
+    isWaterDamage: pathname.startsWith('/water-damage'),
   };
 }
 
@@ -51,5 +53,36 @@ export function FooterCallLink() {
     >
       {phone.display}
     </a>
+  );
+}
+
+export function DynamicHeaderNav() {
+  const { isWaterDamage } = useCurrentDispatchPhone();
+
+  return (
+    <nav className="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
+      <Link href="/water-damage" className="hover:text-blue-700 transition">Water Damage</Link>
+      <Link href="/pest-control" className="hover:text-blue-700 transition">Pest Control</Link>
+      {!isWaterDamage && (
+        <Link href="/roof-repair" className="hover:text-blue-700 transition">Roof Repair</Link>
+      )}
+    </nav>
+  );
+}
+
+export function DynamicFooterServices() {
+  const { isWaterDamage } = useCurrentDispatchPhone();
+
+  return (
+    <div>
+      <h4 className="text-slate-900 font-bold mb-4 text-xs tracking-wider uppercase">Emergency Services</h4>
+      <ul className="space-y-2.5 text-xs">
+        <li><Link href="/water-damage" className="hover:text-blue-700 transition text-slate-600">Water Extraction &amp; Flood Cleanup</Link></li>
+        <li><Link href="/pest-control" className="hover:text-blue-700 transition text-slate-600">Emergency Pest Extermination</Link></li>
+        {!isWaterDamage && (
+          <li><Link href="/roof-repair" className="hover:text-blue-700 transition text-slate-600">Storm &amp; Roof Leak Repair</Link></li>
+        )}
+      </ul>
+    </div>
   );
 }

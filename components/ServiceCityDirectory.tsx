@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { Search, MapPin, Clock, Star, ExternalLink, ChevronDown } from "lucide-react";
+import { Search, MapPin, Clock, Star, ExternalLink, ChevronDown, Shield } from "lucide-react";
 import type { City } from "@/lib/niches";
 
 interface Props {
@@ -126,8 +126,8 @@ export function ServiceCityDirectory({
                     <span>{city.response_mins} min avg dispatch</span>
                   </div>
                   <div className="flex items-center gap-1.5">
-                    <Star className="w-3.5 h-3.5 text-amber-500" />
-                    <span>Starting at \${city.avg_cost}</span>
+                    <Shield className="w-3.5 h-3.5 text-blue-600" />
+                    <span>Certified Local Specialists</span>
                   </div>
                   <div className="flex items-center gap-1.5">
                     <MapPin className="w-3.5 h-3.5 text-slate-400" />

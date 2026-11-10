@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { ShieldCheck, Clock } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 import { CallTracking } from '@/components/CallTracking';
-import { HeaderCallButton, FooterCallLink } from '@/components/DynamicPhoneLink';
+import { HeaderCallButton, FooterCallLink, DynamicHeaderNav, DynamicFooterServices } from '@/components/DynamicPhoneLink';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -74,11 +74,7 @@ export default function RootLayout({
               </div>
             </Link>
 
-            <nav className="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
-              <Link href="/water-damage" className="hover:text-blue-700 transition">Water Damage</Link>
-              <Link href="/pest-control" className="hover:text-blue-700 transition">Pest Control</Link>
-              <Link href="/roof-repair" className="hover:text-blue-700 transition">Roof Repair</Link>
-            </nav>
+            <DynamicHeaderNav />
 
             <HeaderCallButton />
           </div>
@@ -101,14 +97,7 @@ export default function RootLayout({
               </p>
             </div>
 
-            <div>
-              <h4 className="text-slate-900 font-bold mb-4 text-xs tracking-wider uppercase">Emergency Services</h4>
-              <ul className="space-y-2.5 text-xs">
-                <li><Link href="/water-damage" className="hover:text-blue-700 transition text-slate-600">Water Extraction &amp; Flood Cleanup</Link></li>
-                <li><Link href="/pest-control" className="hover:text-blue-700 transition text-slate-600">Emergency Pest Extermination</Link></li>
-                <li><Link href="/roof-repair" className="hover:text-blue-700 transition text-slate-600">Storm &amp; Roof Leak Repair</Link></li>
-              </ul>
-            </div>
+            <DynamicFooterServices />
 
             <div>
               <h4 className="text-slate-900 font-bold mb-4 text-xs tracking-wider uppercase">Trust &amp; Legal</h4>
@@ -116,7 +105,7 @@ export default function RootLayout({
                 <li><Link href="/terms" className="hover:text-blue-700 transition text-slate-600 font-medium">Terms of Service &amp; Disclaimer</Link></li>
                 <li><Link href="/privacy" className="hover:text-blue-700 transition text-slate-600 font-medium">Privacy Policy (CCPA)</Link></li>
                 <li><span className="text-slate-500">Licensed &amp; Insured Contractors</span></li>
-                <li><span className="text-slate-500">Zero Obligation Phone Quotes</span></li>
+                <li><span className="text-slate-500">Emergency Dispatch Assessment</span></li>
               </ul>
             </div>
 
@@ -138,12 +127,12 @@ export default function RootLayout({
             </div>
           </div>
 
-          <div className="text-xs text-gray-500 max-w-5xl mx-auto mt-6 text-center leading-relaxed border-t border-gray-800 pt-6">
-            <p className="mb-2">
-              <strong>Disclaimer:</strong> LinesFix.com is an independent referral directory and marketing service connecting residential property owners with third-party service specialists. LinesFix does not perform home repair or mitigation services directly, nor is it a licensed contractor or insurance adjuster. All service contractors are independent, and LinesFix makes no warranty or representation regarding work performed. It is the sole responsibility of the customer to verify licensing, bonding, insurance, and qualifications required by local jurisdiction before commencing work.
+          <div className="text-xs text-gray-500 max-w-5xl mx-auto mt-6 text-center leading-relaxed border-t border-gray-800 pt-6 space-y-2">
+            <p>
+              <strong>Disclaimer:</strong> LinesFix is a free service to assist homeowners in connecting with local service providers. All contractors/providers are independent and LinesFix does not warrant or guarantee any work performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary license and insurance required for the work being performed. All persons depicted in a photo or video are actors or models and not contractors listed on this site.
             </p>
             <p>
-              *24/7 dispatch coordination and hotline assistance are subject to local technician availability, emergency volume, regional coverage, and severe weather conditions.
+              *Same-day and 24/7 emergency services are subject to provider participation, location, technician availability, and demand. Availability is not guaranteed and may vary by market and appointment capacity.
             </p>
           </div>
         </footer>

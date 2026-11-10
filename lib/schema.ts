@@ -72,8 +72,8 @@ export function buildCityServiceSchema(niche: Niche, city: City) {
             a: `Emergency roofing crews arrive in an average of ${city.response_mins} minutes across ${city.city} (${zipCodes.slice(0, 3).join(", ")}). We deploy commercial-grade 20-mil waterproof poly tarping and emergency board-up within 60 minutes to prevent catastrophic interior water intrusion.`,
           },
           {
-            q: `What is the cost of emergency storm roof tarping and leak repair in ${city.city}, ${city.state_code}?`,
-            a: `Initial phone estimates are 100% free with zero travel fee in ${city.city}. Emergency roof tarping and leak stabilization typically start from \$${city.avg_cost}, with complete photographic storm damage reports prepared directly for homeowner insurance claims.`,
+            q: `How does emergency roof assessment and storm damage mitigation work in ${city.city}, ${city.state_code}?`,
+            a: `Call our 24/7 dispatch hotline to connect with an emergency roofing coordinator. Dispatched technicians arrive on-site in ${city.city} to inspect damaged decking, install emergency waterproof tarping, and prepare photographic documentation for homeowner insurance claims.`,
           },
           {
             q: `Do your ${city.city} roofers comply with NRCA and ${city.state} building codes?`,
@@ -86,8 +86,8 @@ export function buildCityServiceSchema(niche: Niche, city: City) {
             a: `Emergency dispatch units arrive within an average of ${city.response_mins} minutes in ${city.city} (${zipCodes.slice(0, 3).join(", ")}). Local crews are stationed near ${city.neighborhoods.slice(0, 2).join(" and ")} for immediate 24/7 mobilization.`,
           },
           {
-            q: `What does emergency ${nicheInfo.label.toLowerCase()} cost in ${city.city}, ${city.state_code}?`,
-            a: `Initial phone estimates are 100% free with zero travel fee in ${city.city}. Local dispatch costs typically start from \$${city.avg_cost}, with exact pricing determined on-site following diagnostic inspection and direct insurance documentation.`,
+            q: `How does emergency dispatch and damage assessment work in ${city.city}, ${city.state_code}?`,
+            a: `Call our 24/7 hotline to connect with an emergency dispatch coordinator. Dispatched technicians arrive on-site in ${city.city} to conduct a full damage assessment and review mitigation procedures with you before commencing work.`,
           },
           {
             q: `Is your ${city.city} dispatch service licensed and available 24/7?`,
@@ -102,7 +102,7 @@ export function buildCityServiceSchema(niche: Niche, city: City) {
     description: `24/7 local emergency ${nicheInfo.label.toLowerCase()} dispatch in ${city.city}, ${city.state_code} (${zipCodes.join(", ")}). Average arrival in ${city.response_mins} mins with licensed, insured contractors.`,
     url: pageUrl,
     telephone: phoneClean,
-    priceRange: `From \$${city.avg_cost}`,
+    priceRange: "$$",
     currenciesAccepted: "USD",
     paymentAccepted: "Cash, Credit Card, Direct Insurance Billing",
     openingHoursSpecification: {
@@ -225,8 +225,8 @@ export function buildServiceHubSchema(niche: Niche) {
             a: `Our nationwide network maintains an average arrival time under 25 minutes across metropolitan dispatch centers. Emergency tarping, roof leak mitigation, and board-up units are dispatched within 60 seconds of your call to ${dispatchPhone.display}.`,
           },
           {
-            q: `Can I get an immediate roof repair quote and insurance claim assistance over the phone?`,
-            a: `Yes. Call ${dispatchPhone.display} and our dispatch coordinators will evaluate your storm or leak damage, provide an instant estimate, and dispatch licensed crews who document hail, wind, or structural damage directly for insurance claims.`,
+            q: `Can I get an immediate phone consultation and insurance claim assistance over the phone?`,
+            a: `Yes. Call ${dispatchPhone.display} and our dispatch coordinators will review your storm or leak damage, explain emergency response protocols, and dispatch licensed crews who document hail, wind, or structural damage directly for insurance claims.`,
           },
           {
             q: `Are all roofing contractors certified according to NRCA and ASTM standards?`,
@@ -239,8 +239,8 @@ export function buildServiceHubSchema(niche: Niche) {
             a: `Our nationwide network maintains an average arrival time under 25 minutes across metropolitan dispatch centers. In active weather or emergency events, units are dispatched within 60 seconds of your call.`,
           },
           {
-            q: `Can I get an immediate pricing estimate over the phone?`,
-            a: `Yes. Call ${dispatchPhone.display} and our dispatch coordinators will evaluate your situation and provide an instant price estimate. Technicians also perform an on-site inspection with no trip charge before any work begins.`,
+            q: `Can I get an immediate phone consultation and emergency assessment?`,
+            a: `Yes. Call ${dispatchPhone.display} and our dispatch coordinators will evaluate your situation and explain emergency response protocols. Technicians perform an on-site damage assessment before work begins.`,
           },
           {
             q: `Do you work directly with homeowner insurance companies?`,

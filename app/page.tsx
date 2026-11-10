@@ -6,7 +6,7 @@ import {
   Search, Phone, Droplets, Bug, Home, ExternalLink,
   MapPin, Clock, Star, ArrowRight, Activity, FileText,
   ChevronDown, Navigation, Headphones, Sparkles, ShieldAlert,
-  RotateCcw,
+  RotateCcw, Shield,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { getDispatchPhone } from "@/config/dispatch";
@@ -395,7 +395,7 @@ export default function DirectoryDashboard() {
                   <span>Call On-Call Tech: {activePhone.display}</span>
                 </a>
                 <span className="text-[11px] font-semibold text-slate-500">
-                  Free Phone Estimates · Zero Obligation
+                  Phone Consultation · Certified Local Contractors
                 </span>
               </div>
             </div>
@@ -589,8 +589,8 @@ export default function DirectoryDashboard() {
                         <span>{city.response_mins} min avg dispatch</span>
                       </div>
                       <div className="flex items-center gap-1.5">
-                        <Star className="w-3.5 h-3.5 text-amber-500" />
-                        <span>Starting from \${city.avg_cost}</span>
+                        <Shield className="w-3.5 h-3.5 text-blue-600" />
+                        <span>Certified Local Specialists</span>
                       </div>
                       <div className="flex items-center gap-1.5">
                         <MapPin className="w-3.5 h-3.5 text-slate-400" />
@@ -659,8 +659,8 @@ export default function DirectoryDashboard() {
               },
               {
                 step: "02",
-                title: "On-Site Evaluation & Free Quote",
-                desc: "Certified technicians arrive, inspect with diagnostic tools, and provide an exact, upfront written estimate.",
+                title: "Emergency Dispatch Assessment",
+                desc: "Certified technicians arrive, inspect with diagnostic tools, and review required mitigation steps directly with you.",
                 icon: Activity,
               },
               {
