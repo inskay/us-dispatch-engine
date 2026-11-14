@@ -19,6 +19,8 @@ function useCurrentDispatchPhone() {
     phone: getDispatchPhone(service),
     service: service || 'water-damage',
     isWaterDamage: pathname.startsWith('/water-damage'),
+    isRoofRepair: pathname.startsWith('/roof-repair'),
+    isPestControl: pathname.startsWith('/pest-control'),
   };
 }
 
@@ -57,30 +59,60 @@ export function FooterCallLink() {
 }
 
 export function DynamicHeaderNav() {
-  const { isWaterDamage } = useCurrentDispatchPhone();
+  const { isWaterDamage, isRoofRepair, isPestControl } = useCurrentDispatchPhone();
+
+  if (isWaterDamage) {
+    return (
+      <nav className="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
+        <Link href="/water-damage" className="hover:text-blue-700 transition">Water Damage Mitigation</Link>
+      </nav>
+    );
+  }
+
+  if (isRoofRepair) {
+    return (
+      <nav className="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
+        <Link href="/roof-repair" className="hover:text-blue-700 transition">Roof Replacement</Link>
+      </nav>
+    );
+  }
+
+  if (isPestControl) {
+    return (
+      <nav className="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
+        <Link href="/pest-control" className="hover:text-blue-700 transition">Pest Control</Link>
+      </nav>
+    );
+  }
 
   return (
     <nav className="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
       <Link href="/water-damage" className="hover:text-blue-700 transition">Water Damage</Link>
       <Link href="/pest-control" className="hover:text-blue-700 transition">Pest Control</Link>
-      {!isWaterDamage && (
-        <Link href="/roof-repair" className="hover:text-blue-700 transition">Roof Repair</Link>
-      )}
+      <Link href="/roof-repair" className="hover:text-blue-700 transition">Roof Replacement</Link>
     </nav>
   );
 }
 
 export function DynamicFooterServices() {
-  const { isWaterDamage } = useCurrentDispatchPhone();
+  const { isWaterDamage, isRoofRepair, isPestControl } = useCurrentDispatchPhone();
 
   return (
     <div>
       <h4 className="text-slate-900 font-bold mb-4 text-xs tracking-wider uppercase">Emergency Services</h4>
       <ul className="space-y-2.5 text-xs">
-        <li><Link href="/water-damage" className="hover:text-blue-700 transition text-slate-600">Water Extraction &amp; Flood Cleanup</Link></li>
-        <li><Link href="/pest-control" className="hover:text-blue-700 transition text-slate-600">Emergency Pest Extermination</Link></li>
-        {!isWaterDamage && (
-          <li><Link href="/roof-repair" className="hover:text-blue-700 transition text-slate-600">Storm &amp; Roof Leak Repair</Link></li>
+        {isWaterDamage ? (
+          <li><Link href="/water-damage" className="hover:text-blue-700 transition text-slate-600">Water Extraction &amp; Structural Drying</Link></li>
+        ) : isRoofRepair ? (
+          <li><Link href="/roof-repair" className="hover:text-blue-700 transition text-slate-600">Residential Roof Replacement &amp; Installation</Link></li>
+        ) : isPestControl ? (
+          <li><Link href="/pest-control" className="hover:text-blue-700 transition text-slate-600">Emergency Pest Extermination</Link></li>
+        ) : (
+          <>
+            <li><Link href="/water-damage" className="hover:text-blue-700 transition text-slate-600">Water Extraction &amp; Flood Cleanup</Link></li>
+            <li><Link href="/pest-control" className="hover:text-blue-700 transition text-slate-600">Emergency Pest Extermination</Link></li>
+            <li><Link href="/roof-repair" className="hover:text-blue-700 transition text-slate-600">Residential Roof Replacement &amp; Installation</Link></li>
+          </>
         )}
       </ul>
     </div>

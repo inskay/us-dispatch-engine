@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import {
   Phone, Clock, Shield, MapPin, AlertTriangle, CheckCircle,
-  Star, Zap, TrendingUp, Lightbulb, BadgeCheck, Wrench, Calendar,
+  Star, Zap, Lightbulb, BadgeCheck, Wrench, Calendar,
 } from "lucide-react";
 import { cities, getOrResolveCity, getRegionalCities } from "@/lib/cities";
 import { NICHES, type Niche, type City } from "@/lib/niches";
@@ -45,8 +45,8 @@ export async function generateMetadata({
   let description = "";
 
   if (service === "roof-repair") {
-    title = `24/7 Emergency Roof Repair in ${city.city}, ${city.state_code} | Rapid Dispatch`;
-    description = `24/7 emergency roof repair, storm damage & roof replacement in ${city.city}, ${city.state_code}. Fast certified dispatch. Call ${dispatchPhone.display} now.`;
+    title = `24/7 Residential Roof Replacement in ${city.city}, ${city.state_code} | Rapid Dispatch`;
+    description = `24/7 residential roof replacement, complete tear-offs & new roof installation in ${city.city}, ${city.state_code}. Fast certified dispatch. Call ${dispatchPhone.display} now.`;
   } else if (service === "water-damage") {
     title = `24/7 Emergency Water Damage in ${city.city}, ${city.state_code} | Rapid Dispatch`;
     description = `24/7 emergency water damage, flood extraction & structural drying in ${city.city}, ${city.state_code}. Fast certified dispatch. Call ${dispatchPhone.display} now.`;
@@ -64,7 +64,7 @@ export async function generateMetadata({
       `emergency ${service} ${city.city}`,
       `${service} 24 7 ${city.zip}`,
       `${service} near me ${city.zip}`,
-      ...(service === "roof-repair" ? ["roof repair 7 24", "emergency roof repair", "storm roof tarping"] : []),
+      ...(service === "roof-repair" ? ["roof replacement 24 7", "residential roof replacement", "new roof installation"] : []),
       ...(service === "water-damage" ? ["water damage 24", "emergency flood cleanup", "water extraction 24 7"] : []),
       ...(service === "pest-control" ? ["exterminator 7 24", "emergency exterminator", "pest control 24 7"] : []),
       ...city.zips_list.map((z) => `${service} ${z}`),
@@ -103,8 +103,8 @@ function buildFaqs(niche: Niche, city: City): Array<{ q: string; a: string }> {
       a: `When you call, our ${city.city} dispatch coordinator collects your address and emergency details to route the nearest mobile unit. On-site, certified technicians evaluate the property, outline required mitigation steps, and review procedures directly with you before work begins.`,
     },
     {
-      q: `Are the ${niche === "pest-control" ? "treatments" : "repairs"} compliant with local ${city.state} regulations?`,
-      a: `Yes — all our ${city.city} technicians are fully licensed, bonded, and insured under ${city.state} statutory codes. We carry appropriate state-specific licensing and provide written guarantees on all completed work.`,
+      q: `Are the ${niche === "pest-control" ? "treatments" : niche === "roof-repair" ? "installations" : "repairs"} compliant with local ${city.state} regulations?`,
+      a: `Yes — all our ${city.city} technicians are fully licensed, bonded, and insured under ${city.state} statutory codes. We carry appropriate state-specific licensing and ensure all completed work meets local building standards.`,
     },
     {
       q: `Can I get an immediate phone consultation before dispatch to ${city.city}?`,
@@ -220,55 +220,31 @@ function HeroSection({ niche, city }: { niche: Niche; city: City }) {
 function AdvisoryBlock({
   city,
   liveAlert,
-  demandIndex,
   localTip,
   monthLabel,
 }: {
   city: City;
   liveAlert: string;
-  demandIndex: "CRITICAL" | "HIGH" | "ELEVATED";
+  demandIndex?: "CRITICAL" | "HIGH" | "ELEVATED";
   localTip: string;
   monthLabel: string;
 }) {
-  const demandStyles: Record<string, { badge: string; bar: string; label: string }> = {
-    CRITICAL: {
-      badge: "bg-red-50 border-red-200 text-red-800",
-      bar: "w-full bg-red-600",
-      label: "text-red-700",
-    },
-    HIGH: {
-      badge: "bg-amber-50 border-amber-200 text-amber-900",
-      bar: "w-3/4 bg-amber-500",
-      label: "text-amber-800",
-    },
-    ELEVATED: {
-      badge: "bg-emerald-50 border-emerald-200 text-emerald-900",
-      bar: "w-1/2 bg-emerald-600",
-      label: "text-emerald-800",
-    },
-  };
-
-  const currentDemand = demandStyles[demandIndex] || demandStyles.HIGH;
-
   return (
     <section className="max-w-4xl mx-auto px-4 -mt-8 relative z-20">
       <div className="bg-white border border-slate-200/90 rounded-2xl shadow-lg overflow-hidden">
         <div className="bg-slate-50 border-b border-slate-200 px-5 py-3.5 flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-2">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-700" />
-            </span>
+            <span className="w-2.5 h-2.5 rounded-full bg-blue-700" />
             <span className="text-xs font-bold uppercase tracking-wider text-slate-800">
-              Live Regional Emergency Advisory
+              Regional Homeowner Advisory
             </span>
           </div>
-          <span className={`text-xs font-bold px-2.5 py-1 rounded-full border ${currentDemand.badge}`}>
-            Demand: {demandIndex}
+          <span className="text-xs font-bold px-2.5 py-1 rounded-full border bg-blue-50 border-blue-200 text-blue-900">
+            {city.city}, {city.state_code}
           </span>
         </div>
 
-        <div className="p-5 sm:p-6 space-y-5">
+        <div className="p-5 sm:p-6 space-y-4">
           <div className="flex items-start gap-3">
             <div className="shrink-0 px-2.5 py-1 rounded-lg text-xs font-bold uppercase tracking-wide bg-blue-50 border border-blue-200 text-blue-900 flex items-center gap-1.5">
               <Calendar className="w-3.5 h-3.5 text-blue-700" />
@@ -277,21 +253,6 @@ function AdvisoryBlock({
             <p className="text-slate-800 text-sm sm:text-base leading-relaxed">
               {liveAlert}
             </p>
-          </div>
-
-          <div className="bg-slate-50 border border-slate-200/70 rounded-xl p-3.5">
-            <div className="flex items-center justify-between text-xs font-semibold mb-2">
-              <span className="flex items-center gap-1.5 text-slate-700">
-                <TrendingUp className="w-4 h-4 text-blue-700" />
-                Dispatch Influx for {city.city}, {city.state_code} this week:
-              </span>
-              <span className={`font-bold uppercase ${currentDemand.label}`}>
-                {demandIndex}
-              </span>
-            </div>
-            <div className="w-full h-2.5 bg-slate-200 rounded-full overflow-hidden">
-              <div className={`h-full rounded-full transition-all duration-500 ${currentDemand.bar}`} />
-            </div>
           </div>
 
           <div className="bg-emerald-50/70 border border-emerald-200 rounded-xl p-4 flex items-start gap-3">
@@ -371,8 +332,8 @@ function LocalDataTable({ niche, city }: { niche: Niche; city: City }) {
           </div>
 
           <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-            <span>Insurance Claim Assistance Available</span>
-            <span className="font-semibold text-slate-700">Direct Billing</span>
+            <span>Residential Emergency Dispatch</span>
+            <span className="font-semibold text-slate-700">Local Specialists</span>
           </div>
         </div>
 
@@ -455,7 +416,7 @@ function ServicesGrid({ niche, city }: { niche: Niche; city: City }) {
             {nicheInfo.label} Services in {city.city}
           </h2>
           <p className="text-sm text-slate-600 max-w-xl mx-auto">
-            Certified emergency solutions with written satisfaction guarantees and insurance coordination.
+            Certified emergency solutions from licensed local contractors.
           </p>
         </div>
 

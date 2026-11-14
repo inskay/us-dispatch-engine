@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'LinesFix | Emergency US Home Services Dispatch Network',
-  description: '24/7 Rapid dispatch for Water Damage Restoration, Pest Extermination, and Emergency Roof Repair across the United States.',
+  description: '24/7 Rapid dispatch for Water Damage Restoration, Pest Extermination, and Residential Roof Replacement across the United States.',
 };
 
 export default function RootLayout({

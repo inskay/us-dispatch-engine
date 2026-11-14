@@ -68,16 +68,16 @@ export function buildCityServiceSchema(niche: Niche, city: City) {
     niche === "roof-repair"
       ? [
           {
-            q: `How quickly can an emergency roof repair crew install waterproof tarping in ${city.city}, ${city.state_code}?`,
-            a: `Emergency roofing crews arrive in an average of ${city.response_mins} minutes across ${city.city} (${zipCodes.slice(0, 3).join(", ")}). We deploy commercial-grade 20-mil waterproof poly tarping and emergency board-up within 60 minutes to prevent catastrophic interior water intrusion.`,
+            q: `How quickly can a residential roof replacement specialist be dispatched in ${city.city}, ${city.state_code}?`,
+            a: `Residential roofing crews arrive in an average of ${city.response_mins} minutes across ${city.city} (${zipCodes.slice(0, 3).join(", ")}). We coordinate professional roof inspections, full tear-offs, and new roof installations.`,
           },
           {
-            q: `How does emergency roof assessment and storm damage mitigation work in ${city.city}, ${city.state_code}?`,
-            a: `Call our 24/7 dispatch hotline to connect with an emergency roofing coordinator. Dispatched technicians arrive on-site in ${city.city} to inspect damaged decking, install emergency waterproof tarping, and prepare photographic documentation for homeowner insurance claims.`,
+            q: `How does residential roof replacement assessment work in ${city.city}, ${city.state_code}?`,
+            a: `Call our 24/7 dispatch hotline to connect with a roofing coordinator. Dispatched technicians arrive on-site in ${city.city} to inspect damaged decking, assess structural conditions, and provide a comprehensive replacement scope.`,
           },
           {
             q: `Do your ${city.city} roofers comply with NRCA and ${city.state} building codes?`,
-            a: `Yes. All technicians are state-licensed and insured under ${city.state} roofing contractor requirements, strictly adhering to NRCA guidelines and ASTM D3462 shingle standards. Call ${dispatchPhone.display} 24/7 for immediate dispatch.`,
+            a: `Yes. All technicians are state-licensed and insured under ${city.state} roofing contractor requirements, strictly adhering to NRCA guidelines and ASTM D3462 shingle standards. Call ${dispatchPhone.display} 24/7 for direct dispatch coordination.`,
           },
         ]
       : [
@@ -104,7 +104,7 @@ export function buildCityServiceSchema(niche: Niche, city: City) {
     telephone: phoneClean,
     priceRange: "$$",
     currenciesAccepted: "USD",
-    paymentAccepted: "Cash, Credit Card, Direct Insurance Billing",
+    paymentAccepted: "Cash, Credit Card",
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: [
@@ -221,16 +221,16 @@ export function buildServiceHubSchema(niche: Niche) {
     niche === "roof-repair"
       ? [
           {
-            q: `How quickly can an emergency roof repair crew be dispatched for storm damage?`,
-            a: `Our nationwide network maintains an average arrival time under 25 minutes across metropolitan dispatch centers. Emergency tarping, roof leak mitigation, and board-up units are dispatched within 60 seconds of your call to ${dispatchPhone.display}.`,
+            q: `How quickly can a residential roof replacement team be dispatched?`,
+            a: `Our nationwide network coordinates prompt consultations and dispatches across metropolitan centers. Roof inspections, tear-offs, and replacement units are mobilized quickly after your call to ${dispatchPhone.display}.`,
           },
           {
-            q: `Can I get an immediate phone consultation and insurance claim assistance over the phone?`,
-            a: `Yes. Call ${dispatchPhone.display} and our dispatch coordinators will review your storm or leak damage, explain emergency response protocols, and dispatch licensed crews who document hail, wind, or structural damage directly for insurance claims.`,
+            q: `Can I get an immediate phone consultation regarding roof replacement?`,
+            a: `Yes. Call ${dispatchPhone.display} and our dispatch coordinators will review your residential roofing requirements, explain options, and dispatch licensed crews to assess decking, underlayment, and materials.`,
           },
           {
             q: `Are all roofing contractors certified according to NRCA and ASTM standards?`,
-            a: `Yes. Dispatched roofers adhere to National Roofing Contractors Association (NRCA) guidelines and ASTM D3462 specifications, providing full workmanship warranties and emergency tarping guarantees.`,
+            a: `Yes. Dispatched roofers adhere to National Roofing Contractors Association (NRCA) guidelines and ASTM D3462 specifications, providing licensed professional service.`,
           },
         ]
       : [
@@ -243,8 +243,8 @@ export function buildServiceHubSchema(niche: Niche) {
             a: `Yes. Call ${dispatchPhone.display} and our dispatch coordinators will evaluate your situation and explain emergency response protocols. Technicians perform an on-site damage assessment before work begins.`,
           },
           {
-            q: `Do you work directly with homeowner insurance companies?`,
-            a: `Yes. We provide complete insurance claim documentation, photographic damage reports, and direct billing for major US insurance carriers, minimizing out-of-pocket stress.`,
+            q: `What should I do immediately before specialists arrive?`,
+            a: `Ensure the area is safe for your household, shut off main water or utility valves if applicable and safe to do so, and keep children and pets away from affected spaces. Our phone coordinator will guide you step-by-step.`,
           },
         ];
 

@@ -103,7 +103,7 @@ const STATIC_ALERTS: Record<string, AdvisoryPayload> = {
       "Hurricane-season winds and tropical storm systems are generating unusually high demand for emergency roof tarping and shingle replacement across Florida. Category 1 winds alone can lift improperly fastened shingles.",
     demandIndex: "CRITICAL",
     localTip:
-      "Photograph your roof from the ground every August — having pre-storm documentation dramatically speeds up insurance claim processing after a hurricane.",
+      "Photograph your roof from the ground every August — having pre-storm documentation dramatically speeds up assessment processing after a hurricane.",
   },
   "FL:roof-repair:fall": {
     liveAlert:
@@ -124,13 +124,13 @@ const STATIC_ALERTS: Record<string, AdvisoryPayload> = {
       "Pre-hurricane season roof inspections are at peak demand across Florida. Roofers are booking 2–4 weeks out — call now to lock in your spot before summer storm season begins.",
     demandIndex: "HIGH",
     localTip:
-      "Replace any missing or lifted shingles before June 1 — Florida's building code requires roofs to withstand 140+ mph wind loads and loose shingles void insurance coverage.",
+      "Replace any missing or lifted shingles before June 1 — Florida's building code requires roofs to withstand 140+ mph wind loads and loose shingles compromise structural protection.",
   },
 
   // ── Texas ──────────────────────────────────────────────────────────────────
   "TX:water-damage:winter": {
     liveAlert:
-      "A severe winter storm system is generating widespread pipe burst and water intrusion claims across Texas. The 2021 freeze event demonstrated how quickly Texas infrastructure can be overwhelmed by sustained sub-freezing temperatures.",
+      "A severe winter storm system is generating widespread pipe burst and water intrusion events across Texas. The 2021 freeze event demonstrated how quickly Texas infrastructure can be overwhelmed by sustained sub-freezing temperatures.",
     demandIndex: "CRITICAL",
     localTip:
       "Insulate exposed pipes in attics, crawl spaces, and garages before any freeze warning — Texas homes were not designed for sustained temperatures below 20°F.",
@@ -140,7 +140,7 @@ const STATIC_ALERTS: Record<string, AdvisoryPayload> = {
       "Texas's spring storm season is producing flash flood emergencies across the Hill Country and urban corridors. Homes in low-lying areas and near creek drainages are at highest risk for structural water intrusion.",
     demandIndex: "CRITICAL",
     localTip:
-      "Know your FEMA flood zone — over 40% of Texas flood insurance claims come from properties outside designated high-risk zones, so standard homeowner policies leave many Texans unprotected.",
+      "Know your FEMA flood zone — standard homeowner preparations require proactive assessment before regional storms arrive.",
   },
   "TX:water-damage:summer": {
     liveAlert:
@@ -272,7 +272,7 @@ const STATIC_ALERTS: Record<string, AdvisoryPayload> = {
   },
   "OH:roof-repair:winter": {
     liveAlert:
-      "Ohio's lake-effect snow events are generating severe ice dam conditions across northern counties. Ice dam water intrusion can cause $10,000+ in interior damage before the leak is visible from inside.",
+      "Ohio's lake-effect snow events are generating severe ice dam conditions across northern counties. Ice dam water intrusion can cause extensive interior damage before the leak is visible from inside.",
     demandIndex: "CRITICAL",
     localTip:
       "Use a roof rake to remove the bottom 4 feet of snow after every major storm — preventing ice dam formation is far less expensive than repairing the water damage they cause.",
@@ -289,7 +289,7 @@ const STATIC_ALERTS: Record<string, AdvisoryPayload> = {
       "Summer thunderstorm systems with golf-ball-sized hail are tracking across Ohio, generating immediate demand for emergency tarping and shingle replacement. Dispatch queues are running 24–48 hours behind.",
     demandIndex: "HIGH",
     localTip:
-      "Document any visible hail impact within 24 hours of a storm — Ohio insurance adjusters require proof of storm-date correlation for full claim coverage.",
+      "Document any visible hail impact within 24 hours of a storm — Ohio weather events require prompt inspection to prevent secondary leaks.",
   },
   "OH:roof-repair:fall": {
     liveAlert:
@@ -365,7 +365,7 @@ const STATIC_ALERTS: Record<string, AdvisoryPayload> = {
   },
   "GA:roof-repair:fall": {
     liveAlert:
-      "Post-storm roof assessments following Georgia's active fall storm season are revealing widespread undiscovered damage from summer events. Insurance claims must be filed within 12 months of the damage date.",
+      "Post-storm roof assessments following Georgia's active fall storm season are revealing widespread undiscovered damage from summer events. Prompt inspection protects residential structures before winter rains.",
     demandIndex: "HIGH",
     localTip:
       "Have your roof inspected every October before winter — Georgia's fall freeze-thaw cycles worsen any pre-existing cracks or lifted shingles that went unaddressed after summer storms.",
@@ -379,10 +379,10 @@ const STATIC_ALERTS: Record<string, AdvisoryPayload> = {
   },
   "GA:roof-repair:spring": {
     liveAlert:
-      "Spring hail season is producing widespread shingle damage across North Georgia. Insurance adjusters are backlogged — early inspection and filing gives homeowners priority scheduling.",
+      "Spring hail season is producing widespread shingle damage across North Georgia. Early inspection gives homeowners priority scheduling for restoration.",
     demandIndex: "HIGH",
     localTip:
-      "Inspect your roof within 72 hours of any hail event — Georgia spring storms pass quickly and delayed inspections make storm-date correlation harder to prove to insurers.",
+      "Inspect your roof within 72 hours of any hail event — Georgia spring storms pass quickly and delayed inspections allow hidden moisture to penetrate decking.",
   },
 
   // ── North Carolina ─────────────────────────────────────────────────────────
@@ -451,10 +451,10 @@ const STATIC_ALERTS: Record<string, AdvisoryPayload> = {
   },
   "NC:roof-repair:fall": {
     liveAlert:
-      "Post-hurricane season roof assessment demand is at its highest level across North Carolina. Insurance adjusters are prioritizing claims with professional inspection reports.",
+      "Post-hurricane season roof assessment demand is at its highest level across North Carolina. Local contractors are prioritizing assessments with comprehensive photo reports.",
     demandIndex: "CRITICAL",
     localTip:
-      "File insurance claims immediately after any storm event — NC insurance law gives adjusters 15 business days to respond and early filing ensures adjuster availability before backlogs develop.",
+      "Schedule an assessment immediately after any storm event — early scheduling ensures contractor availability before service backlogs develop.",
   },
   "NC:roof-repair:winter": {
     liveAlert:
@@ -533,7 +533,7 @@ const STATIC_ALERTS: Record<string, AdvisoryPayload> = {
       "Tennessee's active spring severe weather season is producing tornado-path roof damage and widespread hail impact across Middle and West Tennessee. Emergency response crews are operating at capacity.",
     demandIndex: "CRITICAL",
     localTip:
-      "File your roof claim and get a licensed contractor's damage assessment before accepting any insurance settlement — Tennessee's fast-moving storm season means adjusters work quickly and may undervalue complex damage.",
+      "Get a licensed contractor's damage assessment after storms — Tennessee's fast-moving storm season means early documentation identifies hidden structural damage.",
   },
   "TN:roof-repair:summer": {
     liveAlert:
@@ -619,14 +619,14 @@ const STATIC_ALERTS: Record<string, AdvisoryPayload> = {
       "Oklahoma's peak hail and tornado season is generating the highest volume of emergency roofing calls in the state. Contractors are booked 3–5 weeks out — early calls secure priority scheduling.",
     demandIndex: "CRITICAL",
     localTip:
-      "Choose impact-resistant Class 4 shingles for any Oklahoma roof replacement — they qualify for insurance discounts and withstand the state's frequent large-hail events significantly better than standard shingles.",
+      "Choose impact-resistant Class 4 shingles for any Oklahoma roof replacement — they provide superior durability and withstand the state's frequent large-hail events significantly better than standard shingles.",
   },
   "OK:roof-repair:summer": {
     liveAlert:
       "Oklahoma's summer heat combined with frequent storm systems is accelerating shingle aging and producing new damage events faster than crews can complete repairs. Service timelines are extended.",
     demandIndex: "HIGH",
     localTip:
-      "Document your roof condition with photographs every June — Oklahoma's summer storm frequency makes before/after documentation essential for insurance claims filed later in the season.",
+      "Document your roof condition with photographs every June — Oklahoma's summer storm frequency makes regular documentation essential for tracking roof wear.",
   },
   "OK:roof-repair:fall": {
     liveAlert:
@@ -670,11 +670,11 @@ const STATIC_ALERTS: Record<string, AdvisoryPayload> = {
       "Louisiana's spring flood season is producing Mississippi River tributary flooding across rural and suburban parishes. Pre-season flood barrier installation and property elevation are strongly recommended.",
     demandIndex: "HIGH",
     localTip:
-      "Purchase NFIP flood insurance with 30 days advance notice required — standard Louisiana homeowner policies exclude flood events and spring flood season arrives faster than coverage waiting periods.",
+      "Prepare flood mitigation plans with advance notice — spring flood season arrives faster than emergency preparation periods.",
   },
   "LA:pest-control:summer": {
     liveAlert:
-      "Louisiana's Formosan termite population — the most destructive termite species in North America — is at peak activity. Annual colony damage in Louisiana exceeds $500 million in structural repairs.",
+      "Louisiana's Formosan termite population — the most destructive termite species in North America — is at peak activity. Annual colony damage in Louisiana causes extensive structural damage to local properties.",
     demandIndex: "CRITICAL",
     localTip:
       "Baiting systems designed specifically for Formosan termites are essential for Louisiana homes — standard treatment protocols for eastern subterranean termites are significantly less effective against Formosans.",
@@ -705,11 +705,11 @@ const STATIC_ALERTS: Record<string, AdvisoryPayload> = {
       "Louisiana's hurricane season is generating emergency roof damage events across all parishes. Category 1 and 2 hurricane wind fields extend 50+ miles from track center, affecting areas not in the direct path.",
     demandIndex: "CRITICAL",
     localTip:
-      "Install hurricane straps on your roof-to-wall connection before hurricane season — properly installed straps increase wind resistance from 90 mph to 130+ mph for under $500 in materials.",
+      "Install hurricane straps on your roof-to-wall connection before hurricane season — properly installed straps increase wind resistance from 90 mph to 130+ mph with minimal material expense.",
   },
   "LA:roof-repair:fall": {
     liveAlert:
-      "Post-hurricane roof repair demand across Louisiana has extended booking queues to 6+ weeks. Temporary tarping is the most critical immediate action after roof damage to prevent ongoing interior water intrusion.",
+      "Post-hurricane roof replacement and restoration demand across Louisiana has extended booking queues to 6+ weeks. Temporary tarping is the most critical immediate action after roof damage to prevent ongoing interior water intrusion.",
     demandIndex: "CRITICAL",
     localTip:
       "Use 6-mil poly tarps secured with 2×4 battens screwed through the tarp into the roof deck — Louisiana wind events will shred standard tarps stapled or taped to damaged roofing.",
@@ -726,7 +726,7 @@ const STATIC_ALERTS: Record<string, AdvisoryPayload> = {
       "Louisiana's spring pre-hurricane season is the ideal window for roof maintenance and replacement before summer storm activity begins. Contractor availability is highest during this period.",
     demandIndex: "HIGH",
     localTip:
-      "Consider a metal roof for any Louisiana replacement — metal roofing's 40+ year lifespan, wind resistance, and insurance discount qualifications make it the most cost-effective long-term option for Louisiana climate.",
+      "Consider a metal roof for any Louisiana replacement — metal roofing's 40+ year lifespan and superior wind resistance make it the most durable long-term option for the Louisiana climate.",
   },
 
   // ── Arkansas ───────────────────────────────────────────────────────────────
@@ -791,7 +791,7 @@ const STATIC_ALERTS: Record<string, AdvisoryPayload> = {
       "Arkansas's spring tornado and severe storm season is generating the highest roof damage call volume of the year. Tornado-adjacent wind events cause structural roof damage at distances over 10 miles from the tornado path.",
     demandIndex: "CRITICAL",
     localTip:
-      "Photograph your roof before storm season and again immediately after any major event — before/after documentation gives Arkansas insurance adjusters clear evidence for full claim approval.",
+      "Photograph your roof before storm season and again immediately after any major event — before/after documentation gives local specialists clear evidence of storm impact.",
   },
   "AR:roof-repair:summer": {
     liveAlert:
@@ -877,7 +877,7 @@ const STATIC_ALERTS: Record<string, AdvisoryPayload> = {
       "Alabama's tornado-season storm events are generating widespread roof damage across the state. North Alabama and the Shoals area are at highest risk during the peak tornado season of March through May.",
     demandIndex: "CRITICAL",
     localTip:
-      "Know the difference between wind uplift damage and hail impact — Alabama's spring storms frequently cause both, and distinguishing the damage types ensures your insurance claim covers all repair costs.",
+      "Know the difference between wind uplift damage and hail impact — Alabama's spring storms frequently cause both, and distinguishing damage types ensures comprehensive structural restoration.",
   },
   "AL:roof-repair:summer": {
     liveAlert:
@@ -1003,7 +1003,7 @@ async function callGeminiAPI(
       ? "water damage restoration"
       : niche === "pest-control"
       ? "pest control"
-      : "roof repair";
+      : "residential roof replacement";
 
   const prompt = `You are a hyper-local US home emergency services expert. Generate a JSON advisory payload for:
 - City: ${city}, ${state}

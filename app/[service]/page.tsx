@@ -10,7 +10,6 @@ import { siteConfig } from "@/config/site";
 import { getDispatchPhone } from "@/config/dispatch";
 import { FAQAccordion } from "@/components/FAQAccordion";
 import { ServiceCityDirectory } from "@/components/ServiceCityDirectory";
-import { ServiceSkylineIllustration } from "@/components/verticals/ServiceSkylineIllustration";
 import { buildServiceHubSchema } from "@/lib/schema";
 
 export const revalidate = 86400;
@@ -72,8 +71,8 @@ function buildServiceFaqs(service: Niche) {
       a: `Yes. Call ${dispatchPhone.display} and our dispatch coordinators will evaluate your situation and explain emergency response protocols. Technicians perform an on-site damage assessment before work begins.`,
     },
     {
-      q: `Do you work directly with homeowner insurance companies?`,
-      a: `Yes. We provide complete insurance claim documentation, photographic damage reports, and direct billing for major US insurance carriers, minimizing out-of-pocket stress.`,
+      q: `What should I do immediately before technicians arrive?`,
+      a: `Ensure the area is safe for your household, shut off main water or utility valves if applicable and safe to do so, and keep children and pets away from affected spaces. Our phone coordinator will guide you step-by-step.`,
     },
     {
       q: `Are all technicians licensed, certified, and insured?`,
@@ -166,7 +165,7 @@ export default async function ServiceHubPage({
                 <span>Call {dispatchPhone.display}</span>
               </a>
               <p className="text-slate-500 text-xs sm:text-sm mt-3 font-medium">
-                ⚡ 24/7 Phone Consultation · Certified Local Contractors · Direct Insurance Assistance
+                ⚡ 24/7 Phone Consultation · Certified Local Contractors · Rapid Dispatch Coordination*
               </p>
             </div>
 
@@ -187,15 +186,6 @@ export default async function ServiceHubPage({
                   <div className="text-[11px] text-slate-500">{sub}</div>
                 </div>
               ))}
-            </div>
-
-            {/* Interactive SVG Skyline / Vector Header Illustration */}
-            <div className="pt-6 max-w-5xl mx-auto">
-              <ServiceSkylineIllustration
-                service={service}
-                phoneDisplay={dispatchPhone.display}
-                phoneTel={dispatchPhone.raw}
-              />
             </div>
           </div>
         </section>
@@ -246,7 +236,7 @@ export default async function ServiceHubPage({
                   <div>
                     <h3 className="text-slate-900 font-bold text-sm">{s}</h3>
                     <p className="text-slate-500 text-xs mt-1">
-                      24/7 immediate deployment* with full warranty coverage.
+                      24/7 immediate deployment* with certified local specialists.
                     </p>
                   </div>
                 </div>
@@ -282,8 +272,8 @@ export default async function ServiceHubPage({
               },
               {
                 step: "03",
-                title: "Resolution & Direct Billing",
-                desc: "Work begins immediately. We document all steps for insurance claims and bill directly to your carrier to minimize out-of-pocket costs.",
+                title: "Mitigation & Complete Restoration",
+                desc: "Work begins immediately with full documentation provided directly to you.",
                 icon: FileText,
               },
             ].map(({ step, title, desc, icon: Icon }) => (

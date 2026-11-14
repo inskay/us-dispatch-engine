@@ -55,8 +55,8 @@ const SERVICES = [
   },
   {
     id: "roof-repair",
-    label: "Emergency Roof Repair & Tarping",
-    shortLabel: "Roof Repair",
+    label: "Residential Roof Replacement",
+    shortLabel: "Roof Replacement",
     emoji: "🔨",
     Icon: Home,
     color: "text-amber-800",
@@ -64,7 +64,7 @@ const SERVICES = [
     borderLight: "border-amber-200",
     accentBg: "bg-amber-800",
     badge: "bg-amber-100 text-amber-900 border border-amber-200",
-    description: "Leak detection, emergency tarping, storm damage & shingle replacement.",
+    description: "Residential roof replacement, complete tear-offs & new roof installation.",
   },
 ];
 
@@ -207,7 +207,7 @@ export default function DirectoryDashboard() {
             Fast Response Home Services When Every Minute Counts
           </h1>
           <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            Direct dispatch for certified water damage restoration, licensed extermination, and emergency storm roof repair across 50 states.
+            Direct dispatch for certified water damage restoration, licensed extermination, and residential roof replacement across 50 states.
           </p>
 
           {/* Floating Dispatch Search Card */}
@@ -355,7 +355,7 @@ export default function DirectoryDashboard() {
                 {/* Renamed Badge */}
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100/80 border border-blue-200 text-blue-900 text-xs font-bold uppercase tracking-wider">
                   <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-                  <span>LIVE LOCAL WEATHER &amp; RISK CONDITIONS</span>
+                  <span>SEASONAL HOME DEFENSE ADVISORY</span>
                 </div>
                 <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
                   {seasonalAlert.title}
@@ -365,12 +365,12 @@ export default function DirectoryDashboard() {
                 </p>
                 <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-xs font-semibold text-slate-600 pt-1">
                   <span className="flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                    Real-time NOAA &amp; State Emergency Data Sync
+                    <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                    Seasonal Home Protection Notice
                   </span>
                   <span className="flex items-center gap-1.5">
                     <ShieldAlert className="w-3.5 h-3.5 text-amber-600" />
-                    Demand Level: <strong className="text-amber-700 uppercase">{seasonalAlert.demandLevel}</strong>
+                    Residential Property Advisory
                   </span>
                 </div>
               </div>
@@ -665,8 +665,8 @@ export default function DirectoryDashboard() {
               },
               {
                 step: "03",
-                title: "Immediate Mitigation & Insurance",
-                desc: "Work begins immediately. We handle damage documentation and assist with direct insurance billing.",
+                title: "Mitigation & Structural Restoration",
+                desc: "Work begins immediately. Dispatched technicians review all restoration steps directly with you.",
                 icon: FileText,
               },
             ].map(({ step, title, desc, icon: Icon }) => (
